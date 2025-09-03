@@ -1,16 +1,17 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+// import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
     const snippets = await getCollection('snippets');
-    return snippets.map((snippet) => ({
-        params: { slug: snippet },
+    return snippets.map(snippet => ({
+        params: { slug: snippet.id },
         props: { snippet }
     }));
 }
 
 const { snippet } = Astro.props;
+const { Content } = await render(snippet);
 ---
 <html>
   <head>
@@ -19,7 +20,7 @@ const { snippet } = Astro.props;
   <body>
     <h1>{snippet.data.title}</h1>
     <article>
-      <snippet />
+      <Content />
     </article>
     <ul>
       {snippet.data.tags.map((tag) => <li>{tag}</li>)}

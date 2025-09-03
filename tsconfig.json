@@ -4,6 +4,11 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "strictNullChecks": false,  // add if using `base` template
-    "allowJs": true
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts": ["src/layouts/*"]
+    }
   }
 }
