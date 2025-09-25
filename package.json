@@ -1,16 +1,32 @@
 {
   "name": "code",
-  "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "build": "npx eleventy",
+    "build:clean": "rm -rf _site && npx eleventy",
+    "build:format": "npx eleventy && node utils/format.js",
+    "debug": "DEBUG=* npx eleventy",
+    "format": "node utils/format.js",
+    "start": "npx eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "whitwaltman",
+  "license": "ISC",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.alt:whitwaltman/code.twelvefourseven.net.git"
   },
   "dependencies": {
-    "astro": "^5.13.5",
-    "fuse.js": "^7.1.0",
-    "highlight.js": "^11.11.1"
-  }
+    "@11ty/eleventy": "^3.1.0",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.1"
+  },
+  "type": "module"
 }
