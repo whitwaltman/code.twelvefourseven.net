@@ -1,29 +1,5 @@
-import fs from 'fs';
-import path from 'path';
-import postcss from 'postcss';
-import tailwindcss from '@tailwindcss/postcss';
-
 export default async function (config) {
-    config.on('eleventy.before', async () => {
-        const inputPath = path.resolve('./src/css/main.css');
-        const outputPath = path.resolve('./_site/css/main.css');
-        const cssContent = fs.readFileSync(inputPath, 'utf8');
-
-        const outputDir = path.dirname(outputPath);
-        if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir, { recursive: true });
-        }
-
-        const result = await processor.process(cssContent, {
-            from: inputPath,
-            to: outputPath,
-        });
-        fs.writeFileSync(outputPath, result.css);
-    })
-
-    const processor = postcss([
-        tailwindcss(),
-    ]);
+    config.addGlobalData('layout', 'layouts/base.njk');
     
     config.addShortcode("a", function (url, text) {
         const metadata = 'class="ext-link" target="_blank" rel="noopener noreferrer"';
@@ -39,9 +15,7 @@ export default async function (config) {
         dataTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
         dir: {
-            input: ".",
-            includes: "src/_includes",
-            data: "src/_data",
+            input: "src",
             output: "_site",
         }
     };
