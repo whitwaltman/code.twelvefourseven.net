@@ -1,0 +1,10 @@
+---
+layout: html.njk
+---
+<a href="/">{{ site.title }}</a>
+<main>
+    {{ content | safe }}
+</main>
+<footer>
+    <p>Last built at: <time>{{ site.latestBuild }}</time></p>
+</footer>
