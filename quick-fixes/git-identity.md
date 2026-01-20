@@ -4,6 +4,7 @@ tags:
 - git
 - github
 - ssh
+tldr: ssh-add ~/.ssh/whitwaltman
 ---
 
 I use two different GitHub accounts, and occasionally, I get my wires crossed. Whenever I get the following error message, the fix is almost always `ssh-add ~/.ssh/whitwaltman`.
