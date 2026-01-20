@@ -11,7 +11,7 @@ You need a panel that expands/collapses (notes, filters, sidebar, FAQ).
 Works for: "speaker notes", inspector side panel, settings drawer.
 
 ## Key requirements
-- The toggle must be a <button>
+- The toggle must be a `<button>`
 - Use `aria-expanded` and `aria-controls`
 - The panel should be `hidden` when collapsed (removes from tab order)
 
@@ -45,6 +45,6 @@ If you want animated height, don’t use hidden; use CSS + aria-hidden, but then
 
 ## Gotchas
 
-Don’t attach click handlers to <div> for toggles.
+Don’t attach click handlers to `<div>` for toggles.
 
 If panel contains inputs: when closing, consider moving focus back to the toggle button.

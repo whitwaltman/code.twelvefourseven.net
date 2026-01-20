@@ -1,7 +1,7 @@
 ---
 title: Interaction polish checklist
+type: checklist
 tags:
-- checklist
 - ux
 - a11y
 - polish

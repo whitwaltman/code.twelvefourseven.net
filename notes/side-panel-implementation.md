@@ -1,7 +1,7 @@
 ---
-title:
+title: Side panel implementation
+type: decision-log
 tags:
-- decision-log
 - a11y
 - sveltekit
 - ui
