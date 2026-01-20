@@ -1,21 +1,14 @@
 <h3>Notes</h3>
 <ul>
     {%- for note in collections.notes -%}
-        <li>{{  note }}</li>
+        <li><a href="{{ note.url }}">{{ note.data.title }}</a></li>
     {%- endfor -%}
 </ul>
 
 <h3>Patterns</h3>
 <ul>
     {%- for pattern in collections.patterns -%}
-        <li>{{ pattern }}</li>
-    {%- endfor -%}
-</ul>
-
-<h3>Quick Fixes</h3>
-<ul>
-    {%- for qf in collections.quickFixes -%}
-        <li><a href="{{ qf.url }}">{{ qf.data.title }}</a></li>
+        <li><a href="{{ pattern.url }}">{{ pattern.data.title }}</a></li>
     {%- endfor -%}
 </ul>
 
