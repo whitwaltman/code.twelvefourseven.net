@@ -1,10 +1,7 @@
 <nav>
     <ul>
-        <li>TEST</li>
-    {% for item in collections.all %}
-        {{ collections.all.length }}
-        <li>TEST</li>
+    {%- for item in collections.all -%}
         <li><a href="{{ item.url }}">{{ item.url }}</a></li>
-    {% endfor %}
+    {%- endfor -%}
     </ul>
 </nav>
