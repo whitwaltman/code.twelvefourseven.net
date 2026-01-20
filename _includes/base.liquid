@@ -6,29 +6,50 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <title>{{ site.title }}</title>
     <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        html, body { margin: 0; padding: 0; }
+
         body {
             display: flex;
+            padding: 4px;
+            font-family: system-ui;
             flex-direction: column;
             min-height: 100vh;
+            width: 100vw;
+        }
+
+        header, footer {
+            width: 100%;
+            border: 1px black solid;
+            padding: 8px;
         }
 
         main {
             flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav {
+            flex: 0 0 300px;
         }
     </style>
 </head>
 <body>
     <header class="site__header">
-        <h1 class="site__title">
-            <a href="/">{{ site.title }}</a>
-        </h1>
-        <p class="site__tagline">{{ site.description }}</p>
+        <a href="/">{{ site.title }}</a>
     </header>
     <main>
-        {{ content }}
+        {% render "nav.liquid" %}
+        <div class="container">
+            {{ content }}
+        </div>
     </main>
     <footer>
-        <p>Last built at: <time>{{ site.latestBuild }}</time></p>
+        Last built at: <time>{{ site.latestBuild }}</time>
     </footer>
 </body>
 </html>
