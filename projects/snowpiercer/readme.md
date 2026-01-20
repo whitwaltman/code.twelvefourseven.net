@@ -1,1 +1,0 @@
-Snowpiercer is a small, local app I built to help me track my crossword solves done on paper.

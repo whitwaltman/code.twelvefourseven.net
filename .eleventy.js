@@ -10,10 +10,6 @@ export default async function (config) {
         return collection.getFilteredByGlob("patterns/*.md");
     });
 
-    config.addCollection("quickFixes", (collection) => {
-        return collection.getFilteredByGlob("quick-fixes/*.md");
-    });
-
     config.addCollection("snippets", (collection) => {
         return collection.getFilteredByGlob("snippets/*.md");
     });
