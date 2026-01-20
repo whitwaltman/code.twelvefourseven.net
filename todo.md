@@ -2,3 +2,8 @@
 - [ ] for all "posts", add `created` and `updated` to view
 - [ ] for all posts, add tags
 - [ ] add fallback for files without a title (otherwise it won't render on `index.liquid`)
+- [ ] add an "about" page
+- [ ] handle responsive layout for mobile view
+- [ ] (MAYBE) add section headings and minimap on the right??
+- [ ] (MAYBE) add custom layouts for different post types
+- [ ] (MAYBE) add "focus" mode (blur/dim other sections/items when they're not the primary focus)

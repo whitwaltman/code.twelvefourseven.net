@@ -6,6 +6,10 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <title>{{ site.title }}</title>
     <style>
+        :root {
+            --nav: 270px;
+        }
+        
         *, *:before, *:after {
             box-sizing: border-box;
         }
@@ -49,6 +53,12 @@
             flex: 1 1 calc(100% - 300px);
             border: 1px black solid;
             padding: 8px;
+        }
+
+        @media screen and (width <= 48rem) {
+            nav {
+                display: none;
+            }
         }
     </style>
 </head>
