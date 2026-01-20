@@ -18,6 +18,17 @@
     </style>
 </head>
 <body>
-    {{ content | safe }}
+    <header class="site__header">
+        <h1 class="site__title">
+            <a href="/">{{ site.title }}</a>
+        </h1>
+        <p class="site__tagline">{{ site.description }}</p>
+    </header>
+    <main>
+        {{ content | safe }}
+    </main>
+    <footer>
+        <p>Last built at: <time>{{ site.latestBuild }}</time></p>
+    </footer>
 </body>
 </html>
