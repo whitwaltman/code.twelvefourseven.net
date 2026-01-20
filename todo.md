@@ -1,0 +1,1 @@
+- [ ] add script to `_util/` to make all links have `target=_blank` (maybe run on `eleventy.after`?)
