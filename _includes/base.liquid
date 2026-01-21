@@ -9,6 +9,7 @@
         :root {
             --nav: 16rem;
             --status-bar: 2.25rem;
+            --border-soft: light-dark(#e0e1e6, #303136);
         }
         
         *, *:before, *:after {
@@ -34,47 +35,53 @@
 
         nav {
             width: var(--nav);
+            border-right: 1px solid var(--border-soft);
         }
 
         main {
-            width: calc(100vw - var(--nav));
+            {% comment %} width: calc(100vw - var(--nav)); {% endcomment %}
+            width: 100%;
+            position: relative;
+            padding-top: var(--status-bar);
+            left: 0;
+            overflow: hidden;
         }
 
         header, .nav__header {
-            background: lime;
+            {% comment %} position: fixed;
+            top: 0;
+            left: 0; {% endcomment %}
+            z-index: 1;
             min-height: var(--status-bar);
             height: var(--status-bar);
+            border-bottom: 1px solid var(--border-soft);
+            border-top: 1px solid var(--border-soft);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
         }
 
         footer, .nav__footer {
-            background: orange;
+            {% comment %} position: fixed;
+            bottom: 0;
+            left: 0; {% endcomment %}
+            z-index: 1;
             min-height: var(--status-bar);
             height: var(--status-bar);
+            border-bottom: 1px solid var(--border-soft);
+            border-top: 1px solid var(--border-soft);
         }
 
         .container, .nav__container {
-            background: blue;
             flex: 1 1 calc(100vh - 2 * var(--status-bar));
             height: 100%;
             overflow-y: scroll;
+            padding: 0 1rem;
         }
-
-        {% comment %} main {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: row;
-            overflow: hidden;
-            height: 100%;
-            gap: 4px;
-        }
-
-        .container {
-            height: 100%;
-            overflow-y: scroll;
-            flex: 1 1 calc(100% - 300px);
-            border: 1px black solid;
-            padding: 8px;
-        } {% endcomment %}
     </style>
 </head>
 <body>
