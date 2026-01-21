@@ -7,7 +7,8 @@
     <title>{{ site.title }}</title>
     <style>
         :root {
-            --nav: 270px;
+            --nav: 16rem;
+            --status-bar: 2.25rem;
         }
         
         *, *:before, *:after {
@@ -18,24 +19,47 @@
 
         body {
             display: flex;
-            padding: 4px;
+            {% comment %} padding: 4px; {% endcomment %}
             font-family: system-ui;
-            flex-direction: column;
-            gap: 4px;
+            flex-direction: row;
             height: 100vh;
             width: 100vw;
         }
 
-        header, footer {
-            width: 100%;
-            border: 1px black solid;
+        nav, main {
+            height: 100vh;
             display: flex;
-            flex-direction: row;
-            padding: 8px;
-            gap: 8px;
+            flex-direction: column;
+        }
+
+        nav {
+            width: var(--nav);
         }
 
         main {
+            width: calc(100vw - var(--nav));
+        }
+
+        header, .nav__header {
+            background: lime;
+            min-height: var(--status-bar);
+            height: var(--status-bar);
+        }
+
+        footer, .nav__footer {
+            background: orange;
+            min-height: var(--status-bar);
+            height: var(--status-bar);
+        }
+
+        .container, .nav__container {
+            background: blue;
+            flex: 1 1 calc(100vh - 2 * var(--status-bar));
+            height: 100%;
+            overflow-y: scroll;
+        }
+
+        {% comment %} main {
             flex-grow: 1;
             display: flex;
             flex-direction: row;
@@ -50,27 +74,25 @@
             flex: 1 1 calc(100% - 300px);
             border: 1px black solid;
             padding: 8px;
-        }
+        } {% endcomment %}
     </style>
 </head>
 <body>
-    <header>
-        <button id="sidebar">open panel</button>
-        <span><a href="/">{{ site.title }}</a>&nbsp;{{ page.url }}</span>
-    </header>
+    <nav>
+        <div class="nav__header"></div>
+        <div class="nav__container"></div>
+        <div class="nav__footer"></div>
+    </nav>
     <main>
-        {% include "nav.liquid" %}
+        <header>
+
+        </header>
         <div class="container">
             {{ content }}
         </div>
+        <footer>
+
+        </footer>
     </main>
-    <footer>
-        Last built at: <time>{{ site.latestBuild }}</time>
-    </footer>
-    <script>
-        const toggle = document.getElementById("sidebar");
-        const nav = document.querySelector("nav");
-        sidebar.addEventListener("click", () => nav.classList.toggle("active"));
-    </script>
 </body>
 </html>
