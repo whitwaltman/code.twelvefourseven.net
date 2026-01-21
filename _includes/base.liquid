@@ -29,7 +29,10 @@
         header, footer {
             width: 100%;
             border: 1px black solid;
+            display: flex;
+            flex-direction: row;
             padding: 8px;
+            gap: 8px;
         }
 
         main {
@@ -41,12 +44,6 @@
             gap: 4px;
         }
 
-        nav {
-            flex: 0 0 300px;
-            overflow-y: scroll;
-            border: 1px black solid;
-        }
-
         .container {
             height: 100%;
             overflow-y: scroll;
@@ -54,17 +51,12 @@
             border: 1px black solid;
             padding: 8px;
         }
-
-        @media screen and (width <= 48rem) {
-            nav {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
-        <a href="/">{{ site.title }}</a>&nbsp;{{ page.url }}
+        <button id="sidebar">open panel</button>
+        <span><a href="/">{{ site.title }}</a>&nbsp;{{ page.url }}</span>
     </header>
     <main>
         {% include "nav.liquid" %}
@@ -75,5 +67,10 @@
     <footer>
         Last built at: <time>{{ site.latestBuild }}</time>
     </footer>
+    <script>
+        const toggle = document.getElementById("sidebar");
+        const nav = document.querySelector("nav");
+        sidebar.addEventListener("click", () => nav.classList.toggle("active"));
+    </script>
 </body>
 </html>

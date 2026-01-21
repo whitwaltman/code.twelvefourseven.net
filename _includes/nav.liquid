@@ -1,7 +1,31 @@
+<style>
+    nav {
+        display: none;
+        height: 100%;
+    }
+
+    nav.active {
+        display: block;
+        flex: 0 0 var(--nav);
+        overflow-y: scroll;
+        border: 1px black solid;
+    }
+
+    {% comment %} @media screen and (width <= 48rem) {
+        nav {
+            display: none;
+        }
+    } {% endcomment %}
+</style>
 <nav>
-    <ul>
-    {%- for item in collections.all -%}
-        <li><a href="{{ item.url }}">{{ item.url }}</a></li>
-    {%- endfor -%}
-    </ul>
+    <section>
+        <h3>On this page</h3>
+    </section>
+    <section>
+        <ul>
+        {%- for item in collections.all -%}
+            <li><a href="{{ item.url }}">{{ item.url }}</a></li>
+        {%- endfor -%}
+        </ul>
+    </section>
 </nav>
