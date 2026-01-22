@@ -1,7 +1,14 @@
+import yaml from "js-yaml";
+
 export default async function (config) {
-    config.addGlobalData("layout", "base.liquid");
+    config.addGlobalData("layout", "content.liquid");
     config.addPassthroughCopy("assets");
 
+    config.addDataExtension("yaml", (contents) => {
+        return yaml.load(contents);
+    });
+
+    // COLLECTIONS
     config.addCollection("notes", (collection) => {
         return collection.getFilteredByGlob("notes/*.md");
     });
@@ -14,6 +21,7 @@ export default async function (config) {
         return collection.getFilteredByGlob("snippets/*.md");
     });
 
+    // CUSTOM PORT
     config.setServerOptions({
         port: 2026,
     });    

@@ -7,3 +7,7 @@ const filterTagList = (tags) => {
 }
 
 // subtypes of "notes" = "decision-log", "checklist", etc.
+
+
+// handle tag distinction (language, framework/tool, topic, etc.)
+// let tags stay grouped together, but make them filterable by meta-criteria
