@@ -27,10 +27,6 @@ header, footer {
     flex: 0 0 auto;
 }
 
-header h1 {
-    display: inline;
-}
-
 main {
     flex: 1;
     padding: 1rem 0;
