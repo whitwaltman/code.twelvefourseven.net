@@ -42,7 +42,7 @@ nav {
     left: 0;
     border-right: 1px solid var(--border-soft);
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: none;
 }
 
 main {
@@ -76,11 +76,11 @@ header {
 }
 
 .nav__header {
-    position: sticky;
-    z-index: 99;
+    width: var(--nav);
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    z-index: 1;
 }
 
 footer,
@@ -102,14 +102,14 @@ footer,
 
 .container,
 .nav__container {
-    flex: 1 1 calc(100vh - 2 * var(--status-bar));
-    height: 100%;
+    /* flex: 1 1 calc(100vh - 2 * var(--status-bar)); */
+    height: calc(100vh - 2 * var(--status-bar));
     overflow-y: scroll;
     padding: 0 1rem;
 }
 
-.container {
-    position: relative;
+.nav__container {
+    margin-top: var(--status-bar);
 }
 
 footer {
