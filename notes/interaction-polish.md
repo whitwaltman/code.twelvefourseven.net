@@ -14,4 +14,4 @@ tags:
 - [ ] `prefers-reduced-motion` supported
 - [ ] Empty/loading/error states exist
 - [ ] No layout shift surprises
-- [ ] Esc closes modals/panels (if relevant)
+- [ ] <span class="keyb">Esc</span> closes modals/panels (if relevant)

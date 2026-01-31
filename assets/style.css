@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    line-height: 1.4;
 }
 
 header, footer {
@@ -30,4 +31,12 @@ header, footer {
 main {
     flex: 1;
     padding: 1rem 0;
+    max-width: 80ch;
+}
+
+.keyb {
+    padding: 0.1rem 0.3rem;
+    background: lightgray;
+    font-family: monospace;
+    border: 1px solid black;
 }
