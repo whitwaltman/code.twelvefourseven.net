@@ -102,7 +102,6 @@ footer,
 
 .container,
 .nav__container {
-    /* flex: 1 1 calc(100vh - 2 * var(--status-bar)); */
     height: calc(100vh - 2 * var(--status-bar));
     overflow-y: scroll;
     padding: 0 1rem;
@@ -110,6 +109,12 @@ footer,
 
 .nav__container {
     margin-top: var(--status-bar);
+    /* padding-left: 2rem; */
+}
+
+.nav__container ul, .nav__container li {
+    padding: 0;
+    list-style-type: none;
 }
 
 footer {
@@ -124,4 +129,23 @@ footer,
     flex-direction: row;
     align-items: center;
     padding: 0 1rem;
+}
+
+/* summary::marker {
+    display: none;
+    content: "";
+}
+
+summary::-webkit-details-marker {
+    display: none;
+} */
+
+a.folder {
+    display: block;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+a.file {
+    display: block;
+    border-bottom: 1px solid var(--border-soft);
 }
