@@ -10,30 +10,16 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav__header">
-            <a href="/">code.twelvefourseven.net</a>
-        </div>
-        <div class="nav__container">
-            <details open>
-                <summary><a class="folder" href="/notes">/notes</a></summary>
-                <ul>
-                {%- for item in collections.notes -%}
-                    <li><a class="file" href="{{ item.url }}">/{{ item.fileSlug }}</a></li>
-                {%- endfor -%}
-                </ul>
-            </details>
-                {% comment %} {%- for item in collections.all -%}
-                <li><a href="{{ item.url }}">{{ item.url }}</a></li>
-                {%- endfor -%} {% endcomment %}
-        </div>
-        <div class="nav__footer">
-            Nav footer
-        </div>
-    </nav>
+    <header>
+        <a href="/">code.twelvefourseven.net</a>
+        {% if title %}<h1>{{ title }}</h1>{% endif %}
+    </header>
     <main>
         {{ content }}
     </main>
+    <footer>
+        A <a href="https://twelvefourseven.net" target="_blank">whit waltman</a> production.
+    </footer>
 </body>
 
 </html>
