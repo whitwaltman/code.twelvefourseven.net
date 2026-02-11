@@ -1,10 +1,10 @@
 ---
 layout: base.liquid
+permalink: /posts
 ---
-This is the patterns page!
 
 <ul>
-    {% for post in collections.patterns %}
+    {% for post in collections.posts %}
         <li><a href="{{ post.url }}">{{ post.url }}</a></li>
     {% endfor %}
 </ul>

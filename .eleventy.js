@@ -9,16 +9,8 @@ export default async function (config) {
     });
 
     // COLLECTIONS
-    config.addCollection("notes", (collection) => {
-        return collection.getFilteredByGlob("notes/*.md");
-    });
-
-    config.addCollection("patterns", (collection) => {
-        return collection.getFilteredByGlob("patterns/*.md");
-    });
-
-    config.addCollection("snippets", (collection) => {
-        return collection.getFilteredByGlob("snippets/*.md");
+    config.addCollection("posts", (collection) => {
+        return collection.getFilteredByGlob("src/**/*.md");
     });
 
     // CUSTOM PORT

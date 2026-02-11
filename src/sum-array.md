@@ -1,5 +1,6 @@
 ---
 title: Sum an array of integers
+type: note
 ---
 
 > Given an array of unknown length containing integers, write a function that returns the sum of the array's contents.

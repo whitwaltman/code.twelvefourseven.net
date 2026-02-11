@@ -1,5 +1,6 @@
 ---
 title: A memoized climbing stairs solution
+type: snippet
 tags:
 - ruby
 - dynamic-programming

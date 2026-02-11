@@ -1,5 +1,6 @@
 ---
 title: Accessible disclosure / toggle panel
+type: pattern
 tags:
 - a11y
 - ui
