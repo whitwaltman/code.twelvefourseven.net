@@ -1,12 +1,12 @@
 ---
-layout: base.liquid
+layout: base.njk
 ---
 <article>
     <p>This is a documentation page</p>
     <header>
         {{ title }}
     </header>
-    {{ content }}
+    {{ content | safe}}
     <footer>
         <time>{{ page.date }}</time>
     </footer>

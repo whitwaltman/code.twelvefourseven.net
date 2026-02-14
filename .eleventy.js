@@ -1,7 +1,7 @@
 import yaml from "js-yaml";
 
 export default async function (config) {
-    config.addGlobalData("layout", "base.liquid");
+    config.addGlobalData("layout", "base.njk");
     config.addPassthroughCopy("assets");
 
     config.addDataExtension("yaml", (contents) => {

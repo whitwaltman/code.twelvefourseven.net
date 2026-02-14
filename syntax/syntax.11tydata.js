@@ -1,3 +1,3 @@
 export default {
-    layout: "doc.liquid",
+    layout: "doc.njk",
 }

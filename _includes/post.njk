@@ -1,11 +1,11 @@
 ---
-layout: base.liquid
+layout: base.njk
 ---
 <article>
     <header>
         {{ title }}
     </header>
-    {{ content }}
+    {{ content | safe }}
     <footer>
         <time>{{ page.date }}</time>
     </footer>
