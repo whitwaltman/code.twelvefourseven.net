@@ -8,7 +8,9 @@
     "build:format": "npx eleventy && node utils/format.js",
     "debug": "DEBUG=* npx eleventy",
     "format": "node utils/format.js",
-    "start": "npx eleventy --serve",
+    "open": "open -a \"Firefox Developer Edition\" http://localhost:2026",
+    "start": "npx eleventy --serve --incremental",
+    "serve": "npm run open && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
