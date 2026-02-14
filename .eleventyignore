@@ -1,4 +1,8 @@
 _site/
 _utils/
+.cache
 node_modules/
+README.md
+
 todo.md
+scrap.md
