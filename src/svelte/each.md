@@ -2,7 +2,7 @@
 title: Each blocks in Svelte
 tags:
 - iteration
-- svelte
+- syntax
 ---
 
 Svelte uses `{#each collection as item}...{/each}` to iterate over arrays, array-like objects, and iterables.

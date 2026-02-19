@@ -63,7 +63,7 @@ article {
     border: 1px solid black;
 }
 
-footer, footer * {
+body > footer, body > footer * {
     background: rgb(0, 0, 0);
     color: rgba(255, 255, 255, 0.7);
 }
