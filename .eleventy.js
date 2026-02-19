@@ -29,7 +29,7 @@ export default async function (config) {
     });    
 
     return {
-        // markdownTemplateEngine: "njk",
+        markdownTemplateEngine: "njk",
         dir: {
             input: ".",
             includes: "_includes",

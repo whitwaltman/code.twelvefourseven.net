@@ -13,9 +13,6 @@
 <body>
     <header>
         <a href="/">code.twelvefourseven.net</a>
-        {% if category %}
-        / <a href="/{{ category }}">{{ category }}</a>
-        {% endif %}
     </header>
     <main>
         {{ content | safe}}
