@@ -1,12 +1,13 @@
-This is a work-in-progress/experiment. It's extremely rough around the edges and is mostly developed for my benefit.
-However, I've decided to make it public in case it has value to someone else. The content here is somewhat volatile.
-I can't promise link rot won't happen or that things won't be removed. If you want to preserve a copy of something you read here,
-I suggest saving the relevant page(s) as "web page, HTML only" or screenshotting the portions you want to keep.
+<p>This is a work-in-progress/experiment. It's extremely rough around the edges and is mostly developed for my benefit.
+However, I've decided to make it public in case it has value to someone else.</p>
+
+<p>The content here is somewhat volatile. I can't promise link rot won't happen or that things won't be removed. If you want to preserve a copy of something you read here,
+I suggest saving the relevant page(s) as "web page, HTML only" or screenshotting the portions you want to keep.</p>
 
 <ul>
 {% for post in collections.all %}
     {% if post.url !== "/" %}
-        <li><a href="{{ post.url }}">{{ post.data.title | default(post.url) }}</a></li>
+        <li><a href="{{ post.url }}">{{ post.title | default(post.url) }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>

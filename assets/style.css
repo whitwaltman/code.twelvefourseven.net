@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: normal;
 }
 
+p + p {
+    margin-top: 1rem;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -37,7 +41,19 @@ header, footer {
 main {
     flex: 1;
     padding: 1rem 2.5vmin;
+}
+
+article {
     max-width: 80ch;
+}
+
+.demo-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.demo-container .code {
+    flex: 0 0 300px;
 }
 
 .keyb {
