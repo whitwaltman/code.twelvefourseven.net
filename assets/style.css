@@ -17,12 +17,16 @@ html, body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: normal;
 }
 
 p + p {
     margin-top: 1rem;
+}
+
+a, a:visited {
+    color: blue;
 }
 
 body {
@@ -33,7 +37,7 @@ body {
     line-height: 1.4;
 }
 
-header, footer {
+body > header, body > footer {
     flex: 0 0 auto;
     padding: 1.5vmin 2.5vmin;
 }
@@ -63,7 +67,7 @@ article {
     border: 1px solid black;
 }
 
-body > footer, body > footer * {
+body > footer {
     background: rgb(0, 0, 0);
     color: rgba(255, 255, 255, 0.7);
 }

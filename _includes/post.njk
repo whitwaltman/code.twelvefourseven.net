@@ -2,11 +2,6 @@
 layout: base.njk
 ---
 <article>
-    <header>
-        {{ title }}
-    </header>
+    <h2>{{ title }}</h2>
     {{ content | safe }}
-    <footer>
-        <time>{{ page.date }}</time>
-    </footer>
 </article>
