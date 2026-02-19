@@ -14,11 +14,10 @@
     <header>
         <a href="/">code.twelvefourseven.net</a>
         {% if category %}
-        / {{ category }}
+        / <a href="/{{ category }}">{{ category }}</a>
         {% endif %}
     </header>
     <main>
-        {{ page.url.replaceAll("/", " / ") }}
         {{ content | safe}}
     </main>
     <footer>
