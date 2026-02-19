@@ -5,13 +5,15 @@
  * Ported for PrismJS by Simon Jespersen [https://github.com/simjes]
  */
 
+:root {
+	--bg: rgb(0, 0, 0, 0.15);
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
-	background: #27212e;
-	color: #ffffff;
-	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; /* this is the default */
+	font-family: monospace; /* this is the default */
 	/* The following properties are standard, please leave them as they are */
-	font-size: 1em;
+	font-size: 0.9rem;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -32,7 +34,7 @@ code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection,
 pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection {
-	background: #eb64b927;
+	background: yellow;
 	color: inherit;
 }
 
@@ -40,13 +42,15 @@ code[class*="language-"]::selection,
 code[class*="language-"] ::selection,
 pre[class*="language-"]::selection,
 pre[class*="language-"] ::selection {
-	background: #eb64b927;
+	background: yellow;
 	color: inherit;
 }
 
 /* Properties specific to code blocks */
 pre[class*="language-"] {
-	padding: 1em; /* this is standard */
+	border: 1px solid black;
+	background: var(--bg);
+	padding: 0.5em 1em; /* this is standard */
 	margin: 0.5em 0; /* this is the default */
 	overflow: auto; /* this is standard */
 	border-radius: 0.5em;
@@ -62,17 +66,17 @@ pre[class*="language-"] {
 .token.comment,
 .token.prolog,
 .token.cdata {
-	color: #91889b;
+	color: #2b2b2b;
 }
 
 .token.punctuation {
-	color: #7b6995;
+	color: #434343;
 }
 
 .token.builtin,
 .token.constant,
 .token.boolean {
-	color: #ffe261;
+	color: #5a5a5a;
 }
 
 .token.number {
@@ -83,7 +87,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.property,
 .token.keyword {
-	color: #40b4c4;
+	color: #058899;
 }
 
 .token.doctype,
@@ -92,7 +96,7 @@ pre[class*="language-"] {
 .token.tag,
 .token.class-name,
 .token.symbol {
-	color: #74dfc4;
+	color: #12b28a;
 }
 
 .token.attr-name,
@@ -106,13 +110,13 @@ pre[class*="language-"] {
 .token.regex,
 .token.char,
 .token.string {
-	color: #b4dce7;
+	color: #00a8d7;
 }
 
 .token.entity,
 .token.url,
 .token.variable {
-	color: #ffffff;
+	color: #a61010;
 }
 
 /* The following rules are pretty similar across themes, but feel free to adjust them */

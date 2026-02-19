@@ -4,7 +4,7 @@
 
 - [x] handle responsive layout for mobile view
 - [ ] add h1-h6 styles
-- [ ] add footer content
+- [x] add footer content
 
 ## content
 

@@ -1,5 +1,7 @@
 ---
 title: Computed data in data directory files
+tags:
+- recipe
 ---
 
 I use a lot of data directory files in my Eleventy projects. I prefer the `dirName.11tydata.js` convention, especially since I tend to use JS to transform computed data.
