@@ -1,3 +1,9 @@
+---
+title: Supplied data in Eleventy
+tags:
+- data-cascade
+---
+
 All templates can access:
 - `pkg`
 - `pagination`

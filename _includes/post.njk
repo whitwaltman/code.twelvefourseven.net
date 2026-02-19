@@ -2,8 +2,16 @@
 layout: base.njk
 ---
 <article>
-    <h2>{{ title }}</h2>
+    <h3>{{ title }}</h3>
     {{ content | safe }}
+    {% if tags %}
+    <h5>tags</h5>
+    <ul>
+        {% for tag in tags %}
+        <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 </article>
 
 {# do something with tags and references #}
