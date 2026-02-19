@@ -10,7 +10,9 @@ export default {
         title: (data) => {
             if (data.title) return data.title;
             const slug = data.page.fileSlug.split("-").join(" ");
-            return slug[0].toUpperCase() + slug.slice(1);
+            const cleaned = slug[0].toUpperCase() + slug.slice(1);
+            if (data.category) return `${data.category[0].toUpperCase() + data.category.slice(1)} ${cleaned}`;
+            return cleaned;
         },
         category: (data) => {
             const parts = data.page.filePathStem.split("/");
