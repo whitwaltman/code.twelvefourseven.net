@@ -69,22 +69,6 @@ article {
     max-width: 80ch;
 }
 
-.demo-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.demo-container .code {
-    flex: 0 0 300px;
-}
-
-.keyb {
-    padding: 0.1rem 0.3rem;
-    background: lightgray;
-    font-family: monospace;
-    border: 1px solid black;
-}
-
 body > footer {
     background: rgb(0, 0, 0);
     color: rgba(255, 255, 255, 0.7);
