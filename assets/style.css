@@ -9,6 +9,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     font-size: 1rem;
@@ -17,7 +23,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 body {
     margin: 0;
-    padding: 0.75rem;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -26,11 +31,12 @@ body {
 
 header, footer {
     flex: 0 0 auto;
+    padding: 1.5vmin 2.5vmin;
 }
 
 main {
     flex: 1;
-    padding: 1rem 0;
+    padding: 1rem 2.5vmin;
     max-width: 80ch;
 }
 
@@ -39,4 +45,9 @@ main {
     background: lightgray;
     font-family: monospace;
     border: 1px solid black;
+}
+
+footer, footer * {
+    background: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.7);
 }
