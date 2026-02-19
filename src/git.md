@@ -1,6 +1,3 @@
----
-title: Git commands
----
 Note that I'm using my personal git aliases here for concision.
 
 | command | purpose | details |
