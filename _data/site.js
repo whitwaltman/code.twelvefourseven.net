@@ -1,6 +1,6 @@
 export default {
     title: "code.twelvefourseven.net",
     url: "https://code.twelvefourseven.net",
-    description: "design engineering notes",
+    description: "syntax reference and cheat sheets",
     latestBuild: new Date(),
 }
