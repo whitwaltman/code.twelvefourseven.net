@@ -11,7 +11,7 @@ export default {
             if (data.title) return data.title;
             const slug = data.page.fileSlug.split("-").join(" ");
             const cleaned = slug[0].toUpperCase() + slug.slice(1);
-            if (data.category) return `${data.category[0].toUpperCase() + data.category.slice(1)} ${cleaned}`;
+            if (data.category) return `${data.category[0].toUpperCase() + data.category.slice(1)}: ${cleaned}`;
             return cleaned;
         },
         category: (data) => {
