@@ -1,4 +1,4 @@
 +++
-title = "List of snippets"
+title = "Snippets"
 sort_by = "date"
 +++

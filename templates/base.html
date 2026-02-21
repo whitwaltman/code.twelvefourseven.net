@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+    <!-- <link rel="stylesheet" href="{{ get_url(path='style.css') }}"> -->
 </head>
+
 <body>
     <header>
         <h1><a href="{{ config.base_url }}">{{ config.title }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ get_url(path='@/recall/_index.md') }}">recall</a></li>
+                <li><a href="{{ get_url(path='@/snippets/_index.md') }}">snippets</a></li>
+            </ul>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="search for something">
+
+                <div class="search-results">
+                    <div class="search-results__items"></div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -18,5 +33,9 @@
     <footer>
         <p>© {{ now() | date(format="%Y") }} {{ config.extra.author }}</p>
     </footer>
+
+    <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') }}"></script>
+    <script type="text/javascript" src="{{ get_url(path='search.js') }}"></script>
 </body>
+
 </html>

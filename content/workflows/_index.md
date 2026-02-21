@@ -1,4 +1,4 @@
 +++
-title = "List of workflows"
+title = "Workflows"
 sort_by = "title"
 +++
