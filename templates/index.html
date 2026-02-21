@@ -2,10 +2,29 @@
 
 {% block content %}
   {{ section.content | safe }}
-  
-  <ul>
-    {% for page in section.pages %}
-      <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
-    {% endfor %}
-  </ul>
+
+  {# 1. List the pages that are directly in the root #}
+  {% if section.pages %}
+    <h2>Loose Notes</h2>
+    <ul>
+      {% for page in section.pages %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {# 2. List the Sub-folders (Sections) #}
+  {% if section.subsections %}
+    <h2>Categories</h2>
+    <ul>
+      {% for path in section.subsections %}
+        {# We use the get_section function to get the data for that folder #}
+        {% set subsection = get_section(path=path) %}
+        <li>
+          <a href="{{ subsection.permalink }}"><strong>{{ subsection.title }}</strong></a> 
+          ({{ subsection.pages | length }} notes)
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endblock content %}
