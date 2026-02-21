@@ -1,6 +1,6 @@
 +++
 title = "Unwrap an optional"
-template = "base.html"
+date = 2026-02-20
 +++
 
 There are a couple different ways to unwrap an optional in Swift. This is one of them.
