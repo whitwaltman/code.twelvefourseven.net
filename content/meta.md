@@ -16,3 +16,6 @@ This site contains sort of a "tiered" knowledge system. The lower, base tier can
 
 The upper level tier is made up of insight notes. These are conceptual breakthroughs, mental models, analogies, and design principles. These should compound long-term value.
 
+* * * 
+
+EXTERNALIZING RETRIEVAL
