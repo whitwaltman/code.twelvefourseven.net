@@ -1,6 +1,7 @@
 +++
 title = "jrnl"
 date = 2026-02-21
+weight = 10
 +++
 
 - jrnl

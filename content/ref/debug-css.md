@@ -1,6 +1,7 @@
 +++
 title = "Debugging CSS"
 date = 2026-02-21
+weight = 1
 +++
 
 ```js

@@ -1,5 +1,5 @@
 +++
 title = "Emacs"
 date = 2026-02-22
-weight = 0
+weight = 10
 +++

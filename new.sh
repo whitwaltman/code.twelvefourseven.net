@@ -7,8 +7,9 @@ if [ -z "$1" ]; then
 fi
 
 # ensure input is lowercase for filename
-# (:l) = zsh modifier for lowercase
-SLUG="${1:l}"
+# :l = zsh modifier for lowercase
+# :gs/ /-/ = global search for " ", replace with "-"
+SLUG="${1:l:gs/ /-}"
 
 # capitalize first letter for metadata title
 # (:C) = zsh modifier for capitalizing first letter
@@ -22,7 +23,7 @@ cat <<EOF > "$FILENAME"
 +++
 title = "$TITLE"
 date = $DATE
-weight = 0
+weight = 10
 +++
 EOF
 

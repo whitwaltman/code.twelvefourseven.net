@@ -2,6 +2,7 @@
 title = "What this site is for"
 updated = 2026-02-21
 date = 2026-02-20
+weight = 0
 +++
 
 I've experimented with storing "snippets" and code notes for a while now, but none of my solutions have ever really stuck. I think part of the problem was that I was trying to do too many things and that I wasn't clear about the problem I was trying to solve.

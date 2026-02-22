@@ -16,11 +16,8 @@
         {% endif %}
     </header>
 
-    <hr>
-
     <ul class="notebook-list">
-        {# Sorts pages by date descending. You can also use "title" or "weight" #}
-        {% for page in section.pages | sort(attribute="date") | reverse %}
+        {% for page in section.pages %}
             <li>
                 <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
                 <a href="{{ page.permalink }}">{{ page.title }}</a>
