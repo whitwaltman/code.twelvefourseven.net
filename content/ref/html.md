@@ -1,7 +1,7 @@
 +++
 title = "HTML"
 date = 2026-02-22
-weight = 10
+weight = 2
 +++
 
 ```html
