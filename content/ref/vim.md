@@ -27,5 +27,13 @@ zO = open all folds
 
 * * *
 
+## buffers
+
+https://medium.com/usevim/vim-101-buffers-cf22c0cc37df
+
+* * *
+
 p, P, substitution command(?)
 /, n, N
+
+* * *
