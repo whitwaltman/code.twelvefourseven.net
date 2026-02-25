@@ -6,22 +6,30 @@ weight = 3
 
 **Note:** I use `C-a` as my prefix instead of C-b
 
-1. Re-attach to session from command line
+See more [here](https://tmuxcheatsheet.com/)
+
+
+## Sessions
+
+1. Start a new session
 
 ```sh
+tmux
+tmux new
+tmux new -s <session_name>
+```
+
+2. Re-attach to existing session from command line
+
+```sh
+tmux a # reattach to last session
 tmux a -t <session_name>
 ```
 
-2. Detach from session
+3. Rename session
 
-```
-C-a d
-```
-
-3. Rename window inside session
-
-```
-C-a ,
+```sh
+tmux rename -t <old_name> <new>name>
 ```
 
 4. Rename session inside session
@@ -30,14 +38,49 @@ C-a ,
 C-a $
 ```
 
-5. Kill session
+4. Detach from session
+
+```
+C-a d
+```
+
+
+6. Kill session
 
 ```sh
 tmux kill-ses -t <session_name>
 ```
 
-6. Create new window inside session
+7. Next / previous session
+
+```
+C-a n
+C-a p
+```
+
+## Windows
+
+1. Create new window inside session
 
 ```
 C-a c
+```
+
+2. Rename window inside session
+
+```
+C-a ,
+```
+
+3. Close current window
+
+```
+C-a &
+```
+
+4. Last/next window
+
+```
+C-a l
+C-a n
 ```
