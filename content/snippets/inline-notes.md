@@ -13,7 +13,10 @@ It also adds fallback styling for browsers with JS disabled.
 ```html
 <main>
 	<p>Here's some text content
-		<span class="note-container" role="button" tabindex="0" aria-expanded="false" aria-label="Toggle note">
+  	<span class="note-container"
+  				role="button" tabindex="0"
+  				aria-expanded="false"
+  				aria-label="Toggle note">
 			<span class="note">with a secret!</span>
 		</span>.
 	</p>
