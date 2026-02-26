@@ -1,7 +1,7 @@
 ---
 title: Vim
 created: 2026-02-22
-updated: 2026-02-25
+starred: true
 tags:
 - quick-ref
 ---

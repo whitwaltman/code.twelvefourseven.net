@@ -10,3 +10,5 @@ title: HTML
 Use `<mark>` for highlighting
 
 Only one `<h1>` per page
+
+`overscroll-behavior-y: none` won't work on `<body>` alone; need to also select `<html>`

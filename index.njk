@@ -28,7 +28,7 @@ layout: layouts/base.njk
 <p>
     These cards are written primarily for my benefit (see above), so context is often omitted for brevity.
     Most of the information you find here can be extracted and assembled from various docs and tutorials that exist on the web.
-    I typically won't add a card until I've had to search for the answer to the same problem 3+ times.
+    <b>I typically won't add a card until I've had to search for the answer to the same problem 3+ times.</b>
     At that point, it clearly represents a gap in my retrieval process.
 </p>
 
@@ -39,9 +39,15 @@ layout: layouts/base.njk
     so you can always go back and view the commit history for a specific file if you're looking for something that's no longer there.
 </p>
 
-<h2>cards</h2>
+<hr>
+
+<p>
+    These are some of my most-used cards.
+    You can also see a list of <a href="/cards">every card</a> or browse by <a href="/tags">tag</a>.
+</p>
+
 <ul>
-{% for card in collections.cards %}
+{% for card in collections.starred %}
     <li><a href="{{ card.url }}">{{ card.data.title }}</a></li>
 {% endfor %}
 </ul>

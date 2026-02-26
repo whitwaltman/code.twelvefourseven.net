@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+<h2>All tags</h2>
+
+<ul>
+    {% for tag in collections.tagList %}
+    {% set cards = collections[tag] %}
+    <li>
+        <a href="/tagged/{{ tag }}">{{ tag }}</a>
+        ({{ cards | length }})
+    </li>
+    {% endfor %}
+</ul>

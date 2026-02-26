@@ -1,5 +1,6 @@
 ---
 title: tmux
+starred: true
 tags:
 - quick-ref
 ---

@@ -26,6 +26,21 @@ export default async function (config) {
 		return all.filter((card) => !card.data.draft);
 	});
 
+	// Create starred collection
+	config.addCollection("starred", (collection) => {
+		const all = collection.getFilteredByGlob("cards/**/*.md");
+		return all.filter((card) => card.data.starred);
+	})
+
+	// Add list of tags
+	config.addCollection('tagList', function (collection) {
+		let tagSet = new Set();
+		collection.getAll().forEach((item) => {
+			;(item.data.tags || []).forEach((tag) => tagSet.add(tag));
+		});
+		return [...tagSet];
+	})
+
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);
 

@@ -1,5 +1,6 @@
 ---
 title: Unwrap an optional
+starred: true
 tags:
 - swift
 - how-to

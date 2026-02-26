@@ -1,5 +1,6 @@
 ---
 title: Neovim
+starred: true
 tags:
 - quickref
 ---

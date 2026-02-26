@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: collections.tagList
+    size: 1
+    alias: tag
+permalink: /tagged/{{ tag }}/
+---
+<h2>Cards tagged "{{ tag }}"</h2>
+
+{% set cardList = collections[tag] %}
+<ul>
+{% for card in cardList | reverse %}
+    <li>
+        <a href="{{ card.url }}">
+            {{ card.data.title or card.fileSlug }}</a>
+            {% if card.data.updated %}
+                Updated on {{ card.data.updated | fmtDate }}
+            {% endif %}
+        </a>
+    </li>
+{% endfor %}
+</li>

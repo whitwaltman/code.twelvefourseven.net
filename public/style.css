@@ -38,6 +38,12 @@ header nav {
     justify-content: space-between;
 }
 
+header nav div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 main {
     flex: 1 1 auto;
 }
@@ -46,6 +52,18 @@ pre, code {
     -moz-tab-size: 2;
     tab-size: 2;
     -o-tab-size: 2;
+}
+
+hr {
+  margin: 12px 0;
+  border: 0;
+  text-align: center;
+  
+  &:before {
+    content: "\2022 \2022 \2022";
+    font-size: 24px;
+    color: black;
+  }
 }
 
 .pagefind-ui__results-area * {

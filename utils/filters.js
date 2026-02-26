@@ -21,7 +21,7 @@ const filters = {
 			idx += 1;
 		}
 		return result.slice(0, -1) + "...";
-	}
+	},
 };
 
 export default filters;
