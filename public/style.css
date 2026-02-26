@@ -2,29 +2,44 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html, body {
     margin: 0;
+    overscroll-behavior-y: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     width: 100vw;
+    background: slategray;
 }
 
 header, main, footer {
-    margin-inline: 1rem;
+    padding-inline: 1.25rem;
+    max-width: 84ch;
+    background: white;
+}
+
+header, footer {
+    padding-block: 1rem;
 }
 
 header {
-    margin-block: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 main {
     flex: 1 1 auto;
-    max-width: 84ch;
 }
 
 pre, code {
@@ -58,14 +73,6 @@ body.js-enabled {
 .note-container::after {
 	content: "]";
 }
-
-/* .note-container[aria-expanded="true"]::before,
-.note-container[aria-expanded="true"]::after {
-	content: "...";
-	user-select: none;
-	opacity: 0.6;
-	margin: 0 2px;
-} */
 
 .js-enabled .note {
 	display: none;

@@ -31,6 +31,7 @@
     <header>
         <nav>
             <a href="/">{{ site.title }}</a>
+            <a href="/cards">cards</a>
         </nav>
         <div id="search" class="search"></div>
         <script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
@@ -39,7 +40,7 @@
         {{ content | safe }}
     </main>
     <footer>
-        <p>Latest build: {{ site.latestBuild }}</p>
+        <span>Latest build: {{ site.latestBuild }}</span>
     </footer>
     <script>
         document.body.classList.add("js-enabled");

@@ -1,8 +1,11 @@
-+++
-title = "Debugging CSS"
-date = 2026-02-21
-weight = 1
-+++
+---
+title: Debugging CSS
+date: 2026-02-21
+tags:
+- css
+- debugging
+- quick-ref
+---
 
 ```js
 const root = document.documentElement;
