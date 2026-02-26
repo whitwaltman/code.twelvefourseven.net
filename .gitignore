@@ -1,5 +1,5 @@
 # output
-/public/
+_site/
 
-# local
-/.sass-cache/
+# node
+node_modules/
