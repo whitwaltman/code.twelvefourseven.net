@@ -1,3 +1,0 @@
-Cards are designed to be "evergreen", in the sense that they should rarely become obsolete. They make up the bulk of this website, for now at least. They're also written primarily for my benefit, so context is often omitted for brevity.
-
-I try to regularly refactor my cards (when necessary) in order to keep them useful and usable. Unfortunately, that means that links will sometimes break and information may disappear or be moved elsewhere. I do, however, keep the [source]({{ site.repo }}) for this website public, so you can always go back and view the commit history for a specific file if you're looking for something that's no longer there.

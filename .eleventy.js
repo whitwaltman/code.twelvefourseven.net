@@ -19,6 +19,12 @@ export default async function (config) {
 		config.addFilter(filter, filters[filter]);
 	});
 
+	// Create cards collection
+	config.addCollection("cards", (collection) => {
+		const all = collection.getFilteredByGlob("cards/**/*.md");
+		return all.filter((card) => !card.data.draft);
+	});
+
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);
 
