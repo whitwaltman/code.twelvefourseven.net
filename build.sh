@@ -16,4 +16,4 @@ if [ -f .gitmodules ]; then
 fi
 
 echo "Starting Zola build..."
-./zola build --config zola.toml
+./zola build
