@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 # Exit on error, undefined variables, and pipe failures
-set -euo pipefail
+set -e
+set -u
+set -o pipefail
 
 ZOLA_VERSION=0.22.1
 
