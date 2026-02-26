@@ -36,3 +36,57 @@ pre, code {
 .pagefind-ui__results-area * {
     margin: 0;
 }
+
+/* || Note styling */
+body.js-enabled {
+	counter-reset: fn;
+}
+
+.js-enabled .note-container {
+	cursor: pointer;
+	counter-increment: fn;
+}
+
+.js-enabled .note-container[aria-expanded="false"]::before {
+	content: "[" counter(fn);
+}
+
+.note-container::before {
+	content: "[";
+}
+
+.note-container::after {
+	content: "]";
+}
+
+/* .note-container[aria-expanded="true"]::before,
+.note-container[aria-expanded="true"]::after {
+	content: "...";
+	user-select: none;
+	opacity: 0.6;
+	margin: 0 2px;
+} */
+
+.js-enabled .note {
+	display: none;
+}
+
+.note-container[aria-expanded="true"] .note {
+	display: inline;
+	font-style: italic;
+}
+
+.note-container {
+	display: inline;
+	color: slategray;
+}
+
+.note-container:focus {
+	outline: none;
+}
+
+.note-container:focus-visible {
+	outline: 2px solid blue;
+	outline-offset: 2px;
+	border-radius: 2px;
+}
