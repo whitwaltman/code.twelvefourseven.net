@@ -78,7 +78,13 @@ C-a ,
 C-a &
 ```
 
-4. Last/next window
+4. Preview windows
+
+```
+C-a w
+```
+
+5. Last/next window
 
 ```
 C-a l
