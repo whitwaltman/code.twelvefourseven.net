@@ -3,7 +3,11 @@
 {% block content %}
   {{ section.content | safe }}
 
-  {# 1. List the Sub-folders (Sections) #}
+  {# 1. List the most viewed notes (by me) #}
+  <h2>Popular Notes</h2>
+  
+
+  {# 2. List the Sub-folders (Sections) #}
   {% if section.subsections %}
     <h2>Categories</h2>
     <ul>
@@ -18,7 +22,7 @@
     </ul>
   {% endif %}
 
-  {# 2. List the pages that are directly in the root #}
+  {# 3. List the pages that are directly in the root #}
   {% if section.pages %}
     <h2>Loose Notes</h2>
     <ul>
