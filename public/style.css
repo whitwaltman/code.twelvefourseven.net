@@ -39,7 +39,7 @@ pre, code {
     overflow-wrap: break-word;
 }
 
-// for unsupported themes or languages
+/* for unsupported themes or languages */
 .giallo-ln {
     display: inline-block;
     user-select: none;
