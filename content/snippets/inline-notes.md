@@ -10,18 +10,19 @@ My implementation adds [ARIA](https://developer.mozilla.org/en-US/docs/Web/Acces
 It also adds fallback styling for browsers with JS disabled.
 
 
+## HTML
+
 ```html
 <main>
 	<p>Here's some text content
-  	<span class="note-container"
-  				role="button" tabindex="0"
-  				aria-expanded="false"
-  				aria-label="Toggle note">
+  	<span class="note-container" role="button" tabindex="0" aria-expanded="false" aria-label="Toggle note">
 			<span class="note">with a secret!</span>
 		</span>.
 	</p>
 </main>
 ```
+
+## JS
 
 ```js
 document.body.classList.add("js-enabled");
@@ -43,6 +44,8 @@ containers.forEach((el) => {
 	});
 });
 ```
+
+## CSS
 
 ```css
 body.js-enabled {
