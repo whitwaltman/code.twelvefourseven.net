@@ -12,7 +12,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "build:clean": "rm -rf _site && npx eleventy",
+    "build:clean": "rm -rf .site && npx eleventy",
     "build:all": "npm run build && npm run format",
     "debug": "DEBUG=* npx eleventy",
     "format": "node utils/format.js",
@@ -20,14 +20,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "elasticlunr": "^0.9.5"
+    "@11ty/eleventy": "^3.1.2"
   },
   "overrides": {
     "minimatch": "^10.2.1"
   },
   "devDependencies": {
     "linkedom": "^0.18.12",
+    "pagefind": "^1.4.0",
     "prettier": "^3.7.4"
   }
 }
