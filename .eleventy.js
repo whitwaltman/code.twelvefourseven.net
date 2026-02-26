@@ -1,5 +1,6 @@
 import filters from "./utils/filters.js";
 import transformExternalLinks from "./utils/links.js";
+import searchFilter from "./utils/searchFilter.js";
 
 export default async function (config) {
 	// Add global data variable to signal build modality
@@ -11,13 +12,13 @@ export default async function (config) {
 		"./public": "/",
 	});
 
-	// Add global default layout
-	config.addGlobalData("layout", "layouts/base.njk");
-
 	// Register filter functions
 	Object.keys(filters).forEach((filter) => {
 		config.addFilter(filter, filters[filter]);
 	});
+
+	// Add search filter
+	config.addFilter("search", searchFilter);
 
 	// Create cards collection
 	config.addCollection("cards", (collection) => {

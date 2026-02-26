@@ -1,6 +1,7 @@
 ---
 created: 2026-02-25
 updated: 2026-02-25
+layout: layouts/base.njk
 ---
 
 Some facts about me:

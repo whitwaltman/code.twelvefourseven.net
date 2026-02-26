@@ -20,13 +20,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "elasticlunr": "^0.9.5"
   },
   "overrides": {
     "minimatch": "^10.2.1"
   },
   "devDependencies": {
-    "prettier": "^3.7.4",
-    "linkedom": "^0.18.12"
+    "linkedom": "^0.18.12",
+    "prettier": "^3.7.4"
   }
 }

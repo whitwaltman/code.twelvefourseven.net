@@ -2,13 +2,9 @@
 const isProduction = process.env.NODE_ENV === "production";
 
 const data = {
-    layout: "layouts/card.njk",
+    layout: "layouts/base.njk",
     date: isProduction ? "git Last Modified" : "Last Modified",
     eleventyComputed: {
-        permalink: (data) => {
-            if (isProduction && data.draft) return false;
-            return `/${data.page.fileSlug}/`;
-        },
         title: (data) => {
             if (data.title) return data.title;
             const slug = data.page.fileSlug.split("-").join(" ");

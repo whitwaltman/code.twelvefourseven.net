@@ -29,6 +29,14 @@
 <body>
     <header>
         <a href="/">{{ site.title }}</a>
+        <div class="field">
+            <label for="searchField">Search</label>
+            <input type="search" placeholder="Search..." id="searchField" />
+        </div>
+        <ol id="searchResults"></ol>
+        <div id="noResultsFound" style="display: none">
+            <p>No results found.</p>
+        </div>
     </header>
     <main>
         {{ content | safe }}
@@ -36,5 +44,7 @@
     <footer>
         <p>Latest build: {{ site.latestBuild }}</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+    <script type="text/javascript" src="/search.js"></script>
 </body>
 </html>
