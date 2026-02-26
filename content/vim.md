@@ -1,6 +1,7 @@
 +++
 title = "Vim"
 date = 2026-02-22
+updated = 2026-02-25
 weight = 4
 +++
 
