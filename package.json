@@ -13,11 +13,11 @@
   "scripts": {
     "build": "npx eleventy",
     "build:clean": "rm -rf .site && npx eleventy",
-    "build:all": "npm run build && npm run format",
+    "build:all": "npm run build:clean && npm run format",
+    "postbuild": "npx pagefind --site .site --glob \"**/*.html\"",
     "debug": "DEBUG=* npx eleventy",
     "format": "node utils/format.js",
-    "start": "npx eleventy --serve --incremental",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx eleventy --serve --incremental"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"

@@ -29,11 +29,6 @@ export default async function (config) {
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);
 
-	// Run PageFind CLI after the site has been built
-	config.on('eleventy.after', async ({ dir }) => {
-		await execSync(`npx pagefind --site ${dir.output} --glob \"**/*.html\"`, { encoding: 'utf-8' });
-	});
-
 	return {
         // control which files 11ty will process
         templateFormats: ["md", "njk", "html"],
