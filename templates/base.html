@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
-    <link rel="icon" type="image/svg+xml" href="{{ get_url(path='favicon.svg') }}">
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="{{ get_url(path='style.css') }}"> -->
+     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- <link rel="icon" type="image/svg+xml" href="{{ get_url(path='favicon.svg') }}"> -->
 </head>
 
 <body>
     <header>
-        <h1><a href="{{ config.base_url }}">{{ config.title }}</a></h1>
+        <h1><a href="/">{{ config.title }}</a></h1>
         <nav>
             <div class="search-container">
                 <input id="search" type="search" placeholder="search for something">
@@ -31,8 +33,8 @@
         <p>© {{ now() | date(format="%Y") }} {{ config.extra.author }}</p>
     </footer>
 
-    <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') }}"></script>
-    <script type="text/javascript" src="{{ get_url(path='search.js') }}"></script>
+    <script type="text/javascript" src="/elasticlunr.min.js"></script>
+    <script type="text/javascript" src="/search.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 # The URL the site will be built for
-# base_url = "https://code.twelvefourseven.net"
-base_url = "https://cea02a79.code-twelvefourseven-net.pages.dev/"
+base_url = "https://code.twelvefourseven.net"
+# base_url = "https://cea02a79.code-twelvefourseven-net.pages.dev/"
 
 # The site title and description; used in feeds by default.
 title = "code.twelvefourseven.net"
