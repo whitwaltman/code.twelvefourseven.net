@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+
+{% from 'macros/note.njk' import inlineNote %}
+
+<p>
+    I've adopted the idea of maintaining a <a href="https://ratfactor.com/cards/">"virtual card system"</a> from Dave Gauer,
+    but it's also just a natural extension of how I've been doing things for years. At any given moment,
+    I'm likely to have at least a dozen index cards or sticky notes strewn across my desk or adorning the walls around me.
+    But physical clutter is hard to sort through and search, and it's not durable and portable in the way a website can be.
+    {{ inlineNote(text = "I feel it necessary to add the caveat that digital artifacts are just as fragile as physical ones, if not moreso in certain cases. However, a website is generally more reliable than an index card stuffed in my desk.") }}
+</p>
+
+<p>
+    These cards are written primarily for my benefit, so context is often omitted for brevity.
+    Most of the information you find here can be extracted and assembled from various docs and tutorials that exist on the web.
+    <b>I typically won't add a card until I've had to search for the answer to the same problem 3+ times.</b>
+    At that point, it clearly represents a gap in my retrieval process.
+</p>
+
+<p>
+    I try to regularly refactor my cards (when necessary) in order to keep them useful and usable.
+    Unfortunately, that means that links will sometimes break and information may disappear or be moved elsewhere.
+    I do, however, keep the <a href="{{ site.repo }}">source</a> for this website public,
+    so you can always go back and view the commit history for a specific file if you're looking for something that's no longer there.
+</p>

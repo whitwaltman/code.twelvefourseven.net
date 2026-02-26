@@ -48,6 +48,10 @@ main {
     flex: 1 1 auto;
 }
 
+footer span {
+    font-size: 0.9rem;
+}
+
 pre, code {
     -moz-tab-size: 2;
     tab-size: 2;
@@ -55,15 +59,9 @@ pre, code {
 }
 
 hr {
-  margin: 12px 0;
-  border: 0;
-  text-align: center;
-  
-  &:before {
-    content: "\2022 \2022 \2022";
-    font-size: 24px;
-    color: black;
-  }
+  margin-block: 2.5rem;
+  margin-left: 0;
+  width: 4rem;
 }
 
 .pagefind-ui__results-area * {
