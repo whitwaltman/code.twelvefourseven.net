@@ -25,26 +25,3 @@ pre, code {
     tab-size: 2;
     -o-tab-size: 2;
 }
-
-.giallo {
-    padding: 0.8em;
-    border-radius: 0.8em;
-}
-
-.giallo-l {
-    display: inline-block;
-    min-height: 1lh;
-    width: 100%;
-    text-wrap: stable;
-    overflow-wrap: break-word;
-}
-
-/* for unsupported themes or languages */
-.giallo-ln {
-    display: inline-block;
-    user-select: none;
-    margin-right: 0.4em;
-    padding: 0.4em;
-    min-width: 3ch;
-    opacity: 0.8;
-}
