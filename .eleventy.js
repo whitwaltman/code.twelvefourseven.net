@@ -30,8 +30,8 @@ export default async function (config) {
 	config.addTransform("externalLinks", transformExternalLinks);
 
 	// Run PageFind CLI after the site has been built
-	config.on('eleventy.after', () => {
-		execSync(`npx pagefind --site .site --glob \"**/*.html\"`, { encoding: 'utf-8' });
+	config.on('eleventy.after', async ({ dir }) => {
+		await execSync(`npx pagefind --site ${dir.output} --glob \"**/*.html\"`, { encoding: 'utf-8' });
 	});
 
 	return {
