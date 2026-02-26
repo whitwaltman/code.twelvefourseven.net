@@ -20,7 +20,7 @@
         {% for page in section.pages %}
             <li>
                 <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
-                <a href="{{ page.permalink }}">{{ page.title }}</a>
+                <a href="{{ page.path }}">{{ page.title }}</a>
             </li>
         {% endfor %}
     </ul>
