@@ -1,3 +1,4 @@
+import { execSync } from "child_process";
 import filters from "./utils/filters.js";
 import transformExternalLinks from "./utils/links.js";
 
@@ -27,6 +28,11 @@ export default async function (config) {
 
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);
+
+	// Run PageFind CLI after the site has been built
+	config.on('eleventy.after', () => {
+		execSync(`npx pagefind --site .site --glob \"**/*.html\"`, { encoding: 'utf-8' });
+	});
 
 	return {
         // control which files 11ty will process

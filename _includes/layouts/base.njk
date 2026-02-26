@@ -25,12 +25,16 @@
     {% else %}
         <link rel="stylesheet" href="/style.css"/>
     {% endif %}
+    {# pagefind styles #}
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <a href="/">{{ site.title }}</a>
+        <div id="search" class="search"></div>
+        <script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
     </header>
-    <main>
+    <main data-pagefind-body>
         {{ content | safe }}
     </main>
     <footer>
