@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>{{ site.title }}</title>
+    {% endif %}
+    
+    <meta
+      name="description"
+      content="{{ site.description }}"/>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    {% if isProduction %}
+        {% set css %}{% include "public/style.css" %}{% endset %}
+        <style>
+            {{ css | safe }}
+        </style>
+    {% else %}
+        <link rel="stylesheet" href="/style.css"/>
+    {% endif %}
+</head>
+<body>
+    <header>
+        <a href="/">{{ site.title }}</a>
+    </header>
+    <main>
+        {{ content | safe }}
+    </main>
+    <footer>
+        <p>Latest build: {{ site.latestBuild }}</p>
+    </footer>
+</body>
+</html>
