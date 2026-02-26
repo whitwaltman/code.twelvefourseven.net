@@ -1,8 +1,4 @@
-+++
-title = "HTML"
-date = 2026-02-22
-weight = 2
-+++
+
 
 ```html
 <link rel="stylesheet" href="/path/to/style.css">

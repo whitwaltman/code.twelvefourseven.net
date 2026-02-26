@@ -1,8 +1,3 @@
-+++
-title = "tmux"
-date = 2026-02-24
-weight = 3
-+++
 
 **Note:** I use `C-a` as my prefix instead of C-b
 

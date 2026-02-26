@@ -1,7 +1,6 @@
-+++
-title = "Unwrap an optional"
-date = 2026-02-20
-+++
+---
+title: Unwrap an optional
+---
 
 There are a couple different ways to unwrap an optional in Swift. This is one of them.
 

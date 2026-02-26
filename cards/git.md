@@ -1,8 +1,3 @@
-+++
-title = "Git"
-date = 2026-02-21
-weight = 2
-+++
 
 ```zsh
 git alias
