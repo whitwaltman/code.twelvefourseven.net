@@ -1,8 +1,7 @@
-+++
-title = "Swift"
-date = 2026-02-20
-weight = 3
-+++
+---
+title: Swift
+created: 2026-02-20
+---
 
 ## Strings
 

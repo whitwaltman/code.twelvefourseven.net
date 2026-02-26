@@ -1,9 +1,10 @@
-+++
-title = "Vim"
-date = 2026-02-22
-updated = 2026-02-25
-weight = 4
-+++
+---
+title: Vim
+created: 2026-02-22
+updated: 2026-02-25
+tags:
+- quick-ref
+---
 
 Note that everything that works in Vim should also work in Neovim. Neovim is a superset of Vim.
 

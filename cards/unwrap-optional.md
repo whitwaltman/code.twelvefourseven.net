@@ -1,5 +1,8 @@
 ---
 title: Unwrap an optional
+tags:
+- swift
+- how-to
 ---
 
 There are a couple different ways to unwrap an optional in Swift. This is one of them.

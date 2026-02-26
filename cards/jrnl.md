@@ -1,4 +1,9 @@
-
+---
+title: jrnl
+tags:
+- quick-ref
+- personal
+---
 
 - jrnl
 - jrnl scratch

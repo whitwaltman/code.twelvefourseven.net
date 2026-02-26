@@ -1,4 +1,5 @@
 ---
+title: JS Strings
 created: 2026-02-25T20:29:07Z
 ---
 

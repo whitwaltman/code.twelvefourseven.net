@@ -1,7 +1,6 @@
 ---
 title: Svelte
 created: 2026-02-21
-
 ---
 
 ```svelte

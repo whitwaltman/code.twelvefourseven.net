@@ -1,6 +1,6 @@
 ---
 title: Debugging CSS
-date: 2026-02-21
+created: 2026-02-21
 tags:
 - css
 - debugging

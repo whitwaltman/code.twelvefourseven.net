@@ -1,3 +1,8 @@
+---
+title: tmux
+tags:
+- quick-ref
+---
 
 **Note:** I use `C-a` as my prefix instead of C-b
 

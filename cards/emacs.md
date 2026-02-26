@@ -1,5 +1,4 @@
-+++
-title = "Emacs"
-date = 2026-02-22
-weight = 10
-+++
+---
+title: Emacs
+created: 2026-02-22
+---

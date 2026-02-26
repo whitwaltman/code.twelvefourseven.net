@@ -1,4 +1,8 @@
-
+---
+title: Neovim
+tags:
+- quickref
+---
 <space>zo = open all folds
 <space>zs = close (shut) all folds
 
