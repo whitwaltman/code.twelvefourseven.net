@@ -17,24 +17,14 @@ function stampDates(dir) {
             const fileContent = fs.readFileSync(fp, "utf-8");
             const { data, content } = matter(fileContent);
 
-            if (data.created) {
-                const asDateObj = new Date(data.created);
-                data.created = asDateObj;
-
-                const updatedContent = matter.stringify(content, data);
-                fs.writeFileSync(fp, updatedContent);
-                
-                console.log(`Updated ${file}`);
-            }
-
             if (!data.created) {
-                const createdDate = stat.birthtime.toISOString();
+                const createdDate = stat.birthtime;
                 data.created = createdDate;
 
                 const updatedContent = matter.stringify(content, data);
                 fs.writeFileSync(fp, updatedContent);
                 
-                console.log(`Stamped ${file} with: ${createdDate.split('T')[0]}`);
+                console.log(`Stamped ${file} with: ${createdDate.toISOString().split('T')[0]}`);
             }
         }
     });
