@@ -5,5 +5,3 @@ layout: layouts/base.njk
 <span>Updated: {{ page.date | fmtDate }}</span>
 
 {{ content | safe }}
-
-{{ {created: created, tags: tags} | dump }}

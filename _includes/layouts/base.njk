@@ -17,14 +17,7 @@
     <meta property="og:title" content="{{ site.title }}">
     <meta property="og:description" content="{{ site.description }}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    {% if isProduction %}
-        {% set css %}{% include "public/style.css" %}{% endset %}
-        <style>
-            {{ css | safe }}
-        </style>
-    {% else %}
-        <link rel="stylesheet" href="/style.css"/>
-    {% endif %}
+    <link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
     <header>
