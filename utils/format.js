@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import prettier from "prettier";
 
-const outputDir = "_site";
+const outputDir = ".site";
 
 async function processHTMLFiles(dir) {
 	const entries = await fs.readdir(dir, { withFileTypes: true });
