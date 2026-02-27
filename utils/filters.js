@@ -22,6 +22,9 @@ const filters = {
 		}
 		return result.slice(0, -1) + "...";
 	},
+	typeof: (val) => {
+		return typeof val;
+	}
 };
 
 export default filters;

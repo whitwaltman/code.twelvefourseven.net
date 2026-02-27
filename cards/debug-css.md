@@ -1,6 +1,5 @@
 ---
 title: Debugging CSS
-created: 2026-02-21
 tags:
 - css
 - debugging

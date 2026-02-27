@@ -1,6 +1,5 @@
 ---
 title: Swift
-created: 2026-02-20
 ---
 
 ## Strings

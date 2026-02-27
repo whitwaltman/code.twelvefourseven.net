@@ -14,8 +14,8 @@ permalink: /tagged/{{ tag }}/
     <li>
         <a href="{{ card.url }}">
             {{ card.data.title or card.fileSlug }}</a>
-        {% if card.data.date %}
-            Updated on {{ card.data.date }}
+        {% if card.date %}
+            Updated on {{ card.date | fmtDate }}
         {% endif %}
     </li>
 {% endfor %}

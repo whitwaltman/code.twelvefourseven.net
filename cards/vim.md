@@ -1,6 +1,5 @@
 ---
 title: Vim
-created: 2026-02-22
 starred: true
 tags:
 - quick-ref

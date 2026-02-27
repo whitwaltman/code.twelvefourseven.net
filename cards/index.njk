@@ -7,8 +7,8 @@ layout: layouts/base.njk
 {% for card in collections.cards | reverse %}
     <li>
         <a href="{{ card.url }}">{{ card.data.title }}</a>
-        {% if card.data.date %}
-            Updated on {{ card.data.date }}
+        {% if card.date %}
+            Updated on {{ card.date | fmtDate }}
         {% endif %}
     </li>
 {% endfor %}

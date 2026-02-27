@@ -35,12 +35,6 @@ header {
 header nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-header nav div {
-    display: flex;
-    flex-direction: row;
     gap: 1rem;
 }
 
