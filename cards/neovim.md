@@ -3,7 +3,7 @@ title: Neovim
 starred: true
 tags:
   - quickref
-created: '2026-02-23T19:10:41.465Z'
+created: 2026-02-23T19:10:41.465Z
 ---
 <space>zo = open all folds
 <space>zs = close (shut) all folds

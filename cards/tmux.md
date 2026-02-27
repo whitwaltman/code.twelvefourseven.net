@@ -3,7 +3,7 @@ title: tmux
 starred: true
 tags:
   - quick-ref
-created: '2026-02-26T00:47:45.792Z'
+created: 2026-02-26T00:47:45.792Z
 ---
 
 **Note:** I use `C-a` as my prefix instead of C-b

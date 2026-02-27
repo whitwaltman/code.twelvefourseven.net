@@ -58,6 +58,12 @@ hr {
   width: 4rem;
 }
 
+.flex-row-btwn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .pagefind-ui__results-area * {
     margin: 0;
 }

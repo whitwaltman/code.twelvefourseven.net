@@ -17,6 +17,16 @@ function stampDates(dir) {
             const fileContent = fs.readFileSync(fp, "utf-8");
             const { data, content } = matter(fileContent);
 
+            if (data.created) {
+                const asDateObj = new Date(data.created);
+                data.created = asDateObj;
+
+                const updatedContent = matter.stringify(content, data);
+                fs.writeFileSync(fp, updatedContent);
+                
+                console.log(`Updated ${file}`);
+            }
+
             if (!data.created) {
                 const createdDate = stat.birthtime.toISOString();
                 data.created = createdDate;

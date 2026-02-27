@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
-<span>Created: {{ created | toDateObj | fmtDate }}</span>
+<span>Created: {{ created | fmtDate }}</span>
 <span>Updated: {{ page.date | fmtDate }}</span>
 
 {{ content | safe }}

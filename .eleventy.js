@@ -23,7 +23,9 @@ export default async function (config) {
 	// Create cards collection
 	config.addCollection("cards", (collection) => {
 		const all = collection.getFilteredByGlob("cards/**/*.md");
-		return all.filter((card) => !card.data.draft);
+		return all.filter((card) => !card.data.draft).sort((a, b) => {
+			return a.data.created - b.data.created;
+		});
 	});
 
 	// Create starred collection
