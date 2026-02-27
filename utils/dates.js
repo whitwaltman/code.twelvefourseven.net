@@ -24,7 +24,7 @@ function stampDates(dir) {
                 const updatedContent = matter.stringify(content, data);
                 fs.writeFileSync(fp, updatedContent);
                 
-                console.log(`Stamped ${file} with: ${createdDate.toISOString().split('T')[0]}`);
+                console.log(`Stamped ${file}`);
             }
         }
     });

@@ -3,7 +3,7 @@ layout: layouts/base.njk
 ---
 <h2>cards</h2>
 <ul>
-{% for card in collections.cards %}
+{% for card in collections.cards | reverse %}
     <li>
         <div class="flex-row-btwn">
             <a href="{{ card.url }}">{{ card.data.title }}</a>
