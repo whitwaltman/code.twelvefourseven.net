@@ -1,2 +1,6 @@
-- [ ] add tags
-- [ ] create tag pages
+- [x] add tags
+- [x] create tag pages
+- [ ] update / fill in cards
+- [ ] truncate or wrap longer titles (wonky on mobile)
+- [ ] make body width larger?
+- [ ] add code block basic styles
