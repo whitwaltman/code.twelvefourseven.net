@@ -2,8 +2,9 @@
 title: Unwrap an optional
 starred: true
 tags:
-- swift
-- how-to
+  - swift
+  - how-to
+created: '2026-02-21T04:00:27.449Z'
 ---
 
 There are a couple different ways to unwrap an optional in Swift. This is one of them.

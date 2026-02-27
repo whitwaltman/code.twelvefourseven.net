@@ -1,4 +1,7 @@
 const filters = {
+	toDateObj: (dateStr) => {
+		return new Date(dateStr);
+	},
 	fmtDate: (dateObj) => {
 		return dateObj.toDateString();
 	},

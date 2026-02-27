@@ -1,6 +1,7 @@
 ---
 title: Named/Numeric character references
 subtitle: Displaying Unicode characters with relative ease
+created: '2026-02-26T03:40:48.367Z'
 ---
 
 [Here's](https://html.spec.whatwg.org/multipage/named-characters.html) a list of all the supported named character references in HTML. Be warned: it's a lot of math symbols.

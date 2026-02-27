@@ -2,7 +2,8 @@
 title: Vim
 starred: true
 tags:
-- quick-ref
+  - quick-ref
+created: '2026-02-22T19:28:55.923Z'
 ---
 
 Note that everything that works in Vim should also work in Neovim. Neovim is a superset of Vim.

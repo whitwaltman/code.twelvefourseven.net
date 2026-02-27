@@ -1,11 +1,9 @@
 ---
 layout: layouts/base.njk
 ---
-{% if page.created %}
-    <p>Created: {{ page.created }}</p>
-{% endif %}
-<p>Updated: {{ page.date }}</p>
+<span>Created: {{ created | toDateObj | fmtDate }}</span>
+<span>Updated: {{ page.date | fmtDate }}</span>
 
 {{ content | safe }}
 
-{{ page | dump }}
+{{ {created: created, tags: tags} | dump }}
