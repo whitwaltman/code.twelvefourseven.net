@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+---
+<span>Created: {{ created | fmtDate }}</span>
+<span>Updated: {{ page.date | fmtDate }}</span>
+
+{{ content | safe }}
+
+{% if source %}
+<a href="{{ source }}">source</a>

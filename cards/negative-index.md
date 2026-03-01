@@ -1,9 +1,10 @@
 ---
 title: Negative indexing
 tags:
-- ruby
-- javascript
-- arrays
+  - ruby
+  - javascript
+  - arrays
+created: 2026-03-01T22:37:43.728Z
 ---
 
 Some languages allow you to use a negative index value (e.g. Ruby, JavaScript). A negative index is an offset that traverses backwards from the end of the array.

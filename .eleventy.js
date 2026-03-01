@@ -28,11 +28,19 @@ export default async function (config) {
 		});
 	});
 
-	// Create starred collection
+	// Create snippets collection
+	config.addCollection("snippets", (collection) => {
+		const all = collection.getFilteredByGlob("snippets/**/*.njk");
+		return all.sort((a, b) => {
+			return a.date.created - b.date.created;
+		});
+	});
+
+	// Create starred cards collection
 	config.addCollection("starred", (collection) => {
 		const all = collection.getFilteredByGlob("cards/**/*.md");
 		return all.filter((card) => card.data.starred);
-	})
+	});
 
 	// Add list of tags
 	config.addCollection('tagList', function (collection) {
@@ -41,7 +49,7 @@ export default async function (config) {
 			;(item.data.tags || []).forEach((tag) => tagSet.add(tag));
 		});
 		return [...tagSet];
-	})
+	});
 
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);
