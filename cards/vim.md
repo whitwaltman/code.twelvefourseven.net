@@ -2,6 +2,7 @@
 title: Vim
 starred: true
 tags:
+  - hotkeys
   - quick-ref
 created: 2026-02-22T19:28:55.923Z
 ---

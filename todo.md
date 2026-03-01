@@ -4,6 +4,9 @@
 - [ ] **truncate or wrap longer titles (wonky on mobile)**
 - [ ] make body width larger?
 - [ ] add code block basic styles
+    - [ ] bg + text color
+    - [ ] overflow-x within block, scroll to view more
+    - [ ] maybe add a block thing on top that states what language it is (even if I don't use a syntax highlighter) ??
 - [ ] **checkbox for link styling (all blue) -- make this subtle!!**
 - [ ] more / better tags
 - [ ] refactor cards

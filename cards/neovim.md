@@ -3,6 +3,7 @@ title: Neovim
 starred: true
 tags:
   - quickref
+  - hotkeys
 created: 2026-02-23T19:10:41.465Z
 ---
 <space>zo = open all folds

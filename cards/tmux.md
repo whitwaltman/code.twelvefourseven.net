@@ -2,6 +2,7 @@
 title: tmux
 starred: true
 tags:
+  - hotkeys
   - quick-ref
 created: 2026-02-26T00:47:45.792Z
 ---

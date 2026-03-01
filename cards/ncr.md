@@ -1,5 +1,5 @@
 ---
-title: Named/Numeric character references
+title: Named character references
 subtitle: Displaying Unicode characters with relative ease
 created: 2026-02-26T03:40:48.367Z
 ---
