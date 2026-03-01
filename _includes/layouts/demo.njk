@@ -1,10 +1,3 @@
----
-layout: layouts/base.njk
-styles: ["/syntax.css", "/demo.css"]
----
-<span>Created: {{ created | fmtDate }}</span>
-<span>Updated: {{ page.date | fmtDate }}</span>
-
 {{ description | safe }}
 
 <style>
@@ -12,17 +5,21 @@ styles: ["/syntax.css", "/demo.css"]
 </style>
 
 <details>
-  <summary>CSS for "{{ title }}"</summary>
+  <summary>index.html</summary>
+
+  {% highlight "html" %}
+  {{ html | safe }}
+  {% endhighlight %}
+</details>
+
+<details>
+  <summary>style.css</summary>
 
   {% highlight "css" %}
-  {{- css | safe }}
+  {{ css | safe }}
   {% endhighlight %}
 </details>
 
 <div class="demo">
 {{ html | safe }}
 </div>
-
-{% if source %}
-<a href="{{ source }}">source</a>
-{% endif %}

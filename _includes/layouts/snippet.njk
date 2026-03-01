@@ -1,9 +1,7 @@
 ---
-layout: layouts/base.njk
-styles: ["/syntax.css"]
+layout: layouts/card.njk
+styles: ["/syntax.css", "/demo.css"]
 ---
-<span>Created: {{ created | fmtDate }}</span>
-<span>Updated: {{ page.date | fmtDate }}</span>
 
 {{ content | safe }}
 
