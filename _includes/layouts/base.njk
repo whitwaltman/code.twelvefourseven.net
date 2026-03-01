@@ -15,6 +15,11 @@
     <meta property="og:description" content="{{ site.description }}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style.css"/>
+    {% if css %}
+        {% for link in css %}
+            <link rel="stylesheet" href="{{ link | url }}"/>
+        {% endfor %}
+    {% endif %}
 </head>
 <body>
     <header>

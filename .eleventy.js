@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import filters from "./utils/filters.js";
 import transformExternalLinks from "./utils/links.js";
 
@@ -6,6 +6,11 @@ export default async function (config) {
 	// Add global data variable to signal build modality
 	const isProduction = process.env.NODE_ENV === "production";
 	config.addGlobalData("isProduction", isProduction);
+
+	// Add syntax highlighting plugin: https://www.11ty.dev/docs/plugins/syntaxhighlight/
+	config.addPlugin(syntaxHighlight, {
+		templateFormats: ["snippet.njk"]
+	})
 
 	// Copy public assets to output folder
 	config.addPassthroughCopy({
