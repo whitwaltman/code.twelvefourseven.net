@@ -1,6 +1,12 @@
-- [x] add tags
-- [x] create tag pages
+- [x] ~~add tags~~
+- [x] ~~create tag pages~~
 - [ ] update / fill in cards
-- [ ] truncate or wrap longer titles (wonky on mobile)
+- [ ] **truncate or wrap longer titles (wonky on mobile)**
 - [ ] make body width larger?
 - [ ] add code block basic styles
+- [ ] **checkbox for link styling (all blue) -- make this subtle!!**
+- [ ] more / better tags
+- [ ] refactor cards
+    - [ ] add some basic formatting
+- [ ] investigate / fix search
+- [ ] investigate / fix blocked CORS requests
