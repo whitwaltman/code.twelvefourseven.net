@@ -8,9 +8,7 @@ export default async function (config) {
 	config.addGlobalData("isProduction", isProduction);
 
 	// Add syntax highlighting plugin: https://www.11ty.dev/docs/plugins/syntaxhighlight/
-	config.addPlugin(syntaxHighlight, {
-		templateFormats: ["snippet.njk"]
-	})
+	config.addPlugin(syntaxHighlight);
 
 	// Copy public assets to output folder
 	config.addPassthroughCopy({

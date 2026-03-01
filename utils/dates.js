@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const CONTENT_DIR = "./cards";
+const CONTENT_DIRS = ["./cards", "./snippets"];
 
 function stampDates(dir) {
     const files = fs.readdirSync(dir);
@@ -30,4 +30,4 @@ function stampDates(dir) {
     });
 }
 
-stampDates(CONTENT_DIR);
+CONTENT_DIRS.forEach((dir) => stampDates(dir));

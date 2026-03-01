@@ -1,17 +1,11 @@
 ---
 layout: layouts/base.njk
-css: ["/syntax.css"]
+styles: ["/syntax.css"]
 ---
 <span>Created: {{ created | fmtDate }}</span>
 <span>Updated: {{ page.date | fmtDate }}</span>
 
-{{ description | safe }}
-
-<style>
-    {{ css | safe }}
-</style>
-
-<details>
+{{ content | safe }}
 
 {% if source %}
 <a href="{{ source }}">source</a>
