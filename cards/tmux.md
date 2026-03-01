@@ -10,6 +10,8 @@ created: 2026-02-26T00:47:45.792Z
 
 See more [here](https://tmuxcheatsheet.com/)
 
+**View all defafult key bindings** <mark>C-a ?</mark>
+
 
 ## Sessions
 
@@ -53,11 +55,17 @@ C-a d
 tmux kill-ses -t <session_name>
 ```
 
-7. Next / previous session
+7. Previous session
 
 ```
-C-a n
-C-a p
+C-a (
+C-a L
+```
+
+8. Next session
+
+```
+C-a )
 ```
 
 ## Windows
