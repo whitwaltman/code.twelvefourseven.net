@@ -21,6 +21,7 @@
         {% endfor %}
     {% endif %}
 </head>
+
 <body>
     <header>
         <a href="/"><b>{{ site.title }}</b></a>
@@ -31,27 +32,35 @@
             <button id="search-open" aria-label="Open search">search (/)</button>
             <dialog id="search-modal">
                 <div class="modal-header">
-                    <h2>Search</h2>
-                    <button id="search-close" aria-label="Close search">x</button>
+                    <p>Search {{ site.title }}</p>
+                    <button id="search-close" aria-label="Close search">✕</button>
                 </div>
-
-                <div id="search"></div>
+                
+                <div id="search" class="search"></div>
             </dialog>
         </nav>
     </header>
+
     <main data-pagefind-body>
         {{ content | safe }}
     </main>
+
     <footer>
         <span>Latest build: {{ site.latestBuild }}</span>
-        <div id="search" class="search"></div>
-        <script src="/_pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+        <script src="/_pagefind/pagefind-ui.js"></script>
     </footer>
+
     <script>
         window.addEventListener("DOMContentLoaded", (event) => {
             const modal = document.querySelector("#search-modal");
             const openBtn = document.querySelector("#search-open");
             const closeBtn = document.querySelector("#search-close");
+
+            new PagefindUI({
+                element: "#search",
+                resetStyles: true,
+                showSubResults: true,
+            });
 
             const openModal = () => {
                 modal.showModal();
