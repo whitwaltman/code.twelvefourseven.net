@@ -28,14 +28,14 @@ header, footer {
 
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
 }
 
 header nav {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 main {
@@ -67,6 +67,42 @@ hr {
 
 .pagefind-ui__results-area * {
     margin: 0;
+}
+
+/* || Search styling */
+#search-modal::backdrop {
+    background:rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+#search-modal {
+    width: 90%;
+    max-width: 650px;
+    height: 500px;
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Pagefind results */
+#search {
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+}
+
+.pagefind-ui__results-area {
+    overflow-y: auto !important;
+    flex-grow: 1;
+    padding-right: 10px;
 }
 
 /* || Note styling */
