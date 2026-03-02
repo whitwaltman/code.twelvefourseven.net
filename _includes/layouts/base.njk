@@ -47,7 +47,7 @@
 
     <footer>
         <span>Latest build: {{ site.latestBuild }}</span>
-        <script src="/_pagefind/pagefind-ui.js"></script>
+        <script src="/pagefind/pagefind-ui.js"></script>
     </footer>
 
     <script>
@@ -58,8 +58,11 @@
 
             new PagefindUI({
                 element: "#search",
-                resetStyles: true,
+                pageSize: 8,
                 showSubResults: true,
+                showImages: false,
+                excerptLength: 50,
+                bundlePath: "/pagefind/",
             });
 
             const openModal = () => {

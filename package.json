@@ -14,7 +14,7 @@
     "build": "npx eleventy",
     "build:clean": "rm -rf .site && npx eleventy",
     "build:all": "npm run build:clean && npm run format",
-    "postbuild": "npx pagefind --site .site --glob \"**/*.html\"",
+    "prebuild:all": "npx pagefind --site .site --glob \"**/*.html\"",
     "debug": "DEBUG=* npx eleventy",
     "format": "node utils/format.js",
     "prestart": "node utils/dates.js",

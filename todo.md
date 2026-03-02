@@ -11,6 +11,8 @@
 
 ## info architecture
 
+- [ ] set title for tagged pages!!!
+- [ ] update which elements have `data-pagefind-body`
 - [ ] **add tag data to card layout**
 - [ ] add better styling to metadata / card layout
 - [ ] more / better tags
@@ -33,10 +35,11 @@
 
 ## js
 
-- [ ] investigate / fix search
+- [ ] [customize](https://pagefind.app/docs/ui/) pagefind config
 - [ ] investigate / fix blocked CORS requests
 - [ ] add copy/paste functionality to code blocks???
 
 ## completed
 - [x] ~~add tags~~
 - [x] ~~create tag pages~~
+- [x] ~~investigate / fix search~~

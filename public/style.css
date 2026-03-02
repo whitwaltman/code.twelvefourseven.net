@@ -96,15 +96,28 @@ hr {
     align-items: center;
 }
 
+/* Pagefind form */
 .pagefind-ui__form {
-    display: flex;
-    flex-direction: row;
+    display: grid !important;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
     gap: 8px;
-    width: 100%;
+    align-items: center;
 }
 
 .pagefind-ui__search-input {
-    flex-grow: 1;
+    grid-column: 1;
+    width: 100% !important;
+}
+
+.pagefind-ui__search-clear {
+    grid-column: 2;
+    width: auto;
+}
+
+.pagefind-ui__drawer {
+    grid-column: 1 / span 2;
+    grid-row: 2;
 }
 
 /* Pagefind results */
