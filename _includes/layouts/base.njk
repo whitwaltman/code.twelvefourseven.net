@@ -57,12 +57,12 @@
             const closeBtn = document.querySelector("#search-close");
 
             new PagefindUI({
+                bundlePath: "/pagefind/",
                 element: "#search",
                 pageSize: 8,
                 showSubResults: true,
                 showImages: false,
                 excerptLength: 50,
-                bundlePath: "/pagefind/",
             });
 
             const openModal = () => {

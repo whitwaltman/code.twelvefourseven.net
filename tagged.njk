@@ -1,10 +1,12 @@
 ---
-layout: layouts/tags.njk
+layout: layouts/base.njk
 pagination:
     data: collections.tagList
     size: 1
     alias: tag
 permalink: /tags/{{ tag }}/
+eleventyComputed:
+    title: Cards tagged "{{ tag }}"
 ---
 <h2>Cards tagged "{{ tag }}"</h2>
 

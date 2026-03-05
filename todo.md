@@ -11,7 +11,6 @@
 
 ## info architecture
 
-- [ ] set title for tagged pages!!!
 - [ ] update which elements have `data-pagefind-body`
 - [ ] **add tag data to card layout**
 - [ ] add better styling to metadata / card layout
@@ -31,7 +30,6 @@
 
 - [ ] **truncate or wrap longer titles (wonky on mobile)**
 - [ ] make body width larger?
-- [ ] fix nav spacing
 
 ## js
 
@@ -43,3 +41,5 @@
 - [x] ~~add tags~~
 - [x] ~~create tag pages~~
 - [x] ~~investigate / fix search~~
+- [x] ~~set title for tagged pages!!!~~
+- [x] fix nav spacing

@@ -7,7 +7,7 @@ layout: layouts/base.njk
     {% for tag in collections.tagList %}
     {% set cards = collections[tag] %}
     <li>
-        <a href="/tagged/{{ tag }}">{{ tag }}</a>
+        <a href="/tags/{{ tag }}">{{ tag }}</a>
         ({{ cards | length }})
     </li>
     {% endfor %}
