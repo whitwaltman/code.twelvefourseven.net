@@ -28,9 +28,9 @@
         <span>Latest build: {{ site.latestBuild }}</span>
     </footer>
 
-    <script src="/pagefind/pagefind-ui.js"></script>
+    {# <script src="/pagefind/pagefind-ui.js"></script> #}
     <script>
-        window.addEventListener("DOMContentLoaded", (event) => {
+        {# window.addEventListener("DOMContentLoaded", (event) => {
             const modal = document.querySelector("#search-modal");
             const openBtn = document.querySelector("#search-open");
             const closeBtn = document.querySelector("#search-close");
@@ -65,7 +65,7 @@
                     openModal();
                 }
             });
-        });
+        }); #}
 
         document.body.classList.add("js-enabled");
 
