@@ -23,22 +23,7 @@
 </head>
 
 <body>
-    <header>
-        <a href="/"><b>{{ site.title }}</b></a>
-        <nav>
-            <a href="/cards">cards</a>
-            <a href="/tags">tags</a>
-            <button id="search-open" aria-label="Open search">search (/)</button>
-            <dialog id="search-modal">
-                <div class="modal-header">
-                    <p>Search {{ site.title }}</p>
-                    <button id="search-close" aria-label="Close search">✕</button>
-                </div>
-                
-                <div id="search" class="search"></div>
-            </dialog>
-        </nav>
-    </header>
+    {% include "partials/header.njk" %}
 
     <main data-pagefind-body>
         {{ content | safe }}
