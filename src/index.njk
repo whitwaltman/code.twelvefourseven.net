@@ -3,7 +3,7 @@ Hello world
 <ul>
 {% for item in collections.all %}
     {% if item.url !== "/" %}
-        <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+        <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>

@@ -8,13 +8,14 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: #f8f8f2;
 	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	/* font-family: monospace; */
+	/* font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; */
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
+	/* line-height: 1.5; */
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -50,7 +51,7 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #d4d0ab;
+	color: #9b9b9b;
 }
 
 .token.punctuation {
