@@ -61,47 +61,7 @@ export default async function (config) {
 
 		return decks;
 	});
-
-	// // Create starred cards collection
-	// config.addCollection("starred", (collection) => {
-	// 	const all = collection.getFilteredByGlob("cards/**/*.md");
-	// 	return all.filter((card) => card.data.starred);
-	// });
-
-	// // Add list of decks
-	// config.addCollection("deckList", function (collection) {
-	// 	let deckSet = new Set();
-	// 	collection.getAll().forEach((item) => {
-	// 		if (item.data.deck) {
-	// 			deckSet.add(item.data.deck);
-	// 		}
-	// 	});
-	// 	return [...deckSet];
-	// });
-
-	// // Add list of tags
-	// config.addCollection("tagList", function (collection) {
-	// 	let tagSet = new Set();
-	// 	collection.getAll().forEach((item) => {
-	// 		;(item.data.tags || []).forEach((tag) => tagSet.add(tag));
-	// 	});
-	// 	return [...tagSet];
-	// });
-
-	// Shortcode to bundle multiple CSS files
-	config.addShortcode("bundleCss", function (files) {
-		const fileList = Array.isArray(files) ? files : [files];
-		let combined = "";
-		files.forEach((f) => {
-			const fp = path.join(process.cwd(), f);
-			if (fs.existsSync(fp)) {
-				combined += fs.readFileSync(fp, "utf8");
-			}
-		});
-
-		return combined;
-	});
-
+	
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);
 
