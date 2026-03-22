@@ -1,4 +1,13 @@
 ```js
+import transformExternalLinks from "./utils/links.js";
+
+export default async function (config) {
+	// ...
+	config.addTransform("externalLinks", transformExternalLinks);
+}
+```
+
+```js
 import { parseHTML } from "linkedom";
 
 export default function(content) {
