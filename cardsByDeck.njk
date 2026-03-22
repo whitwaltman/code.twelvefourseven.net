@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: collections.deckList
+    size: 1
+    alias: deck
+permalink: /decks/{{ deck }}/
+eleventyComputed:
+    title: Cards in "{{ deck }}"
+---
+<h2>Cards in "{{ deck }}"</h2>
+
+{% set cardList = collections[deck] %}
+<ul>
+{% for card in cardList | reverse %}
+    <li>
+        <div class="flex-row-btwn">
+            <a href="{{ card.url }}">{{ card.data.title }}</a>
+            <time>{{ card.data.created | fmtDate }}</time>
+        </div>
+    </li>
+{% endfor %}

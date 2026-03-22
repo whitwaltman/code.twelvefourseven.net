@@ -5,6 +5,7 @@ const data = {
     layout: "layouts/snippet.njk",
     date: isProduction ? "git Last Modified" : "Last Modified",
     templateEngineOverride: "njk, md",
+    deck: "snippet",
     eleventyComputed: {
         permalink: (data) => `/${data.page.fileSlug}/`,
         title: (data) => {

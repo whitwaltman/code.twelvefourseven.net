@@ -31,22 +31,25 @@ export default async function (config) {
 		});
 	});
 
-	// Create snippets collection
-	config.addCollection("snippets", (collection) => {
-		const all = collection.getFilteredByGlob("snippets/**/*.njk");
-		return all.sort((a, b) => {
-			return a.date.created - b.date.created;
-		});
-	});
-
 	// Create starred cards collection
 	config.addCollection("starred", (collection) => {
 		const all = collection.getFilteredByGlob("cards/**/*.md");
 		return all.filter((card) => card.data.starred);
 	});
 
+	// Add list of decks
+	config.addCollection("deckList", function (collection) {
+		let deckSet = new Set();
+		collection.getAll().forEach((item) => {
+			if (item.data.deck) {
+				deckSet.add(item.data.deck);
+			}
+		});
+		return [...deckSet];
+	});
+
 	// Add list of tags
-	config.addCollection('tagList', function (collection) {
+	config.addCollection("tagList", function (collection) {
 		let tagSet = new Set();
 		collection.getAll().forEach((item) => {
 			;(item.data.tags || []).forEach((tag) => tagSet.add(tag));

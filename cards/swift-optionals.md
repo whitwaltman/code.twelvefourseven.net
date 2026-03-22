@@ -1,9 +1,7 @@
 ---
-title: Unwrap an optional
+title: Optionals in Swift
 starred: true
-tags:
-  - swift
-  - how-to
+deck: swift
 created: 2026-02-21T04:00:27.449Z
 ---
 

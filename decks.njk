@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+<h2>All decks</h2>
+
+<ul>
+    {% for deck in collections.deckList %}
+    {% set cards = collections[deck] %}
+    <li>
+        <a href="/decks/{{ deck }}">{{ deck }}</a>
+        ({{ cards | length }})
+    </li>
+    {% endfor %}
+</ul>
