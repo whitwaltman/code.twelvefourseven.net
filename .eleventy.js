@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import filters from "./utils/filters.js";
 import transformExternalLinks from "./utils/links.js";
@@ -85,6 +87,20 @@ export default async function (config) {
 	// 	});
 	// 	return [...tagSet];
 	// });
+
+	// Shortcode to bundle multiple CSS files
+	config.addShortcode("bundleCss", function (files) {
+		const fileList = Array.isArray(files) ? files : [files];
+		let combined = "";
+		files.forEach((f) => {
+			const fp = path.join(process.cwd(), f);
+			if (fs.existsSync(fp)) {
+				combined += fs.readFileSync(fp, "utf8");
+			}
+		});
+
+		return combined;
+	});
 
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);

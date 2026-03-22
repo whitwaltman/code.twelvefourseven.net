@@ -1,0 +1,16 @@
+---
+permalink: /style.css
+eleventyExcludeFromCollections: true
+---
+{% set files = [
+    "css/card.css",
+    "css/demo.css",
+    "css/layout.css",
+    "css/note.css",
+    "css/reset.css",
+    "css/search.css",
+    "css/syntax.css",
+    "css/util.css"
+] %}
+
+{% bundleCss files | safe %}
