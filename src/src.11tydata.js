@@ -5,16 +5,12 @@ const data = {
     date: isProduction ? "git Last Modified" : "Last Modified",
     eleventyComputed: {
         deck: (data) => {
+            // ASSUMES ALL CARDS ARE LOCATED IN "src/DECK/**"
             return data.page.filePathStem.split("/")[2];
         },
         permalink: (data) => {
             if (isProduction && data.draft) return false;
             return `${data.deck}/${data.page.fileSlug}/`;
-        },
-        title: (data) => {
-            if (data.title) return data.title;
-            const slug = data.page.fileSlug.split("-").join(" ");
-            return slug[0].toUpperCase() + slug.slice(1);
         },
         tags: (data) => {
             if (data.tags) return data.tags;

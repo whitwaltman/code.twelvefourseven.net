@@ -35,7 +35,7 @@ export default async function (config) {
 
 	// Create feed collection
 	config.addCollection("feed", (collection) => {
-		const all = collection.getFilteredByGlob("src/**/*.md");
+		const all = collection.getFilteredByGlob("src/**/*");
 		return all.filter((card) => !card.data.draft).sort((a, b) => {
 			return a.data.date - b.data.date;
 		});
@@ -43,7 +43,7 @@ export default async function (config) {
 
 	// Create decks collection
 	config.addCollection("decks", (collection) => {
-		const all = collection.getFilteredByGlob("src/**/*.md").filter((c) => !c.data.draft);
+		const all = collection.getFilteredByGlob("src/**/*").filter((c) => !c.data.draft);
 		// Object where keys are folder names (decks)
 		const decks = {};
 
