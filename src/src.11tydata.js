@@ -4,11 +4,12 @@ const isProduction = process.env.NODE_ENV === "production";
 const data = {
     date: isProduction ? "git Last Modified" : "Last Modified",
     eleventyComputed: {
+        deck: (data) => {
+            return data.page.filePathStem.split("/")[2];
+        },
         permalink: (data) => {
             if (isProduction && data.draft) return false;
-            // filePathStem: "/current/page/myFile",
-            return data.page.filePathStem.slice(4,) + "/";
-            // return `/${data.page.fileSlug}/`;
+            return `${data.deck}/${data.page.fileSlug}/`;
         },
         title: (data) => {
             if (data.title) return data.title;

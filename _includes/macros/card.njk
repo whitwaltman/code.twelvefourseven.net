@@ -1,6 +1,6 @@
-{% macro render(title, content) %}
+{% macro render(slug, content, url) %}
 <div class="card">
-    {{ title }}
+    <a href="{{ url }}">{{ slug }}</a>
     {{ content | safe }}
 </div>
 {% endmacro %}

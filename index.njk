@@ -4,7 +4,7 @@ layout: layouts/base.njk
 {% from 'macros/card.njk' import render %}
 
 {% for item in collections.feed | reverse %}
-    {{ render(item.data.title, item.templateContent) }}
+    {{ render(item.url, item.templateContent, item.url) }}
     {# <article>
         <h2>{{ card.data.title or card.fileSlug }}</h2>
         {{ card.templateContent | safe }}
