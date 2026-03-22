@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: collections.decks
+    size: 1
+    alias: deckName
+permalink: "/{{ deckName }}/index.html"
+---
+
+<h1>Deck: {{ deckName | capitalize }}</h1>
+
+<ul>
+{% for card in collections.decks[deckName] %}
+    <li><a href="{{ card.url }}">{{ card.data.title or card.fileSlug }}</a></li>
+{% endfor %}
+</ul>

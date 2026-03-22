@@ -31,6 +31,27 @@ export default async function (config) {
 		});
 	});
 
+	// Create decks collection
+	config.addCollection("decks", (collection) => {
+		const all = collection.getFilteredByGlob("src/**/*.md").filter((c) => !c.data.draft);
+		// Object where keys are folder names (decks)
+		const decks = {};
+
+		all.forEach((item) => {
+			const path = item.filePathStem.split('/');
+			const deckName = path[path.length - 2];
+
+			if (deckName && deckName !== 'src') {
+				if (!decks[deckName]) {
+					decks[deckName] = [];
+				}
+				decks[deckName].push(item);
+			}
+		});
+
+		return decks;
+	});
+
 	// // Create starred cards collection
 	// config.addCollection("starred", (collection) => {
 	// 	const all = collection.getFilteredByGlob("cards/**/*.md");
