@@ -2,6 +2,8 @@
 
 - [ ] render cards with custom styling
     - card preview different styling from card actual (?)
+- [ ] create card macro?
+- [ ] paginate index feed
 
 ## content
 

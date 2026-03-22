@@ -4,5 +4,9 @@ layout: layouts/base.njk
 {% for card in collections.cards | reverse %}
     <article>
         {{ card.templateContent | safe }}
+        <div class="flex-row-btwn">
+            <span>Updated: <time>{{ card.date }}</time></span>
+            <a href="{{ card.url }}">permalink</a>
+        </div>
     </article>
 {% endfor %}
