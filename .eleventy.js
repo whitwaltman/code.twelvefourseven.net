@@ -1,8 +1,6 @@
-import fs from "fs";
-import path from "path";
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import filters from "./utils/filters.js";
 import transformExternalLinks from "./utils/links.js";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default async function (config) {
 	// Add global data variable to signal build modality

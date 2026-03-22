@@ -20,14 +20,14 @@
 <body>
     {% include "partials/header.njk" %}
 
-    <main data-pagefind-body>
+    <main>
         {{ content | safe }}
     </main>
 
     <footer>
         <span>Latest build: {{ site.latestBuild }}</span>
     </footer>
-    
+
     <script src="/pagefind/pagefind-ui.js"></script>
     <script>
         window.addEventListener("DOMContentLoaded", (event) => {

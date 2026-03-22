@@ -1,1 +1,9 @@
 Hello world
+
+<ul>
+{% for item in collections.all %}
+    {% if item.url !== "/" %}
+        <li><a href="{{ item.url }}">{{ item.url }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
