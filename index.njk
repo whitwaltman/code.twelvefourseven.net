@@ -1,15 +1,13 @@
 ---
 layout: layouts/base.njk
 ---
-{% from 'macros/note.njk' import inlineNote %}
-<p>Some facts about me:</p>
-
-<ol>
-    <li>I write code. Sometimes for money, sometimes for fun.</li>
-    <li>I have a poor working memory. {{ inlineNote(text = "I have pretty severe ADHD. I'm medicated, but meds can only do so much.") }}</li>
-    <li>I tend to use a relatively small, but consistent set of tools.</li>
-</ol>
-
-<p>To compensate for my working memory, I often try to <mark>externalize information</mark>. This is one such attempt to do so.</p>
-
-<p>This website is made up of "cards". You can read more about them <a href="/about">here</a>.</p>
+<ul>
+{% for card in collections.cards | reverse %}
+    <li>
+        <div class="flex-row-btwn">
+            <a href="{{ card.url }}">{{ card.data.title }}</a>
+            <time>{{ card.data.created | fmtDate }}</time>
+        </div>
+    </li>
+{% endfor %}
+</ul>
