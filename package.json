@@ -17,7 +17,6 @@
     "prebuild:all": "npx pagefind --site .site --glob \"**/*.html\"",
     "debug": "DEBUG=* npx eleventy",
     "format": "node utils/format.js",
-    "prestart": "node utils/dates.js",
     "start": "npx eleventy --serve --incremental"
   },
   "dependencies": {
