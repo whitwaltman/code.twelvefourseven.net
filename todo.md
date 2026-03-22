@@ -2,8 +2,8 @@
 
 - [ ] render cards with custom styling
     - card preview different styling from card actual (?)
-- [ ] create card macro?
-- [ ] paginate index feed
+- [ ] create card macro (??) for index pages
+- [ ] **decide if i want to paginate index feed or just cut off at X number of posts**
 
 ## content
 
