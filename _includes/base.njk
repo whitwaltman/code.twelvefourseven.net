@@ -15,11 +15,6 @@
     <meta property="og:description" content="{{ site.description }}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style.css"/>
-    {% if styles %}
-        {% for link in styles %}
-            <link rel="stylesheet" href="{{ link | url }}"/>
-        {% endfor %}
-    {% endif %}
 </head>
 
 <body>
@@ -31,9 +26,9 @@
 
     <footer>
         <span>Latest build: {{ site.latestBuild }}</span>
-        <script src="/pagefind/pagefind-ui.js"></script>
     </footer>
-
+    
+    <script src="/pagefind/pagefind-ui.js"></script>
     <script>
         window.addEventListener("DOMContentLoaded", (event) => {
             const modal = document.querySelector("#search-modal");

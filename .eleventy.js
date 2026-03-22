@@ -18,50 +18,13 @@ export default async function (config) {
 	});
 
 	// Add global default layout
-	config.addGlobalData("layout", "layouts/base.njk");
+	config.addGlobalData("layout", "base.njk");
 
 	// Register filter functions
 	Object.keys(filters).forEach((filter) => {
 		config.addFilter(filter, filters[filter]);
 	});
 
-	// Create cards collection
-	config.addCollection("cards", (collection) => {
-		const all = collection.getFilteredByGlob("src/**/*.md");
-		return all.filter((card) => !card.data.draft).sort((a, b) => {
-			return a.data.created - b.data.created;
-		});
-	});
-
-	// Create feed collection
-	config.addCollection("feed", (collection) => {
-		const all = collection.getFilteredByGlob("src/**/*");
-		return all.filter((card) => !card.data.draft).sort((a, b) => {
-			return a.data.date - b.data.date;
-		});
-	});
-
-	// Create decks collection
-	config.addCollection("decks", (collection) => {
-		const all = collection.getFilteredByGlob("src/**/*").filter((c) => !c.data.draft);
-		// Object where keys are folder names (decks)
-		const decks = {};
-
-		all.forEach((item) => {
-			const path = item.filePathStem.split('/');
-			const deckName = path[path.length - 2];
-
-			if (deckName && deckName !== 'src') {
-				if (!decks[deckName]) {
-					decks[deckName] = [];
-				}
-				decks[deckName].push(item);
-			}
-		});
-
-		return decks;
-	});
-	
 	// Register imported links function as a transform
 	config.addTransform("externalLinks", transformExternalLinks);
 
@@ -77,9 +40,9 @@ export default async function (config) {
 
         // directory config
 		dir: {
-			input: ".",
-			includes: "_includes",
-			data: "_data",
+			input: "./src",
+			includes: "../_includes",
+			data: "../_data",
 			output: ".site",
 		}
 	};
