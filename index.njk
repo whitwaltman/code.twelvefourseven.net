@@ -1,13 +1,16 @@
 ---
 layout: layouts/base.njk
 ---
-{% for card in collections.feed | reverse %}
-    <article>
+{% from 'macros/card.njk' import render %}
+
+{% for item in collections.feed | reverse %}
+    {{ render(item.data.title, item.templateContent) }}
+    {# <article>
         <h2>{{ card.data.title or card.fileSlug }}</h2>
         {{ card.templateContent | safe }}
         <div class="flex-row-btwn">
             <span>Updated: <time>{{ card.date }}</time></span>
             <a href="{{ card.url }}">permalink</a>
         </div>
-    </article>
+    </article> #}
 {% endfor %}

@@ -1,0 +1,6 @@
+{% macro render(title, content) %}
+<div class="card">
+    {{ title }}
+    {{ content | safe }}
+</div>
+{% endmacro %}
