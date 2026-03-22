@@ -1,7 +1,9 @@
 ---
 layout: layouts/base.njk
+styles: ["/card.css"]
 ---
-<span>Created: {{ created | fmtDate }}</span>
-<span>Updated: {{ page.date | fmtDate }}</span>
-
-{{ content | safe }}
+<div class="card">
+    {{ content | safe }}
+    <span>Created: {{ created | fmtDate }}</span>
+    <span>Updated: {{ page.date | fmtDate }}</span>
+</div>

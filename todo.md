@@ -1,5 +1,8 @@
 # todo
 
+- [ ] render cards with custom styling
+    - card preview different styling from card actual (?)
+
 ## content
 
 - [ ] update / fill in cards
@@ -12,6 +15,7 @@
 ## info architecture
 
 - [ ] update which elements have `data-pagefind-body`
+    - should only be in `card.njk` i think
 - [ ] **add tag data to card layout**
 - [ ] add better styling to metadata / card layout
 - [ ] more / better tags
