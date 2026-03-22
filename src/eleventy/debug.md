@@ -1,6 +1,5 @@
 ---
 title: Debug in eleventy
-deck: eleventy
 created: 2026-02-27T00:25:56.554Z
 ---
 

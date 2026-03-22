@@ -7,7 +7,9 @@ const data = {
     eleventyComputed: {
         permalink: (data) => {
             if (isProduction && data.draft) return false;
-            return `/${data.page.fileSlug}/`;
+            // filePathStem: "/current/page/myFile",
+            return data.page.filePathStem.slice(4,) + "/";
+            // return `/${data.page.fileSlug}/`;
         },
         title: (data) => {
             if (data.title) return data.title;
