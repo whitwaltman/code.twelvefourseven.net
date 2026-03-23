@@ -14,9 +14,9 @@
     "build": "npx eleventy",
     "build:clean": "rm -rf .site && npx eleventy",
     "build:all": "npm run build:clean && npm run format",
-    "prebuild:all": "npx pagefind --site .site --glob \"**/*.html\"",
+    "postbuild:all": "npx pagefind --site .site --glob \"**/*.html\"",
     "debug": "DEBUG=* npx eleventy",
-    "format": "node utils/format.js",
+    "format": "node _utils/format.js",
     "start": "npx eleventy --serve --incremental"
   },
   "dependencies": {

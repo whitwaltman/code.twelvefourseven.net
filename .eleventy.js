@@ -1,6 +1,6 @@
-import filters from "./utils/filters.js";
-import shortcodes from "./utils/shortcodes.js";
-import transformExternalLinks from "./utils/links.js";
+import filters from "./_utils/filters.js";
+import shortcodes from "./_utils/shortcodes.js";
+import transformExternalLinks from "./_utils/links.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default async function (config) {
@@ -34,15 +34,15 @@ export default async function (config) {
 
 	// Create collections
 	config.addCollection("crib", (collection) => {
-		return collection.getFilteredByGlob("crib/**/*");
+		return collection.getFilteredByGlob("src/crib/**/*");
 	});
 
 	config.addCollection("notes", (collection) => {
-		return collection.getFilteredByGlob("notes/**/*");
+		return collection.getFilteredByGlob("src/notes/**/*");
 	});
 
 	config.addCollection("snippets", (collection) => {
-		return collection.getFilteredByGlob("snippets/**/*");
+		return collection.getFilteredByGlob("src/snippets/**/*");
 	});
 
 	// Register imported links function as a transform
@@ -62,6 +62,7 @@ export default async function (config) {
 		dir: {
 			input: "./src",
 			includes: "../_includes",
+			layouts: "../_layouts",
 			data: "../_data",
 			output: ".site",
 		}
