@@ -1,6 +1,8 @@
-- TODO: separate snippets by category / type (label them too!)
+- TODO: add collections for each category / type
+    - TODO: separate snippets (in index) by category / type (label them too!)
 - TODO: separate snippets from regular notes
-- TODO: add file name to snippet blocks
+
+- TODO: add file name to snippet blocks (?)
 - TODO: add copy button for snippet blocks
 
 - add description?

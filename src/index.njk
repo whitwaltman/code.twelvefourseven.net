@@ -1,12 +1,23 @@
 ---
 layout: base.njk
 ---
-Hello world
-
+<h1>crib sheets</h1>
 <ul>
-{% for item in collections.all %}
-    {% if item.url !== "/" %}
-        <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
-    {% endif %}
+{% for item in collections.crib %}
+    <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
+{% endfor %}
+</ul>
+
+<h1>notes</h1>
+<ul>
+{% for item in collections.notes %}
+    <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
+{% endfor %}
+</ul>
+
+<h1>snippets</h1>
+<ul>
+{% for item in collections.snippets %}
+    <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
 {% endfor %}
 </ul>

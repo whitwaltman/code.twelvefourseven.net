@@ -1,13 +1,10 @@
-```js
-import transformExternalLinks from "./utils/links.js";
+---
+title: Transforming external links in Eleventy
+---
 
-export default async function (config) {
-	// ...
-	config.addTransform("externalLinks", transformExternalLinks);
-}
-```
-
-```js
+{% tabsContainer "utils/links.js, .eleventy.js" %}
+	{% tabWrapper "utils/links.js" %}
+{% highlight "js" %}
 import { parseHTML } from "linkedom";
 
 export default function(content) {
@@ -36,4 +33,17 @@ export default function(content) {
 
 	return content;
 };
-```
+{% endhighlight %}
+	{% endtabWrapper %}
+
+	{% tabWrapper ".eleventy.js" %}
+{% highlight "js" %}
+import transformExternalLinks from "./utils/links.js";
+
+export default async function (config) {
+	// ...
+	config.addTransform("externalLinks", transformExternalLinks);
+}
+{% endhighlight %}
+	{% endtabWrapper %}
+{% endtabsContainer %}

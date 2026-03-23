@@ -1,5 +1,9 @@
+---
+title: Eleventy config
+---
+
+```js
 import filters from "./utils/filters.js";
-import shortcodes from "./utils/shortcodes.js";
 import transformExternalLinks from "./utils/links.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
@@ -14,7 +18,6 @@ export default async function (config) {
 	// Copy public assets to output folder
 	config.addPassthroughCopy({
 		"./public": "/",
-  		"node_modules/@zachleat/seven-minute-tabs/seven-minute-tabs.js": "js/seven-minute-tabs.js",
 	});
 
 	// Add global default layout
@@ -23,26 +26,6 @@ export default async function (config) {
 	// Register filter functions
 	Object.keys(filters).forEach((filter) => {
 		config.addFilter(filter, filters[filter]);
-	});
-
-	// Register paired shortcodes
-	Object.keys(shortcodes).forEach((shortcode) => {
-		config.addPairedShortcode(shortcode, shortcodes[shortcode]);
-	})
-	// config.addPairedShortcode("tabsContainer", tabsContainer);
-	// config.addPairedShortcode("tabWrapper", tabWrapper);
-
-	// Create collections
-	config.addCollection("crib", (collection) => {
-		return collection.getFilteredByGlob("crib/**/*");
-	});
-
-	config.addCollection("notes", (collection) => {
-		return collection.getFilteredByGlob("notes/**/*");
-	});
-
-	config.addCollection("snippets", (collection) => {
-		return collection.getFilteredByGlob("snippets/**/*");
 	});
 
 	// Register imported links function as a transform
@@ -67,3 +50,4 @@ export default async function (config) {
 		}
 	};
 }
+```
