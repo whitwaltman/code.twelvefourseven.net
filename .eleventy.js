@@ -1,5 +1,6 @@
 import filters from "./_utils/filters.js";
 import shortcodes from "./_utils/shortcodes.js";
+import insertCopyButton from "./_utils/codeblocks.js";
 import transformExternalLinks from "./_utils/links.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
@@ -49,8 +50,9 @@ export default async function (config) {
 		return collection.getFilteredByGlob("src/snippets/**/*");
 	});
 
-	// Register imported links function as a transform
+	// Register utility functions as transforms
 	config.addTransform("externalLinks", transformExternalLinks);
+	config.addTransform("copyCode", insertCopyButton);
 
 	return {
         // control which files 11ty will process

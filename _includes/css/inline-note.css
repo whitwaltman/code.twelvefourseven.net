@@ -30,7 +30,7 @@ body.js-enabled {
 
 .note-container {
     display: inline;
-    color: slategray;
+    color: darkgreen;
 }
 
 .note-container:focus {

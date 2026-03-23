@@ -26,6 +26,20 @@ code {
     -o-tab-size: 2;
 }
 
+pre:has(code) {
+    position: relative;
+    margin: 5px 0;
+    padding: 1.75rem 0 1.75rem 1rem;
+}
+
+pre:has(code) button {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
 hr {
     margin-block: 2.5rem;
     margin-left: 0;
