@@ -10,3 +10,10 @@
     - leaning no, but could be helpful for something like "config" general snipet
     - for now, don't use because it's unnecessary
 - make sure any index pages (e.g. `snippets/eleventy/`) use the base layout template (don't index their contents)
+
+
+---
+
+migrate from:
+- `~/Desktop/_dir/cache/`
+- `~/Desktop/_dir/summaries/`

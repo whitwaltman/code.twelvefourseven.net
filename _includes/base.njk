@@ -15,6 +15,7 @@
     <meta property="og:description" content="{{ site.description }}">
     <link rel="stylesheet" href="/style.css"/>
     <link rel="stylesheet" href="/syntax.css"/>
+    <link rel="stylesheet" href="/tabs.css"/>
 </head>
 
 <body>
@@ -24,49 +25,10 @@
         {{ content | safe }}
     </main>
 
-    <footer>
-        <span>Latest build: {{ site.latestBuild }}</span>
-    </footer>
+    {% include "partials/footer.njk" %}
 
-    {# <script src="/pagefind/pagefind-ui.js"></script> #}
+    <script src="/js/seven-minute-tabs.js" type="module"></script>
     <script>
-        {# window.addEventListener("DOMContentLoaded", (event) => {
-            const modal = document.querySelector("#search-modal");
-            const openBtn = document.querySelector("#search-open");
-            const closeBtn = document.querySelector("#search-close");
-
-            new PagefindUI({
-                bundlePath: "/pagefind/",
-                element: "#search",
-                pageSize: 8,
-                showSubResults: true,
-                showImages: false,
-                excerptLength: 50,
-            });
-
-            const openModal = () => {
-                modal.showModal();
-                setTimeout(() => {
-                    document.querySelector(".pagefind-ui__search-input").focus();
-                }, 100);
-            };
-
-            openBtn.addEventListener("click", openModal);
-
-            closeBtn.addEventListener("click", () => modal.close());
-
-            modal.addEventListener("click", (e) => {
-                if (e.target === modal) modal.close();
-            });
-
-            document.addEventListener("keydown", (e) => {
-                if (e.key === "/" && !modal.open) {
-                    e.preventDefault();
-                    openModal();
-                }
-            });
-        }); #}
-
         document.body.classList.add("js-enabled");
 
         const containers = document.querySelectorAll(".note-container");

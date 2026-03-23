@@ -13,6 +13,7 @@ export default async function (config) {
 	// Copy public assets to output folder
 	config.addPassthroughCopy({
 		"./public": "/",
+  		"node_modules/@zachleat/seven-minute-tabs/seven-minute-tabs.js": "js/seven-minute-tabs.js",
 	});
 
 	// Add global default layout

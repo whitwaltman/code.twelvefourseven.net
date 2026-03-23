@@ -1,8 +1,9 @@
 # code.twelvefourseven.net
 
-migrate from:
-- `~/Desktop/_dir/cache/`
-- `~/Desktop/_dir/summaries/`
+## uses
+
+- https://www.11ty.dev/docs/plugins/syntaxhighlight/
+- https://zachleat.github.io/seven-minute-tabs/
 
 ## search
 
