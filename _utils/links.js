@@ -10,14 +10,9 @@ export default function(content) {
 			const isExternal = href && href.startsWith("http");
 
 			if (isExternal) {
+				link.classList.add("external");
 				link.setAttribute("target", "_blank");
 				link.setAttribute("rel", "noopener noreferrer");
-				link.classList.add("ext-link");
-
-				const icon = document.createElement("span");
-				icon.classList.add("icon-ne");
-				icon.innerHTML = "<svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg>";
-				link.appendChild(icon);
 			}
 		});
 

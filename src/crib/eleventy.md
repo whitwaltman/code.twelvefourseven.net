@@ -1,7 +1,14 @@
-Highlight in njk uses shortcodes:
+---
+title: Eleventy crib sheet
+code: true
+tabs: false
+templateEngineOverride: "md"
+---
 
-```njk
+Highlighting in njk uses shortcodes:
+
+```md
 {% highlight "js" %}
-const arr = Array(5).fill(0).map((_, i) => i + 1);
+    const arr = Array(5).fill(0).map((_, i) => i + 1);
 {% endhighlight %}
 ```

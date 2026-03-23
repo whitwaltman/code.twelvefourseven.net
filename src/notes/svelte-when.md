@@ -1,5 +1,7 @@
 ---
 title: When to use Svelte
+code: false
+tabs: false
 ---
 Trying to formalize some of my decision making processes around choosing tools and frameworks.
 

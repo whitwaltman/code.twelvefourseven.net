@@ -1,5 +1,7 @@
 ---
 title: Eleventy config
+code: true
+tabs: false
 ---
 
 ```js

@@ -1,5 +1,18 @@
 const slugify = (text) => text.toLowerCase().replace(/\s+/g, '-');
 
+// helper to remove leading indentation from a multi-line string
+const dedent = (str) => {
+    const lines = str.split('\n');
+    const firstContentLine = lines.find(line => line.trim().length > 0);
+    if (!firstContentLine) return str;
+
+    const indent = firstContentLine.match(/^\s*/)[0];
+    return lines
+        .map(line => line.startsWith(indent) ? line.substring(indent.length) : line)
+        .join('\n')
+        .trim();
+};
+
 const shortcodes = {
     tabsContainer: function(content, labelsStr) {
         const labels = labelsStr.split(',').map(l => l.trim());
@@ -19,7 +32,8 @@ const shortcodes = {
 
     tabWrapper: function(content, label) {
         const id = slugify(label);
-        return `<div id="${id}" role="tabpanel">${content}</div>`;
+        const cleaned = dedent(content);
+        return `<div id="${id}" role="tabpanel">${cleaned}</div>`;
     }
 };
 

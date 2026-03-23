@@ -1,5 +1,7 @@
 ---
 title: Swift crib sheet
+code: true
+tabs: false
 ---
 
 Doubles vs. floats
