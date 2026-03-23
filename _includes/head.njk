@@ -11,10 +11,19 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-    {# load styles #}
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/syntax.css">
-    <link rel="stylesheet" href="/tabs.css">
+    {# LOAD STYLES #}
+    {% if code %}
+        <link rel="stylesheet" href="/syntax.css">
+    {% endif %}
+
+    {% if tabs %}
+        <link rel="stylesheet" href="/tabs.css">
+    {% endif %}
+
+    {# bundle css #}
+    {% css %}
+    
+    {% endcss %}
     
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ site.title }}">

@@ -11,7 +11,10 @@ export default async function (config) {
 	// Add syntax highlighting plugin: https://www.11ty.dev/docs/plugins/syntaxhighlight/
 	config.addPlugin(syntaxHighlight);
 
-	// Copy public assets to output folder
+	// Configure bundle for CSS
+	config.addBundle("css");
+
+	// Copy assets to output folder
 	config.addPassthroughCopy({
 		"./public": "/",
   		"node_modules/@zachleat/seven-minute-tabs/seven-minute-tabs.js": "js/seven-minute-tabs.js",
