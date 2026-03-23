@@ -10,26 +10,13 @@
 
     {% include "footer.njk" %}
 
-    <script src="/js/seven-minute-tabs.js" type="module"></script>
-    <script>
-        document.body.classList.add("js-enabled");
-
-        const containers = document.querySelectorAll(".note-container");
-
-        const toggleNote = (el) => {
-            const isExpanded = el.getAttribute("aria-expanded") === "true";
-            el.setAttribute("aria-expanded", !isExpanded);
-        }
-
-        containers.forEach((el) => {
-            el.addEventListener("click", () => toggleNote(el));
-            el.addEventListener("keydown", (e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    toggleNote(el);
-                }
-            });
-        });
-    </script>
+    {% if tabs %}
+        <script src="/js/seven-minute-tabs.js" type="module"></script>
+    {% endif %}
+    
+    {% js %}
+        {% include "js/notes.js" %}
+    {% endjs %}
+    <script>{% getBundle "js" %}</script>
 </body>
 </html>

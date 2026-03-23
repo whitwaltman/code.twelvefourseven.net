@@ -11,8 +11,9 @@ export default async function (config) {
 	// Add syntax highlighting plugin: https://www.11ty.dev/docs/plugins/syntaxhighlight/
 	config.addPlugin(syntaxHighlight);
 
-	// Configure bundle for CSS
+	// Create app-level bundles
 	config.addBundle("css");
+	config.addBundle("js");
 
 	// Copy assets to output folder
 	config.addPassthroughCopy({
