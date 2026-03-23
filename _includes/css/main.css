@@ -19,6 +19,13 @@ footer span {
     font-size: 0.9rem;
 }
 
+code:not(pre > code) {
+    font-size: 0.84em;
+    background-color: lightgray;
+    padding: 0 2px;
+    outline: 1px solid gray;
+}
+
 pre,
 code {
     -moz-tab-size: 2;

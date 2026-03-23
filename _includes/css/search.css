@@ -17,10 +17,15 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+#search-close {
+    font-size: 0.7em;
+}
+
 .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 1em;
 }
 
 /* Pagefind form */
@@ -58,4 +63,5 @@
     overflow-y: auto !important;
     flex-grow: 1;
     padding-right: 10px;
+    padding-bottom: 40px
 }

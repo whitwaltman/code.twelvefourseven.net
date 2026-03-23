@@ -1,5 +1,10 @@
 # todo
-- [ ] add collection index pages !!!!
+- [ ] add type hierarchy stuff back to styles (`h2`, etc.)
+- [ ] fix size of `<code>` element renderings
+- [ ] **add collection index pages**
+    - [ ] `/crib`
+    - [ ] `/notes`
+    - [ ] `/snippets`
 - [ ] fix spacing / layout on search modal
 
 ## maybe
