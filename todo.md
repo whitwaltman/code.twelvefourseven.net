@@ -1,0 +1,12 @@
+- TODO: separate snippets by category / type (label them too!)
+- TODO: separate snippets from regular notes
+- TODO: add file name to snippet blocks
+- TODO: add copy button for snippet blocks
+
+- add description?
+- add title?
+- figure out if/how i want to display hotkey commands (emacs, nvim)
+- figure out if i want to use tags
+    - leaning no, but could be helpful for something like "config" general snipet
+    - for now, don't use because it's unnecessary
+- make sure any index pages (e.g. `snippets/eleventy/`) use the base layout template (don't index their contents)
