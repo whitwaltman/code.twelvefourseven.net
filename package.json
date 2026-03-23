@@ -13,7 +13,7 @@
   "scripts": {
     "build": "npx eleventy",
     "build:clean": "rm -rf .site && npx eleventy",
-    "build:all": "npm run build:clean && npm run format",
+    "build:all": "NODE_ENV=production npm run build:clean && npm run format",
     "postbuild:all": "npx pagefind --site .site --glob \"**/*.html\"",
     "debug": "DEBUG=* npx eleventy",
     "format": "node _utils/format.js",

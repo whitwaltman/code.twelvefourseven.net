@@ -7,6 +7,10 @@ const data = {
         permalink: (data) => {
             if (isProduction && data.draft) return false;
             return data.permalink;
+        },
+        eleventyExcludeFromCollections: (data) => {
+            if (isProduction && data.draft) return true;
+            return data.eleventyExcludeFromCollections;
         }
     }
 };

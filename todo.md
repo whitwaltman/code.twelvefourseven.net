@@ -1,9 +1,8 @@
-- TODO: add collections for each category / type
-    - TODO: separate snippets (in index) by category / type (label them too!)
-- TODO: separate snippets from regular notes
+# todo
+- [ ] add collection index pages !!!!
+- [ ] fix spacing / layout on search modal
 
-- TODO: add file name to snippet blocks (?)
-- TODO: add copy button for snippet blocks
+## maybe
 
 - add description?
 - add title?
@@ -13,9 +12,15 @@
     - for now, don't use because it's unnecessary
 - make sure any index pages (e.g. `snippets/eleventy/`) use the base layout template (don't index their contents)
 
-
----
+## scratch
 
 migrate from:
 - `~/Desktop/_dir/cache/`
 - `~/Desktop/_dir/summaries/`
+
+---
+
+# done
+- [x] ~~add collections for each category / type~~
+    - [x] ~~separate snippets (in index) by category / type (label them too!)~~
+- [x] ~~add copy button for snippet blocks~~
