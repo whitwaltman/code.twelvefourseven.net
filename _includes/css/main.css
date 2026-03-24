@@ -35,9 +35,11 @@ h3 {
 
 code:not(pre > code) {
     font-size: 0.84em;
-    background-color: lightgray;
-    padding: 0 2px;
-    outline: 1px solid gray;
+    background: #272822;
+    color: #f8f8f2;
+    border-radius: 0.3em;
+    padding: 2px 4px;
+    white-space: nowrap;
 }
 
 .code-block-wrapper {

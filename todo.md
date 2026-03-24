@@ -5,6 +5,9 @@
     - add outline / distinct style for selected tab
 - [ ] Design grid-based crib sheet layout
     - do test run first before templatizing it
+- [ ] toc for crib sheets??
+    - see [plugin](https://plug11ty.com/plugins/table-of-contents/)
+- 
 
 ---
 
@@ -26,16 +29,9 @@
     - surface most helpful stuff at the top
     - maybe add descriptions / context
         - honestly even just definitions of what each type of collection / section actually is/does would be a huge improvement
-
-## maybe
-
-- **thinking about adding a toc shortcode thing for content**
-    - can jump to sections like in [rubystyle.guide](https://rubystyle.guide/#map-find-select-reduce-include-size)
-        - would need to add linking via `id`s
-    - don't wanna use it for everything, but probably helpful for crib sheets primarily
-    - should probably fix type hierarchy / styling first!
+- tags / metadata??
+    - version number / machine
 - add description?
-- figure out if/how i want to display hotkey commands (emacs, nvim)
 - figure out if i want to use tags
     - leaning no, but could be helpful for something like "config" general snipet
     - for now, don't use because it's unnecessary
@@ -68,3 +64,4 @@ migrate from:
 - ~~**code copy button is anchored on scroll**~~
     - ~~covers some comments~~
     - ~~moves with scroll instead of staying fixed~~
+- ~~figure out if/how i want to display hotkey commands (emacs, nvim)~~

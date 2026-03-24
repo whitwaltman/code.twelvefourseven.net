@@ -1,5 +1,5 @@
 import filters from "./_utils/filters.js";
-import singleShortcodes from "./utils/single.js";
+import singleShortcodes from "./_utils/single.js";
 import pairedShortcodes from "./_utils/paired.js";
 import insertCopyButton from "./_utils/codeblocks.js";
 import transformExternalLinks from "./_utils/links.js";
