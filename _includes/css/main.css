@@ -5,7 +5,9 @@ p {
     margin-bottom: 1.25rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #111827;
     font-weight: 600;
     line-height: 1.2;
@@ -60,13 +62,13 @@ pre:has(code) {
     cursor: pointer;
 }
 
-div.grid {
+div.home-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-.grid-link {
+.home-grid-link {
     display: block;
     text-decoration: none;
     color: inherit;

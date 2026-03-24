@@ -1,6 +1,10 @@
 # todo
 
-
+- [ ] *make custom styles for seven-min-tabs*
+    - shrink tab label padding
+    - add outline / distinct style for selected tab
+- [ ] Design grid-based crib sheet layout
+    - do test run first before templatizing it
 
 ---
 
@@ -14,9 +18,6 @@
     - remove the list styling
     - add margin btwn results
     - [ ] fix spacing / layout on search modal
-- *make custom styles for seven-min-tabs*
-    - shrink tab label padding
-    - add outline / distinct style for selected tab
 - **add content**
     - tmux
     - add more notes! (*evergreen content*)
