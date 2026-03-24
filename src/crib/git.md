@@ -4,6 +4,8 @@ code: true
 tabs: false
 ---
 
+## branches
+
 Note: I have `br` set as an alias for `branch`.
 
 ```sh

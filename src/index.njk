@@ -12,21 +12,21 @@ layout: base.njk
 
 <p>To compensate for my working memory deficiencies, I often try to <mark>externalize information</mark>. This is one such attempt to do so.</p>
 <hr>
-<h1>crib sheets</h1>
+<h3>crib sheets</h3>
 <ul>
 {% for item in collections.crib %}
     <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
 {% endfor %}
 </ul>
 
-<h1>notes</h1>
+<h3>notes</h3>
 <ul>
 {% for item in collections.notes %}
     <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
 {% endfor %}
 </ul>
 
-<h1>snippets</h1>
+<h3>snippets</h3>
 <ul>
 {% for item in collections.snippets | sort(false, false, 'url') %}
     <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>

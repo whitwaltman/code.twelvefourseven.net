@@ -4,7 +4,8 @@ code: true
 tabs: false
 ---
 
-Doubles vs. floats
+## Doubles vs. floats
+
 ```swift
 let untyped = 3.14159265
 print(type(of: untyped))                // Double
@@ -14,7 +15,8 @@ print(lessPrecise)                      // 3.1415927
 print(untyped == Double(lessPrecise))   // false
 ```
 
-Strings
+## Strings
+
 ```swift
 let item: String = "Oranges"
 print(item.count)                       // 7
