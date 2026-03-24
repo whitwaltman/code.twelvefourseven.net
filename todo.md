@@ -1,14 +1,37 @@
 # todo
 - [ ] add type hierarchy stuff back to styles (`h2`, etc.)
-- [ ] fix size of `<code>` element renderings
 - [ ] **add collection index pages**
     - [ ] `/crib`
     - [ ] `/notes`
     - [ ] `/snippets`
 - [ ] fix spacing / layout on search modal
 
+## scratch
+
+- update search results styling
+    - title and link are duped: either remove title from pagefind index data or collapse context
+    - make the whole result clickable, not just the link at the top
+    - remove the list styling
+    - add margin btwn results
+- make custom styles for seven-min-tabs
+    - shrink tab label padding
+    - add outline / distinct style for selected tab
+- add content
+    - tmux
+    - add more notes! (**evergreen content**)
+        - crib sheets and snippets are meant to be quick reference
+- add more useful index layout / styling
+    - surface most helpful stuff at the top
+    - maybe add descriptions / context
+        - honestly even just definitions of what each type of collection / section actually is/does would be a huge improvement
+
 ## maybe
 
+- thinking about adding a toc shortcode thing for content
+    - can jump to sections like in [rubystyle.guide](https://rubystyle.guide/#map-find-select-reduce-include-size)
+        - would need to add linking via `id`s
+    - don't wanna use it for everything, but probably helpful for crib sheets primarily
+    - should probably fix type hierarchy / styling first!
 - add description?
 - add title?
 - figure out if/how i want to display hotkey commands (emacs, nvim)
@@ -17,7 +40,7 @@
     - for now, don't use because it's unnecessary
 - make sure any index pages (e.g. `snippets/eleventy/`) use the base layout template (don't index their contents)
 
-## scratch
+## old
 
 migrate from:
 - `~/Desktop/_dir/cache/`
@@ -29,3 +52,5 @@ migrate from:
 - [x] ~~add collections for each category / type~~
     - [x] ~~separate snippets (in index) by category / type (label them too!)~~
 - [x] ~~add copy button for snippet blocks~~
+- [x] ~~*fix size of `<code>` element renderings*~~
+    - sorta done, but i kinda wanna go back and clean up the styling later

@@ -1,0 +1,26 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: collectionName
+    filter:
+        - all
+permalink: "/{{ collectionName }}/"
+layout: base.njk
+---
+
+{% set targetCollections = ["crib", "notes", "snippets"] %}
+
+{% if collectionName in targetCollections %}
+<h1>{{ collectionName }}</h1>
+
+<ul>
+{% for item in collections[collectionName] %}
+    <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
+{% endfor %}
+</ul>
+
+{% else %}
+    {% set ignore = true %}
+{% endif %}
+
