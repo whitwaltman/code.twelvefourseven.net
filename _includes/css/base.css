@@ -26,7 +26,7 @@ body > footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-block: 1rem;
+    padding-block: 0.75rem;
     padding-inline: 1.25rem;
 }
 

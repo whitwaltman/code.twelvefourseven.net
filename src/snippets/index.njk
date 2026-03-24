@@ -4,7 +4,7 @@ layout: folder-index.njk
 <h1>Code snippets</h1>
 
 {% for category in collections.snippetCategories %}
-    <h2>{{ category }}</h2>
+    <h2>{{ category | capitalize }}</h2>
 
     <ul>
         {% for item in collections.snippets %}

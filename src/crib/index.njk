@@ -1,0 +1,10 @@
+---
+layout: folder-index.njk
+---
+<h1>Crib sheets</h1>
+
+<ul>
+    {% for item in collections.crib %}
+        <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a></li>
+    {% endfor %}
+</ul>

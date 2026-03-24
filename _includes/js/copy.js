@@ -11,7 +11,7 @@ document.addEventListener("click", async (event) => {
         await navigator.clipboard.writeText(text);
 
         // visual feedback
-        button.innerText = "Copied";
+        button.innerText = "Copied!";
         setTimeout(() => {
             button.innerText = "Copy";
         }, 1000);
