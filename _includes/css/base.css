@@ -30,6 +30,19 @@ body > footer {
     padding-inline: 1.25rem;
 }
 
+@media (max-width: 768px) {
+    body > footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px) {
+    body > header {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
 main {
     flex: 1 1 auto;
     padding-inline: 1.25rem;

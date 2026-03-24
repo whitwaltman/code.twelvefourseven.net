@@ -38,16 +38,45 @@ code:not(pre > code) {
     outline: 1px solid gray;
 }
 
-pre:has(code) {
+.code-block-wrapper {
     position: relative;
-    margin: 5px 0;
+    margin: 1rem 0;
+}
+
+pre:has(code) {
+    overflow-x: auto;
+    margin: 0;
     padding: 1.75rem 0 1.75rem 1rem;
 }
 
-pre:has(code) button {
+.copy-code-button {
     position: absolute;
-    top: 3px;
-    right: 3px;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
     border-radius: 5px;
     font-size: 0.9rem;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+div.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    background: rgb(158, 214, 249);
+    padding: 0 16px;
+    transition: transform box-shadow 0.3s ease;
+}
+
+.grid-link:hover {
+    transform: scale(1.015);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }

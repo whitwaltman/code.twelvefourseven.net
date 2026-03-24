@@ -8,14 +8,24 @@ export default function(content) {
         const blocks = document.querySelectorAll("pre > code");
 
         blocks.forEach((code) => {
-            const container = code.parentElement;   // the <pre>
+            const pre = code.parentElement;
 
+            // create wrapper div
+            const wrapper = document.createElement("div");
+            wrapper.className = "code-block-wrapper";
+
+            // insert wrapper before <pre>, move <pre> inside it
+            pre.parentNode.insertBefore(wrapper, pre);
+            wrapper.appendChild(pre);
+
+            // create button
             const button = document.createElement("button");
             button.className = "copy-code-button";
             button.type = "button";
             button.textContent = "Copy";
 
-            container.appendChild(button);
+            // append button to wrapper
+            wrapper.appendChild(button);
         });
 
         return "<!DOCTYPE html>\n" + document.documentElement.outerHTML;

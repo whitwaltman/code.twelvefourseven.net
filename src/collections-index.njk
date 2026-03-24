@@ -10,9 +10,14 @@ layout: base.njk
 ---
 
 {% set targetCollections = ["crib", "notes", "snippets"] %}
+{% set labels = {
+    "crib": "Crib sheets",
+    "notes": "Notes",
+    "snippets": "Code snippets"
+} %}
 
 {% if collectionName in targetCollections %}
-<h1>{{ collectionName }}</h1>
+<h1>{{ labels[collectionName] }}</h1>
 
 <ul>
 {% for item in collections[collectionName] %}
