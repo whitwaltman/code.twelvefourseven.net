@@ -9,11 +9,10 @@ permalink: "/{{ folder }}/"
 layout: folder-index.njk
 ---
 
-{% set targetFolders = ["crib", "notes", "snippets"] %}
+{% set targetFolders = ["crib", "notes"] %}
 {% set labels = {
     "crib": "Crib sheets",
-    "notes": "Notes",
-    "snippets": "Code snippets"
+    "notes": "Notes"
 } %}
 
 {% if folder in targetFolders %}
