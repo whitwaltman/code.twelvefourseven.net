@@ -2,25 +2,25 @@
 pagination:
     data: collections
     size: 1
-    alias: collectionName
+    alias: folder
     filter:
         - all
-permalink: "/{{ collectionName }}/"
+permalink: "/{{ folder }}/"
 layout: folder-index.njk
 ---
 
-{% set targetCollections = ["crib", "notes", "snippets"] %}
+{% set targetFolders = ["crib", "notes", "snippets"] %}
 {% set labels = {
     "crib": "Crib sheets",
     "notes": "Notes",
     "snippets": "Code snippets"
 } %}
 
-{% if collectionName in targetCollections %}
-<h1>{{ labels[collectionName] }}</h1>
+{% if folder in targetFolders %}
+<h1>{{ labels[folder] }}</h1>
 
 <ul>
-{% for item in collections[collectionName] %}
+{% for item in collections[folder] %}
     <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
 {% endfor %}
 </ul>

@@ -50,6 +50,20 @@ export default async function (config) {
 		return collection.getFilteredByGlob("src/snippets/**/*");
 	});
 
+	config.addCollection("snippetCategories", (collection) => {
+		const snippets = collection.getFilteredByGlob("src/snippets/**/*");
+		const categories = new Set();
+
+		snippets.forEach((item) => {
+			const parts = item.filePathStem.split("/");
+			if (parts.length > 3) {
+				categories.add(parts[2]);
+			}
+		});
+
+		return Array.from(categories);
+	});
+
 	// Register utility functions as transforms
 	config.addTransform("externalLinks", transformExternalLinks);
 	config.addTransform("copyCode", insertCopyButton);
