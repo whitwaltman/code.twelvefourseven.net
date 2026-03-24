@@ -11,7 +11,16 @@ const data = {
         eleventyExcludeFromCollections: (data) => {
             if (isProduction && data.draft) return true;
             return data.eleventyExcludeFromCollections;
-        }
+        },
+        breadcrumbs: (data) => {
+            const urlPath = data.page.url.split("/").filter((part) => part);
+            return urlPath.map((part, index) => {
+                return {
+                    label: part.replace(/-/g, " "),
+                    url: "/" + urlPath.slice(0, index + 1).join("/") + "/",
+                };
+            });
+        },
     }
 };
 
