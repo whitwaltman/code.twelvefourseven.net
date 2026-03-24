@@ -1,9 +1,3 @@
-/**
- * a11y-dark theme for JavaScript, CSS, and HTML
- * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
- * @author ericwbailey
- */
-
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #f8f8f2;

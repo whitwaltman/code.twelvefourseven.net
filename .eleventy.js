@@ -1,5 +1,6 @@
 import filters from "./_utils/filters.js";
-import shortcodes from "./_utils/shortcodes.js";
+import singleShortcodes from "./utils/single.js";
+import pairedShortcodes from "./_utils/paired.js";
 import insertCopyButton from "./_utils/codeblocks.js";
 import transformExternalLinks from "./_utils/links.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -30,12 +31,14 @@ export default async function (config) {
 		config.addFilter(filter, filters[filter]);
 	});
 
-	// Register paired shortcodes
-	Object.keys(shortcodes).forEach((shortcode) => {
-		config.addPairedShortcode(shortcode, shortcodes[shortcode]);
-	})
-	// config.addPairedShortcode("tabsContainer", tabsContainer);
-	// config.addPairedShortcode("tabWrapper", tabWrapper);
+	// Register all shortcodes
+	Object.keys(singleShortcodes).forEach((sc) => {
+		config.addShortcode(sc, singleShortcodes[sc]);
+	});
+
+	Object.keys(pairedShortcodes).forEach((sc) => {
+		config.addPairedShortcode(sc, pairedShortcodes[sc]);
+	});
 
 	// Create collections
 	config.addCollection("crib", (collection) => {
