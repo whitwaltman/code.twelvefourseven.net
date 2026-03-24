@@ -13,6 +13,7 @@ const data = {
             return data.eleventyExcludeFromCollections;
         },
         breadcrumbs: (data) => {
+            if (isProduction && data.draft) return false;
             const urlPath = data.page.url.split("/").filter((part) => part);
             return urlPath.map((part, index) => {
                 return {

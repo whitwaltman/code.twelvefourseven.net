@@ -1,22 +1,14 @@
 # todo
 
-- [ ] add back buttons and/or nav breadcrumbs (??)
+
 
 ---
-
-## RESPONSIVE
-
-- search is kinda wonky
-    - zooms in when field is in focus so you can't see the results that well
-- ~~footer flex display has a weird wrap~~
-    - ~~can fix by changing to `flex-direction: column;` when at a certain breakpoint~~
-- ~~**code copy button is anchored on scroll**~~
-    - ~~covers some comments~~
-    - ~~moves with scroll instead of staying fixed~~
 
 ## scratch
 
 - update search results styling
+    - kinda wonky on mobile
+    -   zooms in when field is in focus so you can't see the results that well
     - title and link are duped: either remove title from pagefind index data or collapse context
     - make the whole result clickable, not just the link at the top
     - remove the list styling
@@ -25,9 +17,9 @@
 - *make custom styles for seven-min-tabs*
     - shrink tab label padding
     - add outline / distinct style for selected tab
-- add content
+- **add content**
     - tmux
-    - add more notes! (**evergreen content**)
+    - add more notes! (*evergreen content*)
         - crib sheets and snippets are meant to be quick reference
 - add more useful index layout / styling
     - surface most helpful stuff at the top
@@ -56,6 +48,7 @@ migrate from:
 ---
 
 # done
+
 - [x] ~~add collections for each category / type~~
     - [x] ~~separate snippets (in index) by category / type (label them too!)~~
 - [x] ~~add copy button for snippet blocks~~
@@ -68,3 +61,9 @@ migrate from:
     - [x] ~~`/snippets`~~
 - ~~make sure any index pages (e.g. `snippets/eleventy/`) use the base layout template (don't index their contents)~~
 - ~~add title?~~
+- [x] ~~add back buttons and/or nav breadcrumbs (??)~~
+- ~~footer flex display has a weird wrap on mobile~~
+    - ~~can fix by changing to `flex-direction: column;` when at a certain breakpoint~~
+- ~~**code copy button is anchored on scroll**~~
+    - ~~covers some comments~~
+    - ~~moves with scroll instead of staying fixed~~
