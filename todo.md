@@ -7,7 +7,12 @@
     - do test run first before templatizing it
 - [ ] toc for crib sheets??
     - see [plugin](https://plug11ty.com/plugins/table-of-contents/)
-- 
+- [ ] add callout component ????
+    - maybe just use custom styling on an `<aside>` element + class selector?
+- [ ] redesign / edit link styling on index page
+    - box shadow is kind of aggressive
+    - plus i kinda chose the bg colors haphazardly
+- [ ] edit link styling to be uniform regardless of `:visited`
 
 ---
 

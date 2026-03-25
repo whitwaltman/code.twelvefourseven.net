@@ -1,0 +1,100 @@
+---
+title: Note container
+code: true
+tabs: true
+---
+
+{% from 'macros.njk' import insertNote %}
+
+<p>
+    The style and functionality of these "note containers" {{ insertNote(text = "basically an inline footnote/sidenote") }}
+    heavily borrows from the online textbook <cite>Web Browser Engineering</cite>.
+    You can see how its used in the first paragraph of the <a href="https://browser.engineering/intro.html">intro section</a>.
+</p>
+
+<p>
+    The bulk of the code is the styling, although there are some important bits in the JavaScript that make it accessible.
+    Also of note: it'll only collapse the contents of the note <em>if the client has JS enabled</em>, so the actual text
+    will still be visible for users who disable JS.
+</p>
+
+{% tabsContainer "html, css, js" %}
+    {% tabWrapper "html" %}
+        {% highlight "html" %}
+        <span class="note-container" role="button"
+            tabindex="0" aria-expanded="false"
+            aria-label="Toggle note"><span class="note">Place your note here</span></span>
+        {% endhighlight %}
+    {% endtabWrapper %}
+
+    {% tabWrapper "css" %}
+        {% highlight "css" %}
+        body.js-enabled {
+            counter-reset: fn;
+        }
+
+        .js-enabled .note-container {
+            cursor: pointer;
+            counter-increment: fn;
+        }
+
+        .js-enabled .note-container[aria-expanded="false"]::before {
+            content: "[" counter(fn);
+        }
+
+        .note-container::before {
+            content: "[";
+        }
+
+        .note-container::after {
+            content: "]";
+        }
+
+        .js-enabled .note {
+            display: none;
+        }
+
+        .note-container[aria-expanded="true"] .note {
+            display: inline;
+            font-style: italic;
+        }
+
+        .note-container {
+            display: inline;
+            color: darkgreen;
+        }
+
+        .note-container:focus {
+            outline: none;
+        }
+
+        .note-container:focus-visible {
+            outline: 2px solid blue;
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+        {% endhighlight %}
+    {% endtabWrapper %}
+
+    {% tabWrapper "js" %}
+        {% highlight "js" %}
+        document.body.classList.add("js-enabled");
+        const containers = document.querySelectorAll(".note-container");
+
+        const toggleNote = (el) => {
+            const isExpanded = el.getAttribute("aria-expanded") === "true";
+            el.setAttribute("aria-expanded", !isExpanded);
+        }
+
+        containers.forEach((el) => {
+            el.addEventListener("click", () => toggleNote(el));
+            el.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleNote(el);
+                }
+            });
+        });
+        {% endhighlight %}
+    {% endtabWrapper %}
+{% endtabsContainer %}
