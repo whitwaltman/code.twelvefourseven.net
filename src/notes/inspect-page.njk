@@ -4,16 +4,13 @@ draft: true
 
 {% from 'macros.njk' import insertNote %}
 
-<h2>Brilliant.org</h2>
-
 <p>
-    None of these are comprehensive. This is just what I could find from using the dev tools inspector
-    in a very cursory manner and some brief googling. This also applies specifically to the web app
-    since I'm unable to inspect a mobile app.
-    {{ insertNote(text = "However, Brilliant's mobile app doesn't seem to have a native mobile experience, so it's possible they use a native wrapper or something similar.") }}
+    None of these are comprehensive run-downs or audits. This is just what I could find from using the dev tools inspector in a very cursory manner and some brief Googling.
+    In cases where the product offers a mobile app and a web app, my notes will primarily apply to the latter platform, seeing as it's much harder to "inspect" a mobile application.
 </p>
 
 
+<h2>Brilliant.org</h2>
 
 <ul>
     <li>Uses Chakra UI in some capacity {{ insertNote(text = "HTML has chakra in class names for several elements") }}</li>
@@ -23,6 +20,14 @@ draft: true
             <li>Rive shared a <a href="https://rive.app/blog/how-brilliant-org-motivates-learners-with-rive-animations">case study</a> back in 2024</li>
         </ul>
     </li>
+    <li>I'm not an expert in native vs. hybrid mobile development, but based on my experience using the Brilliant mobile app on iOS, I think it's likely that they use a wrapper or something similar to port their codebase.
+        <ul>
+            <li>I will say, though, that their app has had some small but noticeable UX improvements over the past few months</li>
+        </ul>
+    </li>
 </ul>
 
-<p>Brilliant also has 
+<p>
+    Brilliant also has a <a href="https://blog.brilliant.org/hand-crafted-machine-made/">blog</a> where they occasionally
+    {{ insertNote(text = "as of late March 2026, it hasn't been active in over a year :/") }} share behind-the-scenes insights into how they do things.
+</p>
