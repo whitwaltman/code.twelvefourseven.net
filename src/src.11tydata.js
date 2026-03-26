@@ -23,7 +23,6 @@ const data = {
         },
 
         contentType: (data) => {
-            if (data.contentType) return data.contentType;
             const stem = data.page.filePathStem;
             const dirs = ["crib", "notes", "snippets"];
             const match = dirs.find(dir => stem.startsWith(`/${dir}/`));
