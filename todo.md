@@ -18,6 +18,9 @@
 
 ## scratch
 
+- still trying to figure out if / how to add language to code blocks and/or file name (optionally)
+- wanna try out using the diff feature in prism!
+
 - update search results styling
     - kinda wonky on mobile
     -   zooms in when field is in focus so you can't see the results that well
