@@ -13,7 +13,7 @@ const dedent = (str) => {
         .trim();
 };
 
-const shortcodes = {
+const paired = {
     tabsContainer: function(content, labelsStr) {
         const labels = labelsStr.split(',').map(l => l.trim());
         const tabList = labels.map(label => {
@@ -37,4 +37,4 @@ const shortcodes = {
     }
 };
 
-export default shortcodes;
+export default { paired };

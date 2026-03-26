@@ -1,15 +1,22 @@
 import filters from "./_utils/filters.js";
-import singleShortcodes from "./_utils/single.js";
-import pairedShortcodes from "./_utils/paired.js";
-import insertCopyButton from "./_utils/codeblocks.js";
-import transformExternalLinks from "./_utils/links.js";
+import inline from "./_utils/shortcodes/inline.js";
+import block from "./_utils/shortcodes/block.js"
+import insertCopyButton from "./_utils/transforms/codeblocks.js";
+import transformExternalLinks from "./_utils/transforms/links.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
-function renderComponent(ctx, template, data) {
-	return ctx.renderTemplate(
-		`{% include "${template}" %}`,
-		data
-	);
+function registerShortcodes(config, group) {
+	if (group.single) {
+		Object.entries(group.single).forEach(([name, fn]) => {
+			config.addShortcode(name, fn);
+		});
+	}
+
+	if (group.paired) {
+		Object.entries(group.paired).forEach(([name, fn]) => {
+			config.addPairedShortcode(name, fn);
+		});
+	}
 }
 
 export default async function (config) {
@@ -39,17 +46,8 @@ export default async function (config) {
 	});
 
 	// Register all shortcodes
-	Object.keys(singleShortcodes).forEach((sc) => {
-		config.addShortcode(sc, singleShortcodes[sc]);
-	});
-
-	Object.keys(pairedShortcodes).forEach((sc) => {
-		config.addPairedShortcode(sc, pairedShortcodes[sc]);
-	});
-
-	config.addPairedShortcode("note", function(content) {
-		return renderComponent(this, "components/note.njk", { content });
-	});
+	registerShortcodes(config, inline);
+	registerShortcodes(config, block);
 
 	// Create content collections
 	config.addCollection("crib", (collection) => {
