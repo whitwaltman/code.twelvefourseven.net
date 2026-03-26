@@ -3,6 +3,10 @@ layout: folder-index.njk
 ---
 <h1>Notes</h1>
 
+<pre>
+{{ contentType | dump | safe }}
+</pre>
+
 <ul>
     {% for item in collections.notes %}
         <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a></li>

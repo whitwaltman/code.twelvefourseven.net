@@ -15,9 +15,15 @@ layout: base.njk
 
 <h2>All posts</h2>
 
-<ul>
+<ul class="feed">
 {% for item in collections.feed %}
-    <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}<a> {{ item.data.type }}</li>
+    <li class="feed-item">
+        <a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}<a>
+        <span class="label content-type">{{ item.data.contentType }}</span>
+        {% if item.data.snippetCategory %}
+            <span class="label category-tag">{{ item.data.snippetCategory }}</span>
+        {% endif%}
+    </li>
 {% endfor %}
 </ul>
 

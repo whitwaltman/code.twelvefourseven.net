@@ -51,26 +51,25 @@ export default async function (config) {
 
 	// Create content collections
 	config.addCollection("crib", (collection) => {
-		return collection.getFilteredByGlob("src/crib/**/*");
+		return collection.getAll().filter(item => item.data.contentType === "crib sheet");
 	});
 
 	config.addCollection("notes", (collection) => {
-		return collection.getFilteredByGlob("src/notes/**/*");
+		return collection.getAll().filter(item => item.data.contentType === "note");
 	});
 
 	config.addCollection("snippets", (collection) => {
-		return collection.getFilteredByGlob("src/snippets/**/*");
+		return collection.getAll().filter(item => item.data.contentType === "snippet");
 	});
 
 	// Create categories for snippet organization
 	config.addCollection("snippetCategories", (collection) => {
-		const snippets = collection.getFilteredByGlob("src/snippets/**/*");
+		const snippets = collection.getAll().filter(item => item.data.contentType === "snippet");
 		const categories = new Set();
 
 		snippets.forEach((item) => {
-			const parts = item.filePathStem.split("/");
-			if (parts.length > 3) {
-				categories.add(parts[2]);
+			if (item.data.snippetCategory) {
+				categories.add(item.data.snippetCategory);
 			}
 		});
 

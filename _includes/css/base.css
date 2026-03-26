@@ -46,6 +46,7 @@ body > footer {
 main {
     flex: 1 1 auto;
     padding-inline: 1.25rem;
+    padding-bottom: 4rem;
 }
 
 footer span {
@@ -86,7 +87,7 @@ h2 {
 
 article h2 {
     font-size: 1.625rem;
-    text-transform: capitalize;
+    text-transform: none;
     letter-spacing: 0%;
     /* color: #111827; */
     /* color: #309; */
@@ -115,6 +116,10 @@ code {
     tab-size: 2;
     -o-tab-size: 2;
 }
+
+/* li + *, ul > li {
+    margin-top: 0.4rem;
+} */
 
 .external::after {
     background-color: currentcolor;

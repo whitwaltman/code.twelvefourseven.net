@@ -24,9 +24,11 @@ const data = {
 
         contentType: (data) => {
             const stem = data.page.filePathStem;
-            const types = ["crib", "notes", "snippets"];
-            const match = types.find(type => stem.startsWith(`/${type}/`));
-            return match || "page";
+            const dirs = ["crib", "notes", "snippets"];
+            const match = dirs.find(dir => stem.startsWith(`/${dir}/`));
+            if (match === "crib") return "crib sheet";
+            if (match) return match.slice(0, -1);
+            return "page";
         },
 
         snippetCategory: (data) => {
@@ -48,15 +50,11 @@ const data = {
             return urlPath.map((part, index) => {
                 let label = part.replace(/-/g, " ");
 
-                if (index === 0 && part === data.contentType) {
-                    if (data.contentType === "crib") {
-                        label = "crib sheets"
-                    } else {
-                        label = data.contentType;
-                    }
+                if (index === 0 && part.startsWith(data.contentType)) {
+                    label = data.contentType + "s";
                 }
 
-                if (data.contentType === "snippets" && index === 1 && part === data.snippetCategory) {
+                if (data.contentType === "snippet" && index === 1 && part === data.snippetCategory) {
                     label = data.snippetCategory.replace(/-/g, " "); // or custom mapping
                 }
 
