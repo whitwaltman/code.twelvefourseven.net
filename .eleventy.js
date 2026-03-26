@@ -47,11 +47,8 @@ export default async function (config) {
 		config.addPairedShortcode(sc, pairedShortcodes[sc]);
 	});
 
-	config.addPairedShortcode("note", async function(content) {
-		return await this.renderTemplate(
-			`{% include "components/note.njk" %}`,
-			{ content }
-		);
+	config.addPairedShortcode("note", function(content) {
+		return renderComponent(this, "components/note.njk", { content });
 	});
 
 	// Create content collections
