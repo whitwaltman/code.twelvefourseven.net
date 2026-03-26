@@ -17,35 +17,15 @@ layout: base.njk
 
 <div class="sections">
     <a class="section-link" href="/crib/">
-        <h1>crib sheets</h1>
-        <h3>quick reference notes, sans explanations</h3>
+        <h3>crib sheets</h3>
+        <span class="sub-h3">quick reference notes, sans explanations</span>
     </a>
     <a class="section-link" href="/notes/">
         <h3>notes</h3>
-        <p>scribblings and thoughts</p>
+        <span class="sub-h3">scribblings and thoughts</span>
     </a>
     <a class="section-link" href="/snippets/">
         <h3>snippets</h3>
-        <p>code you can copy/steal to save time</p>
+        <span class="sub-h3">code you can copy/steal to save time</span>
     </a>
 </div>
-{# <h3>crib sheets</h3>
-<ul>
-{% for item in collections.crib %}
-    <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
-{% endfor %}
-</ul>
-
-<h3>notes</h3>
-<ul>
-{% for item in collections.notes %}
-    <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
-{% endfor %}
-</ul>
-
-<h3>snippets</h3>
-<ul>
-{% for item in collections.snippets | sort(false, false, 'url') %}
-    <li><a href="{{ item.url }}">{{ item.data.title or item.page.fileSlug }}</a></li>
-{% endfor %}
-</ul> #}

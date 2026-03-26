@@ -42,8 +42,19 @@ pre:has(code) {
     color: darkgray;
 }
 
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .section-link {
     text-decoration: none;
     display: block;
-    background-color: lightgray;
+    padding: 0 0.5rem 1rem;
+}
+
+.section-link:hover {
+    outline: 2px solid blue;
+    border-radius: 8px;
 }
