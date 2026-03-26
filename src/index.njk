@@ -10,13 +10,18 @@ layout: base.njk
 </ol>
 
 <p>To compensate for my working memory deficiencies, I often try to <mark>externalize information</mark>. This is one such attempt to do so.</p>
+
 <hr>
+
+<h2>All posts</h2>
 
 <ul>
 {% for item in collections.feed %}
     <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}<a></li>
 {% endfor %}
 </ul>
+
+<hr>
 
 <h2>Browse by category</h2>
 
