@@ -12,14 +12,32 @@ const data = {
             }
             return false;
         },
+
         permalink: (data) => {
             if (isProduction && data.draft) return false;
             return data.permalink;
         },
+
+        contentType: (data) => {
+            const stem = data.page.filePathStem;
+            const types = ["crib", "notes", "snippets"];
+            types.forEach((type) => {
+                if (stem.startsWith(`/${type}/`)) return type;
+            });
+            return page;
+        },
+
+        snippetCategory: (data) => {
+            const parts = data.page.filePathStem.split("/");
+            if (parts[1] === "snippets" && parts.length > 3) return parts[2];
+            return null;
+        },
+        
         eleventyExcludeFromCollections: (data) => {
             if (isProduction && data.draft) return true;
             return data.eleventyExcludeFromCollections;
         },
+
         breadcrumbs: (data) => {
             if (isProduction && data.draft) return false;
             const urlPath = data.page.url.split("/").filter((part) => part);

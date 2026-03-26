@@ -1,7 +1,7 @@
 const single = {
     kbd: (key) => `<kbd>${key}</kbd>`,
 
-    label: (text) => `<span class="label">${text}</span>`,
+    // label: (text) => `<span class="label">${text}</span>`,
 
     tmuxPrefix: () => {
         const k = ["Ctrl", "a"];
