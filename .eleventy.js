@@ -51,15 +51,15 @@ export default async function (config) {
 
 	// Create content collections
 	config.addCollection("crib", (collection) => {
-		return collection.getAll().filter(item => item.data.contentType === "crib sheet");
+		return collection.getAll().filter(item => item.data.contentTypeLabel === "crib sheets");
 	});
 
 	config.addCollection("notes", (collection) => {
-		return collection.getAll().filter(item => item.data.contentType === "note");
+		return collection.getAll().filter(item => item.data.contentTypeLabel === "notes");
 	});
 
 	config.addCollection("snippets", (collection) => {
-		return collection.getAll().filter(item => item.data.contentType === "snippet");
+		return collection.getAll().filter(item => item.data.contentTypeLabel === "snippets");
 	});
 
 	// Create categories for snippet organization

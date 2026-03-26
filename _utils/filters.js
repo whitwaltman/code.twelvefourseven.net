@@ -1,16 +1,24 @@
 const filters = {
+	chop: (str) => str.slice(0, -1),
+	
+	typeof: (val) => typeof val,
+
 	fmtDate: (dateObj) => {
 		return dateObj.toDateString();
 	},
+
 	fmtTime: (dateObj) => {
 		return dateObj.toLocaleTimeString("en-US", { timeZone: "UTC" });
 	},
+
 	unslug: (slug) => {
 		return slug.split("-").join(" ");
 	},
+
 	capitalize: (str) => {
 		return str[0].toUpperCase() + str.slice(1);
 	},
+
 	trim: (str) => {
 		if (str.length <= 36) return str;
 		const words = str.split(" ");
@@ -22,8 +30,11 @@ const filters = {
 		}
 		return result.slice(0, -1) + "...";
 	},
-	typeof: (val) => {
-		return typeof val;
+
+	filterByData: function (collection, key, value) {
+		return collection.filter((item) => {
+			return item.data[key] === value
+		});
 	}
 };
 

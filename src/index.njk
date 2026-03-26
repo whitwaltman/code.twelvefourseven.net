@@ -39,9 +39,13 @@ layout: base.njk
     <li class="feed-item">
         <a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}<a>
         <div class="metadata">
-            <span class="label content-type">{{ item.data.contentType }}</span>
+            <a href="/{{ item.data.contentType }}" class="label content-type">
+                {{ item.data.contentTypeLabel | chop }}
+            </a>
             {% if item.data.snippetCategory %}
-                <span class="label category-tag">{{ item.data.snippetCategory }}</span>
+                <a href="/snippets/{{ item.data.snippetCategory }}" class="label category-tag">
+                    {{ item.data.snippetCategory }}
+                </a>
             {% endif%}
         </div>
     </li>

@@ -1,5 +1,11 @@
 const isProduction = process.env.NODE_ENV === "production";
 
+const typeMap = {
+    "crib": "crib sheets",
+    "notes": "notes",
+    "snippets": "snippets",
+};
+
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -24,11 +30,12 @@ const data = {
 
         contentType: (data) => {
             const stem = data.page.filePathStem;
-            const dirs = ["crib", "notes", "snippets"];
-            const match = dirs.find(dir => stem.startsWith(`/${dir}/`));
-            if (match === "crib") return "crib sheet";
-            if (match) return match.slice(0, -1);
-            return "page";
+            const match = Object.keys(typeMap).find(dir => stem.startsWith(`/${dir}/`));
+            return match || "page";
+        },
+
+        contentTypeLabel: (data) => {
+            return typeMap[data.contentType] || data.contentType;
         },
 
         snippetCategory: (data) => {
@@ -44,18 +51,13 @@ const data = {
 
         breadcrumbs: (data) => {
             if (isProduction && data.draft) return false;
-
             const urlPath = data.page.url.split("/").filter(Boolean);
 
             return urlPath.map((part, index) => {
                 let label = part.replace(/-/g, " ");
 
-                // if (index === 0 && part.startsWith(data.contentType) || part.startsWith("crib")) {
-                //     label = data.contentType + "s";
-                // }
-
-                if (index === 0 && data.contentType.startsWith(part)) {
-                    label = data.contentType + "s";
+                if (index === 0 && typeMap[part]) {
+                    label = typeMap[part];
                 }
 
                 if (data.contentType === "snippet" && index === 1 && part === data.snippetCategory) {

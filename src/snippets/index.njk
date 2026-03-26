@@ -3,14 +3,19 @@ layout: folder-index.njk
 ---
 <h1>Code snippets</h1>
 
+{{ collections.snippets | length }}
+{{ collections.notes | length }}
+{{ collections.snippetCategories | length }}
+
 {% for category in collections.snippetCategories %}
     <h2>{{ category | capitalize }}</h2>
 
+    <p>Debug: Found {{ (collections.snippets | filterByData("snippetCategory", category)).length }} items</p>
+
     <ul>
-        {% for item in collections.snippets %}
-            {% if "/snippets/" + category in item.url %}
-                <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a></li>
-            {% endif %}
+        {% set categoryPosts = collections.snippets | filterByData("snippetCategory", category) %}
+        {% for item in categoryPosts %}
+            <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a></li>
         {% endfor %}
     </ul>
 {% endfor %}
