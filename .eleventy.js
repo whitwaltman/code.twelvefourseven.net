@@ -40,7 +40,7 @@ export default async function (config) {
 		config.addPairedShortcode(sc, pairedShortcodes[sc]);
 	});
 
-	// Create collections
+	// Create content collections
 	config.addCollection("crib", (collection) => {
 		return collection.getFilteredByGlob("src/crib/**/*");
 	});
@@ -53,6 +53,7 @@ export default async function (config) {
 		return collection.getFilteredByGlob("src/snippets/**/*");
 	});
 
+	// Create categories for snippet organization
 	config.addCollection("snippetCategories", (collection) => {
 		const snippets = collection.getFilteredByGlob("src/snippets/**/*");
 		const categories = new Set();
@@ -65,6 +66,13 @@ export default async function (config) {
 		});
 
 		return Array.from(categories);
+	});
+
+	// Create reverse chronological feed
+	config.addCollection("feed", (collection) => {
+		return collection.getAllSorted().toReversed().filter((item) => {
+			return item.data.layout === "page.njk";
+		});
 	});
 
 	// Register utility functions as transforms
