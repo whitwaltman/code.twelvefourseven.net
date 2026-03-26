@@ -23,6 +23,7 @@ const data = {
         },
 
         contentType: (data) => {
+            if (data.contentType) return data.contentType;
             const stem = data.page.filePathStem;
             const dirs = ["crib", "notes", "snippets"];
             const match = dirs.find(dir => stem.startsWith(`/${dir}/`));
@@ -50,7 +51,11 @@ const data = {
             return urlPath.map((part, index) => {
                 let label = part.replace(/-/g, " ");
 
-                if (index === 0 && part.startsWith(data.contentType)) {
+                // if (index === 0 && part.startsWith(data.contentType) || part.startsWith("crib")) {
+                //     label = data.contentType + "s";
+                // }
+
+                if (index === 0 && data.contentType.startsWith(part)) {
                     label = data.contentType + "s";
                 }
 
