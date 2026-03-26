@@ -52,6 +52,45 @@ footer span {
     font-size: 0.9rem;
 }
 
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #374151;
+    margin-bottom: 1.25rem;
+}
+
+h1,
+h2,
+h3 {
+    color: #111827;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.125rem;
+    color: orangered;
+    text-transform: uppercase;
+    font-weight: 600;
+    /* border-bottom: 1px solid #e5e7eb; */
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: gray;
+    margin-top: 1.5rem;
+}
+
 hr {
     margin-block: 2.5rem;
     margin-left: 0;

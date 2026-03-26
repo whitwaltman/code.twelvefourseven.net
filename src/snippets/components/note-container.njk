@@ -9,24 +9,21 @@ tabs: true
 <p>
     The style and functionality of these "note containers" {{ insertNote(text = "basically an inline footnote/sidenote") }}
     heavily borrows from the online textbook <cite>Web Browser Engineering</cite>.
-    You can see how its used in the first paragraph of the <a href="https://browser.engineering/intro.html">intro section</a>.
+    You can see how they use it in the first paragraph of the <a href="https://browser.engineering/intro.html">intro section</a>.
 </p>
+
+{% highlight "html" %}
+<span class="note-container" role="button"
+    tabindex="0" aria-expanded="false"
+    aria-label="Toggle note"><span class="note">Place your note here</span></span>
+{% endhighlight %}
 
 <p>
     The bulk of the code is the styling, although there are some important bits in the JavaScript that make it accessible.
-    Also of note: it'll only collapse the contents of the note <em>if the client has JS enabled</em>, so the actual text
-    will still be visible for users who disable JS.
+    It also handles the case where the client has JavaScript disabled {{ insertNote(text = "which I unfortunately cannot yet claim to be true about most other components I've built") }}.
 </p>
 
-{% tabsContainer "html, css, js" %}
-    {% tabWrapper "html" %}
-        {% highlight "html" %}
-        <span class="note-container" role="button"
-            tabindex="0" aria-expanded="false"
-            aria-label="Toggle note"><span class="note">Place your note here</span></span>
-        {% endhighlight %}
-    {% endtabWrapper %}
-
+{% tabsContainer "js, css" %}
     {% tabWrapper "css" %}
         {% highlight "css" %}
         body.js-enabled {
