@@ -10,7 +10,7 @@ permalink: "/snippets/{{ category }}/"
 <h1>{{ category | capitalize }} snippets</h1>
 
 <ul>
-    {% set categoryPosts = collections.snippets | filterByData("snippetCategory", category) %}
+    {% set categoryPosts = collections.snippets | filterBySnippetCategory(category) %}
     {% for item in categoryPosts %}
         <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a></li>
     {% endfor %}

@@ -34,7 +34,7 @@ export default async function (config) {
 	// Copy assets to output folder
 	config.addPassthroughCopy({
 		"./public": "/",
-  		"node_modules/@zachleat/seven-minute-tabs/seven-minute-tabs.js": "js/seven-minute-tabs.js",
+		"node_modules/@zachleat/seven-minute-tabs/seven-minute-tabs.js": "js/seven-minute-tabs.js",
 	});
 
 	// Add global default layout
@@ -64,16 +64,19 @@ export default async function (config) {
 
 	// Create categories for snippet organization
 	config.addCollection("snippetCategories", (collection) => {
-		const snippets = collection.getAll().filter(item => item.data.contentType === "snippet");
+		const snippets = collection.getFilteredByGlob("src/snippets/**/*");
 		const categories = new Set();
 
 		snippets.forEach((item) => {
-			if (item.data.snippetCategory) {
-				categories.add(item.data.snippetCategory);
+			// Structure: /snippets/[category]/[post-name]
+			const parts = item.filePathStem.split("/");
+			// parts[0] is "", parts[1] is "snippets", parts[2] is the category
+			if (parts[1] === "snippets" && parts.length > 3) {
+				categories.add(parts[2]);
 			}
 		});
-
-		return Array.from(categories);
+		
+		return Array.from(categories).sort();
 	});
 
 	// Create reverse chronological feed
@@ -88,16 +91,16 @@ export default async function (config) {
 	config.addTransform("copyCode", insertCopyButton);
 
 	return {
-        // control which files 11ty will process
-        templateFormats: ["md", "njk", "html"],
+		// control which files 11ty will process
+		templateFormats: ["md", "njk", "html"],
 
-        // pre-process *.md files with:
+		// pre-process *.md files with:
 		markdownTemplateEngine: "njk",
 
-        // pre-process *.html files with:
-        htmlTemplateEngine: "njk",
+		// pre-process *.html files with:
+		htmlTemplateEngine: "njk",
 
-        // directory config
+		// directory config
 		dir: {
 			input: "./src",
 			includes: "../_includes",
