@@ -5,6 +5,13 @@ import insertCopyButton from "./_utils/codeblocks.js";
 import transformExternalLinks from "./_utils/links.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
+function renderComponent(ctx, template, data) {
+	return ctx.renderTemplate(
+		`{% include "${template}" %}`,
+		data
+	);
+}
+
 export default async function (config) {
 	// Add global data variable to signal build modality
 	const isProduction = process.env.NODE_ENV === "production";
@@ -38,6 +45,13 @@ export default async function (config) {
 
 	Object.keys(pairedShortcodes).forEach((sc) => {
 		config.addPairedShortcode(sc, pairedShortcodes[sc]);
+	});
+
+	config.addPairedShortcode("note", async function(content) {
+		return await this.renderTemplate(
+			`{% include "components/note.njk" %}`,
+			{ content }
+		);
 	});
 
 	// Create content collections

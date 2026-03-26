@@ -6,8 +6,11 @@ const data = {
     eleventyComputed: {
         title: (data) => {
             if (data.title) return data.title;
-            const slug = data.page.fileSlug.split("-").join(" ");
-            return slug[0].toUpperCase() + slug.slice(1);
+            if (data.layout === "page.njk") {
+                const slug = data.page.fileSlug.split("-").join(" ");
+                return slug[0].toUpperCase() + slug.slice(1);
+            }
+            return false;
         },
         permalink: (data) => {
             if (isProduction && data.draft) return false;
