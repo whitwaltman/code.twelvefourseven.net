@@ -77,16 +77,20 @@ h1 {
 }
 
 h2 {
-    font-size: 1.125rem;
-    color: #63C;
+    font-size: 1rem;
+    color: #63F;
+    letter-spacing: 2.5%;
     text-transform: uppercase;
     padding-bottom: 0.3rem;
 }
 
 article h2 {
-    font-size: 1.375;
+    font-size: 1.625rem;
+    text-transform: capitalize;
+    letter-spacing: 0%;
     /* color: #111827; */
-    color: #309;
+    /* color: #309; */
+    color: #63F;
 }
 
 h3 {
