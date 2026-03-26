@@ -16,13 +16,13 @@ And `cd` into the repo to get started.
 
 ---
 
-You can also clone a specific subdirectory or branch:
+You can also clone a specific subdirectory:
 
 ```sh
 npx degit solidjs/templates/js my-solid-app
 ```
 
-(for when I create that pagefind branch)
+Or branch... (for when I finally create that Pagefind branch):
 
 ```sh
 npx degit whitwaltman/11ty-starter#pagefind project-with-search

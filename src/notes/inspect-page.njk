@@ -1,0 +1,28 @@
+---
+draft: true
+---
+
+{% from 'macros.njk' import insertNote %}
+
+<h2>Brilliant.org</h2>
+
+<p>
+    None of these are comprehensive. This is just what I could find from using the dev tools inspector
+    in a very cursory manner and some brief googling. This also applies specifically to the web app
+    since I'm unable to inspect a mobile app.
+    {{ insertNote(text = "However, Brilliant's mobile app doesn't seem to have a native mobile experience, so it's possible they use a native wrapper or something similar.") }}
+</p>
+
+
+
+<ul>
+    <li>Uses Chakra UI in some capacity {{ insertNote(text = "HTML has chakra in class names for several elements") }}</li>
+    <li>Has a in-house/closed-source tool called <a href="https://www.youtube.com/watch?v=gT9Xu-ctNqI">Diagrammar</a> for making simple, interactive diagrams</li>
+    <li>Uses/has previously used Rive {{ insertNote(text = "I assume it's still being used but can't really confirm") }} for real-time motion graphics
+        <ul>
+            <li>Rive shared a <a href="https://rive.app/blog/how-brilliant-org-motivates-learners-with-rive-animations">case study</a> back in 2024</li>
+        </ul>
+    </li>
+</ul>
+
+<p>Brilliant also has 

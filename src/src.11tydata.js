@@ -4,6 +4,11 @@ const data = {
     layout: "page.njk",
     date: isProduction ? "git Last Modified" : "Last Modified",
     eleventyComputed: {
+        title: (data) => {
+            if (data.title) return data.title;
+            const slug = data.page.fileSlug.split("-").join(" ");
+            return slug[0].toUpperCase() + slug.slice(1);
+        },
         permalink: (data) => {
             if (isProduction && data.draft) return false;
             return data.permalink;
