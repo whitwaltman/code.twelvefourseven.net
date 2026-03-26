@@ -7,7 +7,11 @@ pagination:
 permalink: "/snippets/{{ category }}/"
 ---
 
-<h1>{{ category | capitalize }} snippets</h1>
+{% set categoryInfo = sections.snippets.children[category] %}
+{% set displayLabel = categoryInfo.label or category %}
+
+<h1>{{ displayLabel | capitalize }} snippets</h1>
+<p>{{ categoryInfo.description | capitalize }}</p>
 
 <ul>
     {% set categoryPosts = collections.snippets | filterBySnippetCategory(category) %}

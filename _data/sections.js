@@ -20,7 +20,7 @@ export default {
             },
 
             components: {
-                label: "components",
+                label: "component",
                 description: "reusable building blocks that couple style and layout/functionality"
             },
 
