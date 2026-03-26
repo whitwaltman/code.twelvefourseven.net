@@ -1,5 +1,9 @@
 const isProduction = process.env.NODE_ENV === "production";
 
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const data = {
     layout: "page.njk",
     date: isProduction ? "git Last Modified" : "Last Modified",
@@ -8,7 +12,7 @@ const data = {
             if (data.title) return data.title;
             if (data.layout === "page.njk") {
                 const slug = data.page.fileSlug.split("-").join(" ");
-                return slug[0].toUpperCase() + slug.slice(1);
+                return capitalize(slug);
             }
             return false;
         },
@@ -21,10 +25,8 @@ const data = {
         contentType: (data) => {
             const stem = data.page.filePathStem;
             const types = ["crib", "notes", "snippets"];
-            types.forEach((type) => {
-                if (stem.startsWith(`/${type}/`)) return type;
-            });
-            return page;
+            const match = types.find(type => stem.startsWith(`/${type}/`));
+            return match || "page";
         },
 
         snippetCategory: (data) => {
@@ -40,10 +42,30 @@ const data = {
 
         breadcrumbs: (data) => {
             if (isProduction && data.draft) return false;
-            const urlPath = data.page.url.split("/").filter((part) => part);
+
+            const urlPath = data.page.url.split("/").filter(Boolean);
+
             return urlPath.map((part, index) => {
+                let label = part.replace(/-/g, " ");
+
+                if (index === 0 && part === data.contentType) {
+                    if (data.contentType === "crib") {
+                        label = "crib sheets"
+                    } else {
+                        label = data.contentType;
+                    }
+                }
+
+                if (data.contentType === "snippets" && index === 1 && part === data.snippetCategory) {
+                    label = data.snippetCategory.replace(/-/g, " "); // or custom mapping
+                }
+
+                if (index === urlPath.length - 1 && data.title) {
+                    label = data.title;
+                }
+
                 return {
-                    label: part.replace(/-/g, " "),
+                    label: label,
                     url: "/" + urlPath.slice(0, index + 1).join("/") + "/",
                 };
             });
