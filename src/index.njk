@@ -13,22 +13,6 @@ layout: base.njk
 
 <hr>
 
-<h2>All posts</h2>
-
-<ul class="feed">
-{% for item in collections.feed %}
-    <li class="feed-item">
-        <a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}<a>
-        <span class="label content-type">{{ item.data.contentType }}</span>
-        {% if item.data.snippetCategory %}
-            <span class="label category-tag">{{ item.data.snippetCategory }}</span>
-        {% endif%}
-    </li>
-{% endfor %}
-</ul>
-
-<hr>
-
 <h2>Browse by category</h2>
 
 <div class="sections">
@@ -45,3 +29,21 @@ layout: base.njk
         <span class="sub-h3">code you can copy/steal to save time</span>
     </a>
 </div>
+
+<hr>
+
+<h2>All posts</h2>
+
+<ul class="feed">
+{% for item in collections.feed %}
+    <li class="feed-item">
+        <a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}<a>
+        <div class="metadata">
+            <span class="label content-type">{{ item.data.contentType }}</span>
+            {% if item.data.snippetCategory %}
+                <span class="label category-tag">{{ item.data.snippetCategory }}</span>
+            {% endif%}
+        </div>
+    </li>
+{% endfor %}
+</ul>

@@ -69,6 +69,12 @@ ul.feed {
     margin: 0;
 }
 
+.feed-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .label {
     background-color: #ddd;
     color: black;
@@ -81,7 +87,3 @@ ul.feed {
     border: 1px solid darkgray;
     text-decoration: none;
 }
-
-/* li.feed-item {
-    margin-left: none;
-} */
