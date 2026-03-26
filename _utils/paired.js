@@ -14,6 +14,13 @@ const dedent = (str) => {
 };
 
 const shortcodes = {
+    note: (content) => {
+        return `
+    <span class="note-container" role="button"
+        tabindex="0" aria-expanded="false"
+        aria-label="Toggle note"><span class="note">${content}</span></span>
+        `;
+    },
     tabsContainer: function(content, labelsStr) {
         const labels = labelsStr.split(',').map(l => l.trim());
         const tabList = labels.map(label => {

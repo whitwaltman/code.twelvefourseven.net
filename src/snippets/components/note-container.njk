@@ -4,12 +4,15 @@ code: true
 tabs: true
 ---
 
-{% from 'macros.njk' import insertNote %}
-
 <p>
-    The style and functionality of these "note containers" {{ insertNote(text = "basically an inline footnote/sidenote") }}
+    The style and functionality of these "note containers" {% note %}basically an inline footnote/sidenote{% endnote %}
     heavily borrows from the online textbook <cite>Web Browser Engineering</cite>.
     You can see how they use it in the first paragraph of the <a href="https://browser.engineering/intro.html">intro section</a>.
+</p>
+
+<p>
+    I use this tiny "component" <em>a lot</em>. On this website, which is built using Eleventy, I have it registered as a paired shortcode
+    so I can easily insert it into any page I want.
 </p>
 
 {% highlight "html" %}
@@ -20,7 +23,8 @@ tabs: true
 
 <p>
     The bulk of the code is the styling, although there are some important bits in the JavaScript that make it accessible.
-    It also handles the case where the client has JavaScript disabled {{ insertNote(text = "which I unfortunately cannot yet claim to be true about most other components I've built") }}.
+    It also handles the case where the client has JavaScript disabled
+    {% note %}which I unfortunately cannot yet claim to be true about most other components I've built{% endnote %}.
 </p>
 
 {% tabsContainer "js, css" %}
