@@ -1,5 +1,6 @@
 .globalheader {
     background-color: lightgray;
+    /* margin-bottom: var(--space-xs); */
 }
 
 .globalheader-title {

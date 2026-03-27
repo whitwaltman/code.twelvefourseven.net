@@ -26,17 +26,9 @@
         <link rel="stylesheet" href="/demo.css">
     {% endif %}
 
-    {# bundle css #}
-    {% css %}
-        {% include "css/base.css" %}
-        {% include "css/main.css" %}
-        {% include "css/note.css" %}
-    {% endcss %}
-
     {% if isProduction %}
-        <style>
-            {% getBundle "css" %}
-        </style>
+        {% include "css-prod.njk" %}
+        <style>{% getBundle "css" %}</style>
     {% else %}
         <link rel="stylesheet" href="/style.css">
     {% endif %}

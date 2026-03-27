@@ -1,0 +1,179 @@
+/* || DEFAULTS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+:root {
+    --color-bg: #eee;
+    --color-h: #111827;
+    --color-text: #374151;
+
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-reg: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+}
+
+/* || LAYOUT */
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    background: var(--color-bg);
+    color: var(--color-text);
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+body > header,
+body > footer {
+    padding-block: var(--space-sm);
+    padding-inline: var(--space-lg);
+}
+
+main {
+    flex: 1 1 auto;
+    padding-inline: var(--space-lg);
+}
+
+footer {
+    font-size: var(--text-sm);
+}
+
+/* || TYPOGRAPHY */
+body, p {
+    font-size: var(--text-reg);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: var(--text-2xl);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: var(--text-xl);
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: var(--text-lg);
+    line-height: 1.3;
+}
+
+h4,
+h5,
+h6 {
+    font-size: var(--text-reg);
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-h);
+    /* font-weight: 700; */
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+}
+
+/* || VERTICAL RHYTHM */
+.flow>*+* {
+    /* margin-top: var(--space-lg); */
+    margin-top: var(--space-md);
+}
+
+main>*+* {
+    /* margin-top: var(--space-lg); */
+    margin-top: var(--space-md);
+}
+
+hr {
+    margin-block: 2.5rem;
+    margin-left: 0;
+    width: 4rem;
+}
+
+/* || LISTS */
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list {
+    padding-left: var(--space-lg);
+}
+
+ul.list {
+    list-style-type: disc;
+}
+
+ol.list {
+    list-style-type: decimal;
+}
+
+
+/* || MEDIA & FORMS */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* || MISCELLANY */
+pre,
+code {
+    -moz-tab-size: 2;
+    tab-size: 2;
+    -o-tab-size: 2;
+}
+
+.external::after {
+    background-color: currentcolor;
+    content: "\200b"/"(external)";
+    display: inline-block;
+    height: 1em;
+    margin-left: .2em;
+    -webkit-mask-image: url(/external.svg);
+    mask-image: url(/external.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    vertical-align: text-top;
+    width: 1em;
+}

@@ -3,4 +3,6 @@ eleventyExcludeFromCollections: true
 eleventyComputed:
   permalink: "{% if isProduction %}false{% else %}/style.css{% endif %}"
 ---
-{% getBundle "css" %}
+{% include "../css/base.css" %}
+{% include "../css/main.css" %}
+{% include "../css/note.css" %}
