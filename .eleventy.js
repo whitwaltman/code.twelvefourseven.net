@@ -30,7 +30,6 @@ export default async function (config) {
 	// Create app-level bundles
 	config.addBundle("css");
 	config.addBundle("js");
-	config.addBundle("html");
 
 	// Copy assets to output folder
 	config.addPassthroughCopy({

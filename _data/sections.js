@@ -11,6 +11,7 @@ export default {
 
     snippets: {
         label: "snippets",
+        sectionTitle: "code snippets",
         description: "code you can copy/steal to save time",
 
         children: {

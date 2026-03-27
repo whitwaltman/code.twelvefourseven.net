@@ -18,22 +18,26 @@
         <link rel="stylesheet" href="/tabs.css">
     {% endif %}
 
+    {% if grid %}
+        <link rel="stylesheet" href="/grid.css">
+    {% endif %}
+
     {# bundle css #}
     {% css %}
         {% include "css/base.css" %}
         {% include "css/demos.css" %}
-        {% include "css/grid.css" %}
         {% include "css/main.css" %}
         {% include "css/note.css" %}
         {% include "css/search.css" %}
     {% endcss %}
 
-    <style>
-        {% getBundle "css" %}
-    </style>
-
-    {# add things to `<head>` from anywhere on a page #}
-    {% getBundle "html", "head" %}
+    {% if isProduction %}
+        <style>
+            {% getBundle "css" %}
+        </style>
+    {% else %}
+        <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+    {% endif %}
     
     {# META TAGS #}
     <meta property="og:title" content="{{ site.title }}">

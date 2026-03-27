@@ -1,10 +1,15 @@
 # todo
 
-- [ ] FIX MOBILE FLEX LAYOUTS
+- [ ] TODO: REDESIGN INDEX !!!
 
 - [ ] MAKE DEMO TABS ACCESSIBLE
 - [ ] EDIT DEMO TAB STYLING (it's basically material ui rn)
 - [ ] ADD HIDE / SHOW COMMENTS FUNCTIONALITY
+
+- [ ] add reference section to page layout
+- [ ] edit `grid.css`: styling of panes
+    - space between command rows
+    - alternating colors / divider ? for more contrast / easier visual scanning
 
 ---
 
@@ -21,7 +26,7 @@
     - see [plugin](https://plug11ty.com/plugins/table-of-contents/)
 - [ ] add callout component ????
     - maybe just use custom styling on an `<aside>` element + class selector?
-- [ ] redesign / edit link styling on index page
+- [ ] TODO: redesign / edit link styling on index page
     - box shadow is kind of aggressive
     - plus i kinda chose the bg colors haphazardly
 - [ ] edit link styling to be uniform regardless of `:visited`
@@ -29,6 +34,8 @@
 ---
 
 ## scratch
+
+- could add a bit of js to swap tmux prefixes out based on client input (low priority)
 
 - still trying to figure out if / how to add language to code blocks and/or file name (optionally)
 - wanna try out using the diff feature in prism!
@@ -85,3 +92,5 @@ migrate from:
     - ~~covers some comments~~
     - ~~moves with scroll instead of staying fixed~~
 - ~~figure out if/how i want to display hotkey commands (emacs, nvim)~~
+- [x] FIX MOBILE FLEX LAYOUTS
+    - still ugly but better
