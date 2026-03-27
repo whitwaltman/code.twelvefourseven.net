@@ -22,10 +22,13 @@
         <link rel="stylesheet" href="/grid.css">
     {% endif %}
 
+    {% if demo %}
+        <link rel="stylesheet" href="/demo.css">
+    {% endif %}
+
     {# bundle css #}
     {% css %}
         {% include "css/base.css" %}
-        {% include "css/demos.css" %}
         {% include "css/main.css" %}
         {% include "css/note.css" %}
         {% include "css/search.css" %}
