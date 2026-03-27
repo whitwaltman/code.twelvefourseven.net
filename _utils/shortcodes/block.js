@@ -14,6 +14,24 @@ const dedent = (str) => {
 };
 
 const paired = {
+
+    demo: function(content, tabs = ['preview', 'html', 'css', 'js']) {
+        const buttons = tabs.map((tab, i) => {
+            const label = tab.toUpperCase();
+            const activeClass = i === 0 ? 'active' : '';
+            return `<button class="tab-btn ${activeClass}" data-tab=${tab}>${label}</button>`;
+        }).join('');
+
+        return `
+            <div class="demo-tabs">
+                <div class="tab-buttons">${buttons}</div>
+                <div class="tab-content">${content}</div>
+            </div>
+        `;
+    },
+
+
+
     tabsContainer: function(content, labelsStr) {
         const labels = labelsStr.split(',').map(l => l.trim());
         const tabList = labels.map(label => {

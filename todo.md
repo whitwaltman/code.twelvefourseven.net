@@ -1,5 +1,17 @@
 # todo
 
+- [ ] FIX MOBILE FLEX LAYOUTS
+
+- [ ] MAKE DEMO TABS ACCESSIBLE
+- [ ] EDIT DEMO TAB STYLING (it's basically material ui rn)
+- [ ] ADD HIDE / SHOW COMMENTS FUNCTIONALITY
+
+---
+
+- later... consider doing a split panel (left/right for wider screen, top/bottom for narrower screen) with preview and code
+
+---
+
 - [ ] *make custom styles for seven-min-tabs*
     - shrink tab label padding
     - add outline / distinct style for selected tab

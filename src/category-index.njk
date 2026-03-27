@@ -8,7 +8,7 @@ permalink: "/snippets/{{ category }}/"
 ---
 
 {% set categoryInfo = sections.snippets.children[category] %}
-{% set displayLabel = categoryInfo.label or category %}
+{% set displayLabel = categoryInfo.sectionTitle or categoryInfo.label or category %}
 
 <h1>{{ displayLabel | capitalize }} snippets</h1>
 <p>{{ categoryInfo.description | capitalize }}</p>

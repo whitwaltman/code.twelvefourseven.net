@@ -36,14 +36,16 @@ pre:has(code) {
     font-size: 0.9rem;
 }
 
-/* .breadcrumbs li + * {
-    margin-top: none;
-} */
-
 .breadcrumbs li:not(:last-child)::after {
     content: "/";
     margin-left: 0.5rem;
     color: darkgray;
+}
+
+@media (max-width: 600px) {
+    .breadcrumbs li:last-child {
+        display: none;
+    }
 }
 
 .sections {
@@ -73,6 +75,16 @@ ul.feed {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .feed-item {
+        flex-direction: column;
+    }
+
+    .metadata {
+        align-self: end;
+    }
 }
 
 .label {

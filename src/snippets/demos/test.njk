@@ -1,0 +1,29 @@
+---
+code: true
+---
+
+{% set jsCode %}
+const btn = document.querySelector(".test");
+btn.innerText = "Hi";
+{% endset %}
+
+{% demo ["preview", "html", "js"] %}
+    <div class="tab-panel active" data-tab="preview">
+        <button class="test"></button>
+    </div>
+
+    <div class="tab-panel" data-tab="html">
+        {% highlight "html" %}
+        <button class="test"></button>
+        {% endhighlight %}
+    </div>
+
+    <div class="tab-panel" data-tab="js">
+        {% highlight "js" %}
+        {{ jsCode | safe }}
+        {% endhighlight %}
+    </div>
+
+{% enddemo %}
+
+<script>{{ jsCode | safe }}</script>

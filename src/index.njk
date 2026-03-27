@@ -52,7 +52,7 @@ layout: base.njk
             </a>
             {% if item.data.snippetCategory %}
                 <a href="/snippets/{{ item.data.snippetCategory }}" class="label category-tag">
-                    {{ item.data.categoryLabel }}
+                    {{ item.data.categoryLabel | lower }}
                 </a>
             {% endif%}
         </div>

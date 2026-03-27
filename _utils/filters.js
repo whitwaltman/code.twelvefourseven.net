@@ -12,7 +12,7 @@ const filters = {
 	},
 
 	unslug: (slug) => {
-		return slug.split("-").join(" ");
+		return slug.replace(/\//g, " ").split("-").join(" ");
 	},
 
 	capitalize: (str) => {

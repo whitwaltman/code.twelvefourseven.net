@@ -21,12 +21,19 @@
     {# bundle css #}
     {% css %}
         {% include "css/base.css" %}
+        {% include "css/demos.css" %}
         {% include "css/grid.css" %}
         {% include "css/main.css" %}
         {% include "css/note.css" %}
         {% include "css/search.css" %}
     {% endcss %}
-    <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+
+    <style>
+        {% getBundle "css" %}
+    </style>
+
+    {# add things to `<head>` from anywhere on a page #}
+    {% getBundle "html", "head" %}
     
     {# META TAGS #}
     <meta property="og:title" content="{{ site.title }}">

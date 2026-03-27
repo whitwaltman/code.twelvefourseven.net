@@ -20,8 +20,15 @@ export default {
             },
 
             components: {
-                label: "component",
+                label: "components",
+                sectionTitle: "component",
                 description: "reusable building blocks that couple style and layout/functionality"
+            },
+
+            demos: {
+                label: "demos",
+                sectionTitle: "demo",
+                description: "illustrative examples on how to use something"
             },
 
             eleventy: {
@@ -30,7 +37,8 @@ export default {
             },
 
             js: {
-                label: "JavaScript",
+                label: "js",
+                sectionTitle: "JavaScript",
                 description: "no relation to Java"
             }
         }

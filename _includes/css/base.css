@@ -117,10 +117,6 @@ code {
     -o-tab-size: 2;
 }
 
-/* li + *, ul > li {
-    margin-top: 0.4rem;
-} */
-
 .external::after {
     background-color: currentcolor;
     content: "\200b"/"(external)";
