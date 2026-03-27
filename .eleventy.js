@@ -31,9 +31,12 @@ export default async function (config) {
 	config.addBundle("css");
 	config.addBundle("js");
 
-	// Watch css directory for changes
-	config.addWatchTarget("./css/");
-	config.setWatchThrottleWaitTime(100);
+	// Prevent full rebuilds of CSS in development mode
+	if (!isProduction) {
+		config.addPassthroughCopy({
+			"./_includes/css": "/",
+		});
+	}
 
 	// Copy assets to output folder
 	config.addPassthroughCopy({
