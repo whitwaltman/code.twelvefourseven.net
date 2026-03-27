@@ -20,6 +20,7 @@ html {
     --bg-light: #eee;
     --bg-dark: #111;
     --text-light: #374151;
+    --text-light-2: #111827;
     --text-dark: #dad5d5;
 
     --space-xs: 0.5rem;
@@ -46,23 +47,8 @@ body {
 
 body > header,
 body > footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding-block: var(--space-sm);
-}
-
-@media (max-width: 768px) {
-    body > footer {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 320px) {
-    body > header {
-        flex-direction: column;
-        gap: 0.25rem;
-    }
+    padding-inline: var(--space-lg);
 }
 
 main {
