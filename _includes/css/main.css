@@ -1,7 +1,8 @@
 /* || HEADER STYLES */
 body > header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 4rem;
     align-items: center;
     anchor-name: --header;
 }
@@ -15,12 +16,13 @@ body > header {
 
 .menu-trigger {
     anchor-name: --menu-btn;
+    /* margin-right: var(--space-xl); */
 }
 
 #menu {
     flex-direction: column;
     position-anchor: --menu-btn;
-    position-area: bottom span-left;
+    position-area: bottom span-right;
 
     margin: 0.15rem 0 0 0;  /* tiny gap between button and menu */
     border: none;
@@ -35,24 +37,18 @@ body > header {
 
 #menu ul {
     list-style-type: none;
+    /* display: flex;
+    flex-direction: column;
+    align-items: end; */
     padding: var(--space-xs);
     margin: 0;
 }
 
-#menu li {
-    padding: 0 var(--space-xs);
-}
-
 #menu li a {
     text-decoration: none;
-    /* color: #007bff; */
-    /* color: var(--color-link); */
+    padding: 2px 4px;
+    margin-block: var(--space-xs);
     font-weight: 500;
-}
-
-#menu li a:visited {
-    color: blue;
-    /* color: var(--color-link); */
 }
 
 #menu li a:hover {
