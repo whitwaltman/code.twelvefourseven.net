@@ -1,3 +1,4 @@
+/* || HEADER STYLES */
 body > header {
     display: flex;
     justify-content: space-between;
@@ -24,6 +25,8 @@ body > header {
 
     margin: 0.15rem 0 0 0;  /* tiny gap between button and menu */
     border: none;
+
+    background: var(--color-bg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -33,10 +36,41 @@ body > header {
 
 #menu ul {
     list-style-type: none;
-    padding: var(--space-xs) var(--space-sm);
+    padding: var(--space-xs);
     margin: 0;
 }
 
 #menu li {
-    padding: var(--space-xs);
+    padding: 0 var(--space-xs);
+}
+
+#menu li a {
+    text-decoration: none;
+    /* color: #007bff; */
+    /* color: var(--color-link); */
+    font-weight: 600;
+}
+
+#menu li a:visited {
+    color: blue;
+    /* color: var(--color-link); */
+}
+
+#menu li a:hover {
+    background: lightpink;
+}
+
+/* || FOOTER STYLES */
+body > footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    body > footer span {
+        text-wrap: wrap;
+    }
+    /* body > footer {
+        flex-direction: column;
+    } */
 }

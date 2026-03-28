@@ -94,7 +94,7 @@ export default async function (config) {
 	});
 
 	// Register utility functions as transforms
-	config.addTransform("externalLinks", transformExternalLinks);
+	if (isProduction) config.addTransform("externalLinks", transformExternalLinks);
 	config.addTransform("copyCode", insertCopyButton);
 
 	return {
