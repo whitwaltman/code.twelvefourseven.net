@@ -1,8 +1,8 @@
 /* || HEADER STYLES */
 body > header {
     display: flex;
-    /* justify-content: space-between; */
-    gap: 4rem;
+    justify-content: space-between;
+    /* gap: 4rem; */
     align-items: center;
     anchor-name: --header;
 }
@@ -22,10 +22,11 @@ body > header {
 #menu {
     flex-direction: column;
     position-anchor: --menu-btn;
-    position-area: bottom span-right;
+    position-area: bottom span-left;
 
-    margin: 0.15rem 0 0 0;  /* tiny gap between button and menu */
+    margin: 0.2rem 0 0 0;  /* tiny gap between button and menu */
     border: none;
+    min-width: 150px;
 
     background: var(--color-bg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -33,6 +34,10 @@ body > header {
 
 #menu:popover-open {
     display: flex;
+}
+
+#menu::backdrop {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 #menu ul {
@@ -45,6 +50,7 @@ body > header {
 }
 
 #menu li a {
+    display: block;
     text-decoration: none;
     padding: 2px 4px;
     margin-block: var(--space-xs);
