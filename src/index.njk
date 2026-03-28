@@ -1,4 +1,13 @@
 ---
 layout: base.njk
 ---
-
+<div class="sections">
+    {% for section, sectionInfo in sections %}
+    <a class="section" href="/{{ section }}">
+        <div class="section__content">
+            <h3>{{ sectionInfo.label }}</h3>
+            <p>{{ sectionInfo.description }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>

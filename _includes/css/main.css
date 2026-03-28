@@ -75,3 +75,20 @@ body > footer {
         flex-direction: column;
     } */
 }
+
+/* || INDEX PAGE */
+.sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.section {
+    text-decoration: none;
+    padding: var(--space-sm);
+    border: 1px solid gray;
+}
+
+.section:hover {
+    border: 1px solid tomato;
+}
