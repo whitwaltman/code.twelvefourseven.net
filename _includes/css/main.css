@@ -1,9 +1,62 @@
-.globalheader {
-    background-color: lightgray;
+body > header {
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
 }
 
-.globalheader-title {
+#title {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 600;
+}
+
+#desktop-menu {
+    display: flex;
+}
+
+#menu-btn-show {
+    display: none;
+    cursor: pointer;
+}
+
+#menu-btn-close {
+    width: fit-content;
+    cursor: pointer;
+}
+
+#mobile-menu {
+    flex-direction: column;
+    background-color: #fff;
+    inset: unset;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: var(--space-sm);
+}
+
+#mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#mobile-menu ul li {
+    align-items: flex-end;
+}
+
+#mobile-menu:popover-open {
+    display: flex;
+}
+
+#mobile-menu::backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    #desktop-menu {
+        display: none;
+    }
+
+    #menu-btn-show {
+        display: flex;
+    }
 }

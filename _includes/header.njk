@@ -1,3 +1,35 @@
-<header class="globalheader">
-    <a class="globalheader-title" href="/">{{ site.title }}</a>
+<header>
+    <a id="title" href="/">{{ site.title }}</a>
+    <nav id="desktop-menu">
+        <ul>
+            <li><a href="/crib">crib sheets</a></li>
+            <li><a href="/notes">notes</a></li>
+            <li><a href="/snippets">snippets</a></li>
+        </ul>
+    </nav>
+    <button
+        id="menu-btn-show"
+        popovertarget="mobile-menu"
+        popovertargetaction="show"
+        aria-label="Show site menu"
+        aria-controls="mobile-menu"
+    >
+        menu
+    </button>
+    <nav id="mobile-menu" popover>
+        <button
+            id="menu-btn-close"
+            popovertarget="mobile-menu"
+            popovertargetaction="hide"
+            aria-label="Close site menu"
+            aria-controls="mobile-menu"
+        >
+            close
+        </button>
+        <ul>
+            <li><a href="/crib">crib sheets</a></li>
+            <li><a href="/notes">notes</a></li>
+            <li><a href="/snippets">snippets</a></li>
+        </ul>
+    </nav>
 </header>
