@@ -26,7 +26,7 @@ layout: base.njk
 <ul class="feed">
 {% for item in collections.feed %}
     <li class="feed-item">
-        <a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}<a>
+        <a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a>
         <div class="metadata">
             <a href="/{{ item.data.contentType }}" class="label content-type">
                 {{ item.data.contentTypeLabel | chop }}

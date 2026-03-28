@@ -15,6 +15,8 @@
 
 - later... consider doing a split panel (left/right for wider screen, top/bottom for narrower screen) with preview and code
 
+- short, instructional code blocks (see `/crib/tmux`) -> styling??
+
 ---
 
 - [ ] *make custom styles for seven-min-tabs*
@@ -30,6 +32,11 @@
     - box shadow is kind of aggressive
     - plus i kinda chose the bg colors haphazardly
 - [ ] edit link styling to be uniform regardless of `:visited`
+
+## content
+
+- TODO: add tailwind crib sheet (spacing calculator! favorite colors!)
+- add named web colors crib sheet
 
 ---
 
