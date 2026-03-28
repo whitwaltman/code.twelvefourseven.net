@@ -74,12 +74,21 @@ pre:has(code) {
     gap: 0.5rem;
     padding: 0;
     font-size: 0.9rem;
+    /* font-weight: 300; */
+}
+
+.breadcrumbs :not(li[aria-current="page"]) {
+    color: var(--color-light);
+}
+
+.breadcrumbs li[aria-current="page"] {
+    color: var(--color-text);
 }
 
 .breadcrumbs li:not(:last-child)::after {
     content: "/";
     margin-left: 0.5rem;
-    color: darkgray;
+    color: tomato;
 }
 
 @media (max-width: 600px) {

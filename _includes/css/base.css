@@ -20,7 +20,7 @@ html {
     --color-bg: #eee;
     --color-h: #111827;
     --color-text: #374151;
-    --color-link: dodgerblue;
+    --color-light: gray;
 
     --space-xs: 0.5rem;
     --space-sm: 0.75rem;
@@ -115,22 +115,8 @@ hr {
 
 /* || LISTS */
 ul, ol {
-    list-style: none;
-    padding-left: 0;
-}
-
-.list {
     padding-left: var(--space-lg);
 }
-
-ul.list {
-    list-style-type: disc;
-}
-
-ol.list {
-    list-style-type: decimal;
-}
-
 
 /* || MEDIA & FORMS */
 img,
