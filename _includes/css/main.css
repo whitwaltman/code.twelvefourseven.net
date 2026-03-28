@@ -92,3 +92,27 @@ body > footer {
 .section:hover {
     border: 1px solid tomato;
 }
+
+.categories {
+    display: grid;
+    gap: var(--space-sm);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.category {
+    text-decoration: none;
+    padding: var(--space-xs);
+    border: 1px solid gray;
+    color: var(--color-text);
+}
+
+.category:hover {
+    border: 1px solid tomato;
+}
+
+.category__content .top {
+    color: var(--color-h);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

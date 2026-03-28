@@ -81,6 +81,11 @@ pre:has(code) {
     color: var(--color-light);
 }
 
+.breadcrumbs :not(li[aria-current="page"]) a:hover {
+    color: var(--color-text);
+}
+
+
 .breadcrumbs li[aria-current="page"] {
     color: var(--color-text);
 }

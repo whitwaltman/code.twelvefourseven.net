@@ -20,7 +20,7 @@ html {
     --color-bg: #eee;
     --color-h: #111827;
     --color-text: #374151;
-    --color-light: gray;
+    --color-light: rgb(136, 136, 136);
 
     --space-xs: 0.4rem;
     --space-sm: 0.75rem;
