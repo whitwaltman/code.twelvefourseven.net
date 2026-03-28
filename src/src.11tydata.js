@@ -2,7 +2,7 @@ const isProduction = process.env.NODE_ENV === "production";
 
 const clean = (str) => {
     if (str.length <= 30) return str;
-    const words = str.toLowerCase().split(" ");
+    const words = str.split(" ");
     let result = "";
     let idx = 0;
     while (result.length < 30) {
@@ -23,12 +23,14 @@ const data = {
             if (isProduction && data.draft) return false;
             const urlPath = data.page.url.split("/").filter(Boolean);
             return urlPath.map((part, index) => {
-                let info = data.sections[part] ||
-                    { label: clean(data.title) } ||
-                    { label: part.replace(/-/g, " ") };
+                let info = data.sections[part] || { label: part.replace(/-/g, " ") };
 
                 if (index === 1 && urlPath[0] === "snippets" && data.sections.snippets.children?.[part]) {
                     info = data.sections.snippets.children[part];
+                }
+
+                if (index === urlPath.length - 1 && data.layout === "page.njk" && data.title) {
+                    info = { label: clean(data.title.toLowerCase()) };
                 }
 
                 return {
