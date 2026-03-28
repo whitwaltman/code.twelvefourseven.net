@@ -1,17 +1,5 @@
 const isProduction = process.env.NODE_ENV === "production";
 
-const clean = (str) => {
-    if (str.length <= 30) return str;
-    const words = str.split(" ");
-    let result = "";
-    let idx = 0;
-    while (result.length < 30) {
-        result += words[idx] + " ";
-        idx += 1;
-    }
-    return result.slice(0, -1) + "...";
-};
-
 const data = {
     layout: "page.njk",
     eleventyComputed: {
@@ -30,7 +18,7 @@ const data = {
                 }
 
                 if (index === urlPath.length - 1 && data.layout === "page.njk" && data.title) {
-                    info = { label: clean(data.title.toLowerCase()) };
+                    info = { label: data.title.toLowerCase() };
                 }
 
                 return {

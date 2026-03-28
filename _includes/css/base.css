@@ -22,7 +22,7 @@ html {
     --color-text: #374151;
     --color-light: gray;
 
-    --space-xs: 0.5rem;
+    --space-xs: 0.4rem;
     --space-sm: 0.75rem;
     --space-md: 1rem;
     --space-lg: 1.5rem;
@@ -118,6 +118,14 @@ ul, ol {
     padding-left: var(--space-lg);
 }
 
+li {
+    margin-bottom: var(--space-xs);
+}
+
+ul li ul li {
+    margin-top: var(--space-xs);
+}
+
 /* || MEDIA & FORMS */
 img,
 picture,
@@ -141,4 +149,8 @@ code {
     -moz-tab-size: 2;
     tab-size: 2;
     -o-tab-size: 2;
+}
+
+a, a:visited {
+    color: blue;
 }

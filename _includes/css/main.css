@@ -10,6 +10,7 @@ body > header {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 600;
+    color: var(--color-text);
 }
 
 .menu-trigger {
@@ -46,7 +47,7 @@ body > header {
     text-decoration: none;
     /* color: #007bff; */
     /* color: var(--color-link); */
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #menu li a:visited {
