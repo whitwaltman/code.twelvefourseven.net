@@ -37,6 +37,11 @@ cd -
 cp ~/skeleton/index.html ./
 ```
 
+How I like to create symlinks
+
 ```sh
-ln -s <origin> <symlink_name>
+cd <target_dir>
+x=$(pwd)
+cd ~/symlinks
+ln -s $x <symlink_name>
 ```

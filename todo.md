@@ -1,10 +1,11 @@
 # todo
 
-- [ ] migrate old content
 - [ ] edit demo panel styling
 - [ ] edit code block styling
     - copy code button
     - include language above block
+    - make code block font size slightly smaller
+        - make sure it's small enough on mobile too
 - [ ] add keyword tags
     - [ ] create catalog / index that lists all posts by keyword
 - [ ] create reference section / component
@@ -42,3 +43,6 @@
     - box shadow is kind of aggressive
     - plus i kinda chose the bg colors haphazardly
 - [x] ~~edit link styling to be uniform regardless of `:visited`~~
+- [x] ~~migrate old content~~
+    - good enough for now
+    - still need to add a tailwind cheat sheet and maybe one for named web colors / add some color variables for faster prototyping

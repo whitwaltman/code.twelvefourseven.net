@@ -18,3 +18,9 @@ Get number of lines that match the regex pattern
 ```sh
 grep -c -E <regex_pattern> myFile.md
 ```
+
+Search for a word recursively inside a directory
+
+```sh
+grep -nr "word" <directory>
+```
