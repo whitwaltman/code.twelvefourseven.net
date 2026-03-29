@@ -1,5 +1,5 @@
 ---
-title: Swift crib sheet
+title: Swift notes
 code: true
 tabs: false
 ---

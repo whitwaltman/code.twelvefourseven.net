@@ -1,7 +1,6 @@
 ---
-title: Git crib sheet
-code: true
-tabs: false
+title: Git quick ref
+code: tru
 ---
 
 ## branches
@@ -27,3 +26,44 @@ git push origin -d <branch-to-delete>
 # list remote branches
 git br -r
 ```
+
+## remote
+
+List existing remotes (`-v` == verbose)
+
+```bash
+git remote -v
+git rv # alias
+```
+
+```sh
+git remote set-url origin git://new.url.here
+```
+
+```sh
+git remote remove origin
+```
+
+## tracking
+
+Stop tracking a file; remove from the index (cache)
+
+```sh
+git rm --cached myFile.js
+```
+
+Remove all unstaged changes in working directory but leave all staged changes
+
+```sh
+git restore
+```
+
+## reset
+
+```sh
+git reflog
+git reset --hard <SHA>
+git reset --hard HEAD@{0}
+```
+
+

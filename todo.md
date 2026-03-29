@@ -11,6 +11,9 @@
 - [ ] make css reset even simpler
     - [ ] reference / link to josh's reset for a more comprehensive one
 
+- [ ] TODO: add search back!!
+    - [ ] need to revisit styling and layout of search modal
+
 # done
 
 - [x] ~~add collections for each category / type~~
@@ -27,15 +30,15 @@
 - ~~add title?~~
 - [x] ~~add back buttons and/or nav breadcrumbs (??)~~
 - ~~footer flex display has a weird wrap on mobile~~
-    - ~~can fix by changing to `flex-direction: column;` when at a certain breakpoint~~
+    - can fix by changing to `flex-direction: column;` when at a certain breakpoint
 - ~~**code copy button is anchored on scroll**~~
-    - ~~covers some comments~~
-    - ~~moves with scroll instead of staying fixed~~
+    - covers some comments
+    - moves with scroll instead of staying fixed
 - ~~figure out if/how i want to display hotkey commands (emacs, nvim)~~
-- [x] FIX MOBILE FLEX LAYOUTS
+- [x] ~~FIX MOBILE FLEX LAYOUTS~~
     - still ugly but better
 - [x] ~~REDESIGN INDEX !!!~~
-- [x] redesign / edit link styling on index page
+- [x] ~~redesign / edit link styling on index page~~
     - box shadow is kind of aggressive
     - plus i kinda chose the bg colors haphazardly
-- [x] edit link styling to be uniform regardless of `:visited`
+- [x] ~~edit link styling to be uniform regardless of `:visited`~~

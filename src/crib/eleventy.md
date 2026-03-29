@@ -1,5 +1,5 @@
 ---
-title: Eleventy crib sheet
+title: Eleventy quick ref
 code: true
 templateEngineOverride: "md"
 ---
