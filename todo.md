@@ -1,82 +1,15 @@
 # todo
 
-- [ ] TODO: REDESIGN INDEX !!!
-
-- [ ] MAKE DEMO TABS ACCESSIBLE
-- [ ] EDIT DEMO TAB STYLING (it's basically material ui rn)
-- [ ] ADD HIDE / SHOW COMMENTS FUNCTIONALITY
-
-- [ ] add reference section to page layout
-- [ ] edit `grid.css`: styling of panes
-    - space between command rows
-    - alternating colors / divider ? for more contrast / easier visual scanning
-
----
-
-- later... consider doing a split panel (left/right for wider screen, top/bottom for narrower screen) with preview and code
-
-- short, instructional code blocks (see `/crib/tmux`) -> styling??
-
----
-
-- [ ] *make custom styles for seven-min-tabs*
-    - shrink tab label padding
-    - add outline / distinct style for selected tab
-- [ ] Design grid-based crib sheet layout
-    - do test run first before templatizing it
-- [ ] toc for crib sheets??
-    - see [plugin](https://plug11ty.com/plugins/table-of-contents/)
-- [ ] add callout component ????
-    - maybe just use custom styling on an `<aside>` element + class selector?
-- [ ] TODO: redesign / edit link styling on index page
-    - box shadow is kind of aggressive
-    - plus i kinda chose the bg colors haphazardly
-- [ ] edit link styling to be uniform regardless of `:visited`
-
-## content
-
-- TODO: add tailwind crib sheet (spacing calculator! favorite colors!)
-- add named web colors crib sheet
-
----
-
-## scratch
-
-- could add a bit of js to swap tmux prefixes out based on client input (low priority)
-
-- still trying to figure out if / how to add language to code blocks and/or file name (optionally)
-- wanna try out using the diff feature in prism!
-
-- update search results styling
-    - kinda wonky on mobile
-    -   zooms in when field is in focus so you can't see the results that well
-    - title and link are duped: either remove title from pagefind index data or collapse context
-    - make the whole result clickable, not just the link at the top
-    - remove the list styling
-    - add margin btwn results
-    - [ ] fix spacing / layout on search modal
-- **add content**
-    - tmux
-    - add more notes! (*evergreen content*)
-        - crib sheets and snippets are meant to be quick reference
-- add more useful index layout / styling
-    - surface most helpful stuff at the top
-    - maybe add descriptions / context
-        - honestly even just definitions of what each type of collection / section actually is/does would be a huge improvement
-- tags / metadata??
-    - version number / machine
-- add description?
-- figure out if i want to use tags
-    - leaning no, but could be helpful for something like "config" general snipet
-    - for now, don't use because it's unnecessary
-
-## old
-
-migrate from:
-- `~/Desktop/_dir/cache/`
-- `~/Desktop/_dir/summaries/`
-
----
+- [ ] migrate old content
+- [ ] edit demo panel styling
+- [ ] edit code block styling
+    - copy code button
+    - include language above block
+- [ ] add keyword tags
+    - [ ] create catalog / index that lists all posts by keyword
+- [ ] create reference section / component
+- [ ] make css reset even simpler
+    - [ ] reference / link to josh's reset for a more comprehensive one
 
 # done
 
@@ -101,3 +34,8 @@ migrate from:
 - ~~figure out if/how i want to display hotkey commands (emacs, nvim)~~
 - [x] FIX MOBILE FLEX LAYOUTS
     - still ugly but better
+- [x] ~~REDESIGN INDEX !!!~~
+- [x] redesign / edit link styling on index page
+    - box shadow is kind of aggressive
+    - plus i kinda chose the bg colors haphazardly
+- [x] edit link styling to be uniform regardless of `:visited`
