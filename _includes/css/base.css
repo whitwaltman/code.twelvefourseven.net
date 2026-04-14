@@ -97,13 +97,13 @@ h6 {
 }
 
 /* || VERTICAL RHYTHM */
-.flow>*+* {
+/* .flow>*+* {
     margin-top: var(--space-md);
-}
+} */
 
-main>*+* {
+/* main>*+* {
     margin-top: var(--space-md);
-}
+} */
 
 hr {
     margin-block: 2.5rem;
@@ -116,13 +116,13 @@ ul, ol {
     padding-left: var(--space-lg);
 }
 
-li {
+/* li {
     margin-bottom: var(--space-xs);
 }
 
 ul li ul li {
     margin-top: var(--space-xs);
-}
+} */
 
 /* || MEDIA & FORMS */
 img,
