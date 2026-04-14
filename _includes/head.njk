@@ -10,14 +10,6 @@
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
     {# LOAD STYLES #}
-    {% if code %}
-        <link rel="stylesheet" href="/syntax.css">
-    {% endif %}
-
-    {% if tabs %}
-        <link rel="stylesheet" href="/tabs.css">
-    {% endif %}
-
     {% if grid %}
         <link rel="stylesheet" href="/grid.css">
     {% endif %}
@@ -31,6 +23,7 @@
             {% include "css/base.css" %}
             {% include "css/main.css" %}
             {% include "css/components.css" %}
+            {% include "css/syntax.css" %}
         {% endcss %}
 
         <style>{% getBundle "css" %}</style>
@@ -38,6 +31,7 @@
         <link rel="stylesheet" href="/base.css">
         <link rel="stylesheet" href="/main.css">
         <link rel="stylesheet" href="/components.css">
+        <link rel="stylesheet" href="/syntax.css">
     {% endif %}
     
     {# META TAGS #}

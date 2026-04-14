@@ -56,64 +56,19 @@ pre:has(code) {
     padding: 1.75rem 0 1.75rem 1rem;
 }
 
+/* TODO: fix overlap with long lines of code */
+/* ... possibly fixed with transparent bg? */
 .copy-code-button {
     position: absolute;
     top: 5px;
     right: 5px;
     z-index: 10;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     padding: 2px 4px;
     cursor: pointer;
-}
-
-/* || BREADCRUMBS */
-.breadcrumbs ol {
-    list-style: none;
-    display: flex;
-    gap: 0.5rem;
-    padding: 0;
-    font-size: 0.9rem;
-    /* font-weight: 300; */
-}
-
-.breadcrumbs :not(li[aria-current="page"]) {
-    color: var(--color-light);
-}
-
-.breadcrumbs :not(li[aria-current="page"]) a:hover {
-    color: var(--color-text);
-}
-
-
-.breadcrumbs li[aria-current="page"] {
-    color: var(--color-text);
-}
-
-.breadcrumbs li:not(:last-child)::after {
-    content: "/";
-    margin-left: 0.5rem;
-    color: tomato;
-}
-
-@media (max-width: 600px) {
-    .breadcrumbs li:last-child {
-        display: none;
-    }
-}
-
-/* || LABEL */
-.label {
-    background-color: #ddd;
-    color: black;
-    text-align: center;
-    display: inline-block;
-    font-size: 0.9rem;
-    padding: 0 6px;
-    margin: 4px 2px;
-    border-radius: 1rem;
-    border: 1px solid darkgray;
-    text-decoration: none;
+    background: transparent;
+    color: white;
 }
 
 /* || INLINE CODE */

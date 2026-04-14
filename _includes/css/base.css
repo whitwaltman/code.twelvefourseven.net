@@ -98,12 +98,10 @@ h6 {
 
 /* || VERTICAL RHYTHM */
 .flow>*+* {
-    /* margin-top: var(--space-lg); */
     margin-top: var(--space-md);
 }
 
 main>*+* {
-    /* margin-top: var(--space-lg); */
     margin-top: var(--space-md);
 }
 

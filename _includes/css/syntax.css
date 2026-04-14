@@ -2,8 +2,11 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: #f8f8f2;
 	background: none;
+	
+	font-size: 0.82rem;
 	text-align: left;
 	white-space: pre;
+
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
@@ -20,7 +23,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1em 1.5em;
+	padding: 1em 1.25em;
 	margin: 0.5em 0;
 	overflow: auto;
 	border-radius: 0.5em;
