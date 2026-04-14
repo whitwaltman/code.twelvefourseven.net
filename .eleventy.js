@@ -56,43 +56,6 @@ export default async function (config) {
 	registerShortcodes(config, inline);
 	registerShortcodes(config, block);
 
-	// Create content collections
-	config.addCollection("crib", (collection) => {
-		return collection.getAll().filter(item => item.data.contentTypeLabel === "crib sheets");
-	});
-
-	config.addCollection("notes", (collection) => {
-		return collection.getAll().filter(item => item.data.contentTypeLabel === "notes");
-	});
-
-	config.addCollection("snippets", (collection) => {
-		return collection.getAll().filter(item => item.data.contentTypeLabel === "snippets");
-	});
-
-	// Create categories for snippet organization
-	config.addCollection("snippetCategories", (collection) => {
-		const snippets = collection.getFilteredByGlob("src/snippets/**/*");
-		const categories = new Set();
-
-		snippets.forEach((item) => {
-			// Structure: /snippets/[category]/[post-name]
-			const parts = item.filePathStem.split("/");
-			// parts[0] is "", parts[1] is "snippets", parts[2] is the category
-			if (parts[1] === "snippets" && parts.length > 3) {
-				categories.add(parts[2]);
-			}
-		});
-		
-		return Array.from(categories).sort();
-	});
-
-	// Create reverse chronological feed
-	config.addCollection("feed", (collection) => {
-		return collection.getAllSorted().toReversed().filter((item) => {
-			return item.data.layout === "page.njk";
-		});
-	});
-
 	// Register utility functions as transforms
 	if (isProduction) config.addTransform("externalLinks", transformExternalLinks);
 	config.addTransform("copyCode", insertCopyButton);

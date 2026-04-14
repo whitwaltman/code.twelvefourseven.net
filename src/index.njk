@@ -1,4 +1,5 @@
-this is my code site. it has a bunch of code-related stuff (duh)
-
-its primary purpose / utility is to serve as personal documentation / reference pages.
-
+{% for item in collections.all %}
+    {% if item.url !== "/" %}
+        <a href="{{ item.url }}">{{ item.data.title or item.url }}</a>
+    {% endif%}
+{% endfor %}
