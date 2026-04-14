@@ -1,38 +1,4 @@
----
-layout: base.njk
----
-<p>This is a work in progress. Please ignore the metaphorical dust and rough edges. Read more <a href="/about">about this site</a>.</p>
+this is my code site. it has a bunch of code-related stuff (duh)
 
-<hr>
-<div class="sections">
-    {% for section, sectionInfo in sections %}
-    <a class="section" href="/{{ section }}">
-        <div class="section__content">
-            <h3>{{ sectionInfo.label }}</h3>
-            <p>{{ sectionInfo.description }}</p>
-        </div>
-    </a>
-    {% endfor %}
-</div>
+its primary purpose / utility is to serve as personal documentation / reference pages.
 
-<hr>
-
-<h3>Snippet categories</h3>
-<div class="categories">
-    {% for category, categoryInfo in sections.snippets.children %}
-    {% set categoryPosts = collections.snippets | filterBySnippetCategory(category) %}
-    {% set size = categoryPosts.length %}
-    {% if size > 0 %}
-        <a class="category" href="/snippets/{{ category }}">
-            <div class="category__content">
-                <div class="top">
-                    {% set title = categoryInfo.sectionTitle or categoryInfo.label %}
-                    <h4>{{ title | capitalize }}</h4>
-                    <span>({{ size }})</span>
-                </div>
-                <p>{{ categoryInfo.description }}</p>
-            </div>
-        </a>
-    {% endif %}
-    {% endfor %}
-</div>
