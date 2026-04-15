@@ -1,5 +1,3 @@
-const slugify = (text) => text.toLowerCase().replace(/\s+/g, '-');
-
 // helper to remove leading indentation from a multi-line string
 const dedent = (str) => {
     const lines = str.split('\n');
@@ -14,44 +12,11 @@ const dedent = (str) => {
 };
 
 const paired = {
-
-    demo: function(content, tabs = ['preview', 'html', 'css', 'js']) {
-        const buttons = tabs.map((tab, i) => {
-            const label = tab.toUpperCase();
-            const activeClass = i === 0 ? 'active' : '';
-            return `<button class="tab-btn ${activeClass}" data-tab=${tab}>${label}</button>`;
-        }).join('');
-
-        return `
-            <div class="demo-tabs">
-                <div class="tab-buttons">${buttons}</div>
-                <div class="tab-content">${content}</div>
-            </div>
-        `;
-    },
-
-
-
-    tabsContainer: function(content, labelsStr) {
-        const labels = labelsStr.split(',').map(l => l.trim());
-        const tabList = labels.map(label => {
-            const id = slugify(label);
-            return `<li><a href="#${id}" role="tab">${label}</a></li>`;
-        }).join('');
-
-        return `
-    <seven-minute-tabs autoheight>
-        <ol role="tablist" aria-label="Code options">
-            ${tabList}
-        </ol>
-        ${content}
-    </seven-minute-tabs>`;
-    },
-
-    tabWrapper: function(content, label) {
-        const id = slugify(label);
+    fragment: function(content, desc) {
         const cleaned = dedent(content);
-        return `<div id="${id}" role="tabpanel">${cleaned}</div>`;
+        return `<div class="fragment">
+            <span class="fragment__desc">${desc}</span>
+            ${cleaned}</div>`;
     }
 };
 

@@ -1,0 +1,23 @@
+---
+title: manage session
+tags: ["chunk", "ref", "cli"]
+parent: tmux
+---
+
+{% fragment "New session" %}
+    {% highlight "bash" %}
+    tmux new -s hello
+    {% endhighlight %}
+{% endfragment %}
+
+{% fragment "Reattach to session" %}
+    {% highlight "bash" %}
+    tmux a -t hello
+    {% endhighlight %}
+{% endfragment %}
+
+{% fragment "Kill session" %}
+    {% highlight "bash" %}
+    tmux kill-session -t hello
+    {% endhighlight %}
+{% endfragment %}
