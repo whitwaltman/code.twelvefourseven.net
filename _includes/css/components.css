@@ -94,3 +94,63 @@ code:not(pre > code) {
     vertical-align: text-top;
     width: 1em;
 }
+
+/* || GRID */
+kbd {
+    background-color: #eeeeee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow:
+        0 1px 1px rgb(0 0 0 / 0.2),
+        0 2px 0 0 rgb(255 255 255 / 0.7) inset;
+    color: #333333;
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: bold;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+
+.grid-container {
+    display: grid;
+    /* Adjust min-width based on how many columns you want on desktop */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.grid-card {
+    border: 2px solid #000;
+    /* High contrast */
+    padding: 0.75rem;
+    background: #fff;
+}
+
+.grid-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+}
+
+.command-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    padding: 2px 0;
+    margin-bottom: 4px;
+}
+
+.key {
+    font-weight: bold;
+    color: #d73a49;
+    /* High contrast accent color */
+    margin-right: 1rem;
+}
+
+.desc {
+    color: #333;
+    text-align: right;
+}

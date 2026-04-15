@@ -1,7 +1,7 @@
-{% for item in collections.all %}
 <ul>
-    {% if item.url !== "/" %}
-        <li><a href="{{ item.url }}">{{ item.data.title or item.url }}</a></li>
-    {% endif%}
-</ul>
+{% for item in collections.scrap %}
+    {# {% if item.url !== "/" %} #}
+    <li><a href="{{ item.url }}">{{ item.data.title or item.url }}</a></li>
+    {# {% endif%} #}
 {% endfor %}
+</ul>
