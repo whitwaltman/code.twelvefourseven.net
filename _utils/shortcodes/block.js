@@ -15,8 +15,9 @@ const paired = {
     fragment: function(content, desc) {
         const cleaned = dedent(content);
         return `<div class="fragment">
-            <span class="fragment__desc">${desc}</span>
-            ${cleaned}</div>`;
+            <div class="fragment__desc">${desc}</div>
+            <div class="fragment__body">${cleaned}</div>
+            </div>`;
     }
 };
 

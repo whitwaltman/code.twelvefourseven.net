@@ -95,6 +95,16 @@ code:not(pre > code) {
     width: 1em;
 }
 
+/* || FRAGMENTS */
+.fragment {
+    padding: 8px;
+    background: white;
+}
+
+.fragment + * {
+    margin-top: 1rem;
+}
+
 /* || GRID */
 kbd {
     background-color: #eeeeee;

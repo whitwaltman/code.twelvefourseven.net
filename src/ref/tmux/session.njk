@@ -3,21 +3,21 @@ title: manage session
 tags: ["chunk", "ref", "cli"]
 parent: tmux
 ---
+{{ parent }} / {{ title }}
+<ul>
+{% for tag in tags %}
+<li>{{ tag }}</li>
+{% endfor %}
+</ul>
 
 {% fragment "New session" %}
-    {% highlight "bash" %}
-    tmux new -s hello
-    {% endhighlight %}
+<code>tmux new -s hello</code>
 {% endfragment %}
 
 {% fragment "Reattach to session" %}
-    {% highlight "bash" %}
-    tmux a -t hello
-    {% endhighlight %}
+<code>tmux a -t hello</code>
 {% endfragment %}
 
 {% fragment "Kill session" %}
-    {% highlight "bash" %}
-    tmux kill-session -t hello
-    {% endhighlight %}
+<code>tmux kill-session -t hello</code>
 {% endfragment %}
