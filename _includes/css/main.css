@@ -1,11 +1,19 @@
 header * {
-    font-size: 1.1rem;
+    font-size: 1.15em;
+    text-decoration: none;
 }
 
-header a.active {
-    background-color: rgb(255, 182, 238);
+header a, header a:visited {
+    color: gray;
+    font-weight: 600;
+}
+
+header a.active, header a.active:visited {
+    color: fuchsia;
+    /* color: lightseagreen; */
 }
 
 header span:not(:last-child)::after {
     content: ",";
+    color: gray;
 }
