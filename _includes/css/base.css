@@ -77,6 +77,10 @@ body, p {
     color: var(--color-text);
 }
 
+p + *, * + p {
+    margin-block: var(--space-md);
+}
+
 h1 {
     font-size: var(--text-3xl);
     font-weight: 800;
