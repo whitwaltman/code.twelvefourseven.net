@@ -1,0 +1,5 @@
+<ul>
+{% for note in collections.note %}
+    <li><a href="{{ note.url }}">{{ note.data.title or note.url }}</a></li>
+{% endfor %}
+</ul>

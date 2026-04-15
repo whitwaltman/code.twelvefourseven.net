@@ -1,3 +1,11 @@
-header a:not(:last-child)::after {
+header * {
+    font-size: 1.1rem;
+}
+
+header a.active {
+    background-color: rgb(255, 182, 238);
+}
+
+header span:not(:last-child)::after {
     content: ",";
 }

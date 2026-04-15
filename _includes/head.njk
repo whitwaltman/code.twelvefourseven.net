@@ -10,14 +10,6 @@
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
     {# LOAD STYLES #}
-    {% if grid %}
-        <link rel="stylesheet" href="/grid.css">
-    {% endif %}
-
-    {% if demo %}
-        <link rel="stylesheet" href="/demo.css">
-    {% endif %}
-
     {% if isProduction %}
         {% css %}
             {% include "css/base.css" %}
