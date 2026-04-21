@@ -17,3 +17,7 @@ header span:not(:last-child)::after {
     content: ",";
     color: gray;
 }
+
+main {
+    max-width: 72ch;
+}

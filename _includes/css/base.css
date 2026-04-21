@@ -27,6 +27,7 @@ html {
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2rem;
+    /* --space-2xl: 2.5rem; */
 
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
@@ -64,7 +65,7 @@ header {
 
 main {
     flex: 1 1 auto;
-    padding-inline: var(--space-lg);
+    padding-inline: var(--space-xl);
 }
 
 footer {

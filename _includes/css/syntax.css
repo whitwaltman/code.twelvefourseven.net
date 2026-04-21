@@ -1,6 +1,6 @@
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #f8f8f2;
+	color: #ffff46;
 	background: none;
 	
 	font-size: 0.82rem;
@@ -57,7 +57,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #ffa07a;
+	color: #e42a00;
 }
 
 .token.boolean,
@@ -71,7 +71,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #abe338;
+	color: #ea6c13;
 }
 
 .token.operator,
