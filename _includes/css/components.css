@@ -58,7 +58,12 @@ pre:has(code) {
     padding: 2px 4px;
     cursor: pointer;
     background: transparent;
-    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    .copy-code-button {
+        color: white;
+    }
 }
 
 /* || INLINE CODE */
