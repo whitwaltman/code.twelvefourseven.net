@@ -1,7 +1,7 @@
 import filters from "./_utils/filters.js";
 import inline from "./_utils/shortcodes/inline.js";
 import block from "./_utils/shortcodes/block.js"
-import insertCopyButton from "./_utils/transforms/codeblocks.js";
+// import insertCopyButton from "./_utils/transforms/codeblocks.js";
 import transformExternalLinks from "./_utils/transforms/links.js";
 
 function registerShortcodes(config, group) {
@@ -54,7 +54,7 @@ export default async function (config) {
 
 	// Register utility functions as transforms
 	if (isProduction) config.addTransform("externalLinks", transformExternalLinks);
-	config.addTransform("copyCode", insertCopyButton);
+	// config.addTransform("copyCode", insertCopyButton);
 
 	return {
 		// control which files 11ty will process

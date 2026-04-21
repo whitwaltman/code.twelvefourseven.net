@@ -1,0 +1,5 @@
+- need to figure out if i want to keep copy button
+    - should disable for now since it's not really relevant
+    - ok i disabled it. just have to comment those lines back in later if i want to re-enable it (`base.njk`, `.eleventy.js` (2 lines))
+- should i have filtering on the index page to help with surfacing relevant info?
+    - kind of feels like i should just add stuff until it gets unwieldy, and then implement better structure and nav.
