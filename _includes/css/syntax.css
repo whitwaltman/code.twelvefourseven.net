@@ -1,27 +1,29 @@
 :root {
-	--code-bg: #f8f9fa;
-    --code-base: #374151;
-    --code-quiet: #9ca3af;
-    --code-comment: #6b7280;
-    --code-logic: #d97706;
-    --code-data: #059669;
-    --code-attr: #2563eb;
-    --code-deleted: #dc2626;
-    --code-inserted: #16a34a;
+    --code-bg: #f6f8fa;
+    --code-base: #44475a;      /* Deep Dracula Purple-Gray */
+    --code-quiet: #9ca3af;     /* Structural Punctuation */
+    --code-comment: #6272a4;   /* Classic Dracula Comment */
+    
+    /* Functional Accents (Dracula Soft Tones) */
+    --code-logic: #d03d8d;     /* Pink: Keywords/Flow */
+    --code-data: #22863a;      /* Green: Strings/Numbers */
+    --code-call: #0550ae;      /* Blue: Functions/Classes */
+    --code-name: #e36209;      /* Orange: Attrs/Params */
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--code-bg: #111827;
-        --code-base: #d1d5db;
-        --code-quiet: #4b5563;
+        --code-bg: #282a36;
+        --code-base: #f8f8f2;   /* Soft Off-White text */
+        --code-quiet: #6272a4;  /* Subdued structural elements */
         --code-comment: #9ca3af;
-        --code-logic: #fbbf24;
-        --code-data: #34d399;
-        --code-attr: #60a5fa;
-        --code-deleted: #f87171;
-        --code-inserted: #4ade80;
-	}
+        
+        /* Functional Accents */
+        --code-logic: #ff79c6;  /* Pink */
+        --code-data: #50fa7b;   /* Green */
+        --code-call: #8be9fd;   /* Blue/Cyan */
+        --code-name: #ffb86c;   /* Orange */
+    }
 }
 
 code[class*="language-"],
@@ -31,7 +33,6 @@ pre[class*="language-"] {
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 	font-size: 0.875rem;
 	line-height: 1.25;
-	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
@@ -66,23 +67,16 @@ pre[class*="language-"] {
 .token.punctuation,
 .token.operator,
 .token.namespace,
-.token.entity,
-.token.url,
 .token.variable {
 	color: var(--code-quiet);
 }
 
 .token.keyword,
 .token.atrule,
-.token.rule,
+.token.selector,
 .token.important {
 	color: var(--code-logic);
 	font-weight: 600;
-}
-
-.token.function,
-.token.attr-value {
-	color: var(--code-logic);
 }
 
 .token.string,
@@ -90,17 +84,21 @@ pre[class*="language-"] {
 .token.regex,
 .token.boolean,
 .token.number,
-.token.constant,
-.token.symbol {
+.token.constant {
 	color: var(--code-data);
 }
 
-.token.property,
-.token.tag,
-.token.selector,
+.token.function,
+.token.builtin,
+.token.class-name {
+	color: var(--code-call);
+}
+
 .token.attr-name,
-.token.builtin {
-	color: var(--code-attr);
+.token.parameter,
+.token.property,
+.token.tag {
+	color: var(--code-name);
 }
 
 .token.deleted {
@@ -133,7 +131,6 @@ pre[class*="language-"] {
 	}
 
 	.token.keyword,
-	.token.important,
     .token.function {
         font-weight: bold;
         color: LinkText;
