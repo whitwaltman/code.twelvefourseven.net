@@ -3,8 +3,6 @@ title: Aggregation vs. composition
 tags: [note, software-design, domain-modeling]
 ---
 
-## {{ title }}
-
 - Composition = **strong** ownership {% note %}parts are bound to the whole's lifecycle{% endnote %}
 - Aggregation = *weak* ownership {% note %}parts can exist independently{% endnote %}
 

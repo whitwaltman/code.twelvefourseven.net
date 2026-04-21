@@ -1,9 +1,7 @@
 ---
-title: Swift
-tags: [ref]
+title: Swift string stuff
+tags: [ref, swift]
 ---
-
-## {{ title }}
 
 ### Create a string
 
