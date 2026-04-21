@@ -3,9 +3,9 @@ layout: base.njk
 permalink: /index.html
 eleventyExcludeFromCollections: true
 ---
-<ul>
+<ul class="feed">
 {% for item in collections.all %}
-    <li>
+    <li class="feed_item">
         <a href="{{ item.url }}">{{ item.data.title or item.url }}</a>
         {{ item.templateContent | safe }}
     </li>

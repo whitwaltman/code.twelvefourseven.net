@@ -21,3 +21,11 @@ header span:not(:last-child)::after {
 main {
     max-width: 72ch;
 }
+
+ul.feed {
+    list-style-type: none;
+}
+
+li.feed_item {
+    padding-bottom: 2rem;
+}
