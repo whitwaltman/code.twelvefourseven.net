@@ -1,6 +1,6 @@
 ---
 title: Swift
-tags: [ref, lang]
+tags: [ref]
 ---
 
 ## {{ title }}
