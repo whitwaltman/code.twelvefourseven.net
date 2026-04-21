@@ -1,6 +1,6 @@
 ---
 title: Aggregation vs. composition
-tags: ["note", "software-design", "domain-modeling"]
+tags: [note, software-design, domain-modeling]
 ---
 
 ## {{ title }}
