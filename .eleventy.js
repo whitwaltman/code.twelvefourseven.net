@@ -3,7 +3,6 @@ import inline from "./_utils/shortcodes/inline.js";
 import block from "./_utils/shortcodes/block.js"
 import insertCopyButton from "./_utils/transforms/codeblocks.js";
 import transformExternalLinks from "./_utils/transforms/links.js";
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 function registerShortcodes(config, group) {
 	if (group.single) {
@@ -23,9 +22,6 @@ export default async function (config) {
 	// Add global data variable to signal build modality
 	const isProduction = process.env.NODE_ENV === "production";
 	config.addGlobalData("isProduction", isProduction);
-
-	// Add syntax highlighting plugin: https://www.11ty.dev/docs/plugins/syntaxhighlight/
-	config.addPlugin(syntaxHighlight);
 
 	// Create app-level bundles
 	config.addBundle("css");
