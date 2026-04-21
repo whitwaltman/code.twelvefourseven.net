@@ -1,7 +1,6 @@
 import filters from "./_utils/filters.js";
 import inline from "./_utils/shortcodes/inline.js";
 import block from "./_utils/shortcodes/block.js"
-// import insertCopyButton from "./_utils/transforms/codeblocks.js";
 import transformExternalLinks from "./_utils/transforms/links.js";
 
 function registerShortcodes(config, group) {
@@ -25,7 +24,6 @@ export default async function (config) {
 
 	// Create app-level bundles
 	config.addBundle("css");
-	config.addBundle("js");
 
 	// Prevent full rebuilds of CSS in development mode
 	if (!isProduction) {
@@ -37,11 +35,7 @@ export default async function (config) {
 	// Copy assets to output folder
 	config.addPassthroughCopy({
 		"./public": "/",
-		"node_modules/@zachleat/seven-minute-tabs/seven-minute-tabs.js": "js/seven-minute-tabs.js",
 	});
-
-	// Add global default layout
-	config.addGlobalData("layout", "card.njk");
 
 	// Register filter functions
 	Object.keys(filters).forEach((filter) => {
@@ -54,7 +48,6 @@ export default async function (config) {
 
 	// Register utility functions as transforms
 	if (isProduction) config.addTransform("externalLinks", transformExternalLinks);
-	// config.addTransform("copyCode", insertCopyButton);
 
 	return {
 		// control which files 11ty will process

@@ -35,35 +35,16 @@ body.js-enabled {
 }
 
 /* || CODE BLOCKS */
-.code-block-wrapper {
-    position: relative;
-    margin: 1rem 0;
-}
-
-/* TODO: fix overlap with long lines of code */
-/* ... possibly fixed with transparent bg? */
-.copy-code-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    z-index: 10;
-    border-radius: 5px;
-    font-size: 0.82rem;
-    padding: 2px 4px;
-    cursor: pointer;
-    background: transparent;
-    color: white;
-}
-
 pre:has(code) {
     overflow-x: auto;
     margin: 0;
     background: rgb(35, 35, 35);
     color: ghostwhite;
     border-radius: 0.3em;
-    padding: 1rem;
+    padding: 0.6rem 0.8rem;
     font-size: 0.82rem;
     tab-size: 4;
+    max-width: 75%;
 }
 
 /* || INLINE CODE */
@@ -88,14 +69,4 @@ code:not(pre > code) {
     mask-size: cover;
     vertical-align: text-top;
     width: 1em;
-}
-
-/* || FRAGMENTS */
-.fragment {
-    padding: 8px;
-    background: white;
-}
-
-.fragment+* {
-    margin-top: 1rem;
 }

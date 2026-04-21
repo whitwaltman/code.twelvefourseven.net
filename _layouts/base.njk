@@ -10,12 +10,22 @@
 
     {% include "footer.njk" %}
     
-    {% js %}
-        {% include "js/notes.js" %}
-        {# {% include "js/copy.js" %} #}
-        {# {% include "js/search.js" %} #}
-    {% endjs %}
-    <script>{% getBundle "js" %}</script>
-    {# <script src="/pagefind/pagefind-ui.js"></script> #}
+    <script>
+        document.body.classList.add("js-enabled");
+        const containers = document.querySelectorAll(".note-container");
+        const toggleNote = (el) => {
+            const isExpanded = el.getAttribute("aria-expanded") === "true";
+            el.setAttribute("aria-expanded", !isExpanded);
+        }
+        containers.forEach((el) => {
+            el.addEventListener("click", () => toggleNote(el));
+            el.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleNote(el);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -10,7 +10,6 @@ header a, header a:visited {
 
 header a.active, header a.active:visited {
     color: fuchsia;
-    /* color: lightseagreen; */
 }
 
 header span:not(:last-child)::after {
@@ -18,14 +17,22 @@ header span:not(:last-child)::after {
     color: gray;
 }
 
-main {
+article.card {
     max-width: 72ch;
 }
 
-ul.feed {
-    list-style-type: none;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 0.75rem;
+    padding-top: 0.75rem;
 }
 
-li.feed_item {
-    padding-bottom: 2rem;
+.grid-card {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+}
+
+.grid-card .content {
+    margin-top: 0.4rem;
 }
