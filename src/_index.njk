@@ -1,0 +1,8 @@
+---
+permalink: /index.html
+---
+<ul>
+{% for item in collections.all %}
+    <li><a href="{{ item.url }}">{{ item.data.title or item.url }}</a></li>
+{% endfor %}
+</ul>
