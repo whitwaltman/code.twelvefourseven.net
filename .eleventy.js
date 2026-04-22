@@ -41,9 +41,6 @@ export default async function (config) {
 		"./public": "/",
 	});
 
-	// Add global default layout
-	config.addGlobalData("layout", "card.njk");
-
 	// Register filter functions
 	Object.keys(filters).forEach((filter) => {
 		config.addFilter(filter, filters[filter]);
