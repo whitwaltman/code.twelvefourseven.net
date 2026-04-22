@@ -1,3 +1,5 @@
 <header>
     <span><a class="{{ 'active' if '/' === page.url }}" id="title" href="/">{{ site.title }}</a></span>
+    <span><a class="{{ 'active' if '/ref/' in page.filePathStem }}" href="/ref">ref</a></span>
+    <span><a class="{{ 'active' if '/notes/' in page.filePathStem }}" href="/notes">notes</a></span>
 </header>

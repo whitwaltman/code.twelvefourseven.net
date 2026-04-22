@@ -11,8 +11,3 @@ const page = {
     inputPath: "./src/ref/11ty-supplied.md",
 }
 ```
-
-- url: {{ page.url }}
-- file slug: {{ page.fileSlug }}
-- file path stem: {{ page.filePathStem }}
-- input path: {{ page.inputPath }}

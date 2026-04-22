@@ -12,8 +12,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "build:clean": "rm -rf .site && npx eleventy",
+    "build:clean": "npm run clean && npx eleventy",
     "build:all": "NODE_ENV=production npm run build:clean && npm run format",
+    "clean": "rm -rf .site",
     "postbuild": "npx pagefind --site .site --glob \"**/*.html\"",
     "debug": "DEBUG=* npx eleventy",
     "format": "node _utils/format.js",
