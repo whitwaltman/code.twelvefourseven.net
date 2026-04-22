@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 <div class="grid">
     {% for item in collections.all %}
         <div class="grid-card">
-            <a class="title" href="{{ item.url }}">{{ item.url or item.data.title }}</a>
+            <a class="title" href="{{ item.url }}">{{ item.data.title or item.data.fileSlug}}</a>
             <div class="content">
                 {{ item.templateContent | safe }}
             </div>

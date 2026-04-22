@@ -1,6 +1,7 @@
 import filters from "./_utils/filters.js";
 import inline from "./_utils/shortcodes/inline.js";
 import block from "./_utils/shortcodes/block.js"
+import shikiHighlights from "./_utils/shiki.js";
 import transformExternalLinks from "./_utils/transforms/links.js";
 
 function registerShortcodes(config, group) {
@@ -36,6 +37,12 @@ export default async function (config) {
 	config.addPassthroughCopy({
 		"./public": "/",
 	});
+
+	// https://stefanzweifel.dev/posts/2024/06/03/how-i-use-shiki-in-eleventy/.
+	config.addPlugin(shikiHighlights);
+
+	// Add global default layout
+	config.addGlobalData("layout", "card.njk");
 
 	// Register filter functions
 	Object.keys(filters).forEach((filter) => {

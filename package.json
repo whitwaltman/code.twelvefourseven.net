@@ -20,7 +20,9 @@
     "start": "npx eleventy --serve --incremental"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "flat-cache": "^6.1.22",
+    "shiki": "^4.0.2"
   },
   "overrides": {
     "minimatch": "^10.2.1"
