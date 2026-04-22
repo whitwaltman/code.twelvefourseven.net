@@ -23,6 +23,9 @@ export default async function (config) {
 	const isProduction = process.env.NODE_ENV === "production";
 	config.addGlobalData("isProduction", isProduction);
 
+	// https://stefanzweifel.dev/posts/2024/06/03/how-i-use-shiki-in-eleventy/.
+	config.addPlugin(shikiHighlights);
+
 	// Create app-level bundles
 	config.addBundle("css");
 
@@ -37,9 +40,6 @@ export default async function (config) {
 	config.addPassthroughCopy({
 		"./public": "/",
 	});
-
-	// https://stefanzweifel.dev/posts/2024/06/03/how-i-use-shiki-in-eleventy/.
-	config.addPlugin(shikiHighlights);
 
 	// Add global default layout
 	config.addGlobalData("layout", "card.njk");
