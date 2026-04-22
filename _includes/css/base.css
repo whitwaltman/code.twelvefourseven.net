@@ -53,6 +53,7 @@ main {
 
 footer {
     font-size: var(--text-sm);
+    max-width: fit-content;
 }
 
 /* || TYPOGRAPHY */
@@ -68,4 +69,15 @@ hr {
 
 a, a:visited {
     color: blue;
+}
+
+/* || UTILITY CLASSES */
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
 }

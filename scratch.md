@@ -13,3 +13,6 @@
     - but it could potentially be useful for things like my note container
         - maybe that's a separate use case altogether. or it needs its own section and IA design
 - need to go take a break cuz i haven't eaten since like 9 am
+- might be cool to add some "pinning" functionality or something? cards that are particularly relevant for me rn can get pinned
+    - simplest implementation would be to add that as front matter and then render accordingly
+    - a more complex but useful approach might be a client-side js thing with browser storage, but that's way out of scope right now

@@ -29,6 +29,9 @@ export default async function (config) {
 	// Create app-level bundles
 	config.addBundle("css");
 
+	// https://www.11ty.dev/docs/config/#change-base-file-name-for-data-files
+	config.setDataFileBaseName("_index");
+
 	// Prevent full rebuilds of CSS in development mode
 	if (!isProduction) {
 		config.addPassthroughCopy({
